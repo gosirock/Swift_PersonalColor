@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fi5-zI-Smv">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="sZQ-hG-y0l">
+            <objects>
+                <viewController id="Uwz-Ox-Gjs" customClass="Main_ViewController" customModule="PersonalColor_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydE-Wc-9GP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fpm-W0-wvz">
+                                <rect key="frame" x="-6" y="0.0" width="404" height="848"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWh-bm-Osg">
+                                <rect key="frame" x="34" y="581" width="324" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="kakao_login_btn.png" title="">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn_kakao:" destination="Uwz-Ox-Gjs" eventType="touchUpInside" id="Sdk-Y0-qvg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjv-V7-bGB">
+                                <rect key="frame" x="34" y="659" width="324" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="btn_naver.png" title="">
+                                    <backgroundConfiguration key="background"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btnNaver:" destination="Uwz-Ox-Gjs" eventType="touchUpInside" id="bri-V5-1Hx"/>
+                                    <action selector="btn_kakao:" destination="Uwz-Ox-Gjs" eventType="touchUpInside" id="eOi-1O-bxk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tk9-QV-vf1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7yx-kc-i91"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IxC-Dc-Ne2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.664122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eYG-Qh-yRY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fi5-zI-Smv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="avA-DB-jCL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Uwz-Ox-Gjs" kind="relationship" relationship="rootViewController" id="WnY-hI-im6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Qv-hF-y1K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950.38167938931292" y="3.5211267605633805"/>
+        </scene>
+        <!--Shop_Storyboard-->
+        <scene sceneID="PPQ-vR-6f2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Shop_Storyboard" id="IPL-tD-yUF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="x9o-V0-hqP"/>
+                    <navigationItem key="navigationItem" id="OUO-NF-hUj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gah-eK-S2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239" y="420"/>
+        </scene>
+        <!--Home_Storyboard-->
+        <scene sceneID="y16-eO-nUf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home_Storyboard" id="7bP-xm-xZc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="eIU-HR-oGG"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yo6-G0-Khw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773" y="420"/>
+        </scene>
+        <!--PC_Storyboard-->
+        <scene sceneID="X00-c2-RrA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PC_Storyboard" id="JaR-FN-s7G" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lDL-qc-uiu"/>
+                    <navigationItem key="navigationItem" id="qgv-vc-23f"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PTW-09-M2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="420"/>
+        </scene>
+        <!--Mypage_Storyboard-->
+        <scene sceneID="SL7-Dq-t3f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Mypage_Storyboard" id="Jed-Kl-fwB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="dg9-H8-Dne"/>
+                    <navigationItem key="navigationItem" id="vGf-HU-yT2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Iz-ZI-Ktt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="420"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="UE1-JR-OPv">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarView" automaticallyAdjustsScrollViewInsets="NO" id="ehG-Z1-us4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g2o-eL-0ma">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="7bP-xm-xZc" kind="relationship" relationship="viewControllers" id="764-vn-NKa"/>
+                        <segue destination="JaR-FN-s7G" kind="relationship" relationship="viewControllers" id="h6f-DD-z36"/>
+                        <segue destination="IPL-tD-yUF" kind="relationship" relationship="viewControllers" id="LGf-Ko-jaX"/>
+                        <segue destination="Jed-Kl-fwB" kind="relationship" relationship="viewControllers" id="tzK-Yb-cdE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DA3-zQ-zBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-6"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg.png" width="294.75" height="639"/>
+        <image name="btn_naver.png" width="300" height="45"/>
+        <image name="kakao_login_btn.png" width="300" height="45"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
