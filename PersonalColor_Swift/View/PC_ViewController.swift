@@ -7,6 +7,7 @@
 
 import UIKit
 import PhotosUI
+import Foundation
 
 class PC_ViewController: UIViewController {
  
@@ -16,20 +17,14 @@ class PC_ViewController: UIViewController {
     
     @IBOutlet var img_upload: UIImageView!
     
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
-
     @IBAction func btn_Slect_photo(_ sender: UIButton) {
         presentPicker()
-        
     }
     
     // 앨범띄우기
@@ -56,8 +51,6 @@ class PC_ViewController: UIViewController {
   
     // 앨범선택사진 img에 띄우기
     func addPreviewImage(){
-        
-        
         // 사진이 한 개이므로 first로 접근하여 itemProvider를 생성
         guard let itemProvider = itemProviders.first else { return }
         
@@ -79,28 +72,109 @@ class PC_ViewController: UIViewController {
         }
     } // func addPreviewImage() End-
     
-    
+    // 이미지 flask 전송
+//    func sendImageToServer(image: UIImage) {
+//        let serverURL = URL(string: "http://127.0.0.1:5000/rbg")! // Flask 서버 엔드포인트
+//
+//        // 이미지를 Data로 변환
+//        if let imageData = image.jpegData(compressionQuality: 1.0) {
+//            var request = URLRequest(url: serverURL)
+//            request.httpMethod = "POST"
+//
+//            // 이미지 데이터를 요청 본문에 추가
+//            request.httpBody = imageData
+//
+//            // Content-Type 헤더 설정
+//            request.setValue("image/jpeg", forHTTPHeaderField: "Content-Type")
+//
+//            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+//                if let error = error {
+//                    print("Error: \(error)")
+//                    return
+//                }
+//
+//                if let data = data {
+//                    do {
+//                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+//                            if let rgbValues = json["rgb"] as? [Int] {
+//                                // 서버에서 받은 RGB 값 처리
+//                                print("Received RGB values: \(rgbValues)")
+//                            }
+//                        }
+//                    } catch {
+//                        print("Error parsing JSON: \(error)")
+//                    }
+//                }
+//            }
+//
+//            task.resume()
+//        }
+//    }
     
 }
 
 
 
 // 앨범
-extension PC_ViewController: PHPickerViewControllerDelegate{
-
-        // picker가 종료되면 동작 함
-        func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+// 앨범
+extension PC_ViewController: PHPickerViewControllerDelegate {
+    // picker가 종료되면 동작 함
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        
+        // picker가 선택이 완료되면 화면 내리기
+        picker.dismiss(animated: true)
+        
+        // 만들어준 itemProviders에 Picker로 선택한 이미지정보를 전달
+        itemProviders = results.map(\.itemProvider)
+        
+        // 앨범에서 이미지 선택시 imgview에 보이기
+        if !itemProviders.isEmpty {
+            addPreviewImage()
             
-            // picker가 선택이 완료되면 화면 내리기
-            picker.dismiss(animated: true)
-            
-            // 만들어준 itemProviders에 Picker로 선택한 이미지정보를 전달
-            itemProviders = results.map(\.itemProvider)
-            
-            // 앨범에서 이미지 선택시 imgview에 보이기
-            if !itemProviders.isEmpty {
-                        addPreviewImage()
-                    }
+            // 이미지가 골라지면 정면사진인지 확인
+            if let image = img_upload.image {
+                sendImageToServer(image: image)
+            }
         }
-} // 앨범끗
+    }
+    
+    // 이미지를 Flask 서버로 전송
+    func sendImageToServer(image: UIImage) {
+        let serverURL = URL(string: "http://127.0.0.1:5000/rgb")! // Flask 서버 엔드포인트
+        
+        // 이미지를 Data로 변환
+        if let imageData = image.jpegData(compressionQuality: 1.0) {
+            var request = URLRequest(url: serverURL)
+            request.httpMethod = "POST"
+            
+            // 이미지 데이터를 요청 본문에 추가
+            request.httpBody = imageData
+            
+            // Content-Type 헤더 설정
+            request.setValue("image/jpeg", forHTTPHeaderField: "Content-Type")
+            
+            let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                    return
+                }
+                
+                if let data = data {
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                            if let rgbValues = json["rgb"] as? [Int] {
+                                // 서버에서 받은 RGB 값 처리
+                                print("Received RGB values: \(rgbValues)")
+                            }
+                        }
+                    } catch {
+                        print("Error parsing JSON: \(error)")
+                    }
+                }
+            }
+            
+            task.resume()
+        }
+    }
+}// 앨범
 
