@@ -66,13 +66,6 @@ class Home_ViewController: UIViewController {
         
     }
     
-    @IBAction func btn_shop(_ sender: UIButton) {
-        // 메인페이지로 넘어가기
-        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "Shop_View")
-                vcName?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
-                vcName?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
-                self.present(vcName!, animated: true, completion: nil)
-    }
     
     
     @IBAction func PageControl(_ sender: UIPageControl) {

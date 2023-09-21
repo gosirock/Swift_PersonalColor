@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="PC_ViewController" customModule="PersonalColor_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="PC_ViewController" customModule="PersonalColor_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
     <resources>
         <image name="A_ColorTabBar.png" width="79" height="66"/>
         <image name="IA_ColorTabBar.png" width="79" height="50"/>
-        <image name="UploadPhoto.png" width="209" height="182"/>
+        <image name="UploadPhoto.png" width="203" height="168"/>
         <image name="btn_Slelct_Photo.png" width="301" height="34"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

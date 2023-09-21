@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pG9-KH-4qG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfI-aD-d3Y">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -28,6 +28,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="pctest.png" title=""/>
+                                <connections>
+                                    <segue destination="e27-uo-nUM" kind="show" id="LQH-C1-A15"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQ8-vC-QKx">
                                 <rect key="frame" x="16" y="521" width="362" height="216"/>
@@ -35,7 +38,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Shop.png" title=""/>
                                 <connections>
-                                    <action selector="btn_shop:" destination="pG9-KH-4qG" eventType="touchUpInside" id="odU-63-0LX"/>
+                                    <segue destination="fNw-qp-CGH" kind="show" id="36q-r6-RNX"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="M1C-Rl-xhw">
@@ -69,7 +72,7 @@
                         <viewLayoutGuide key="safeArea" id="bLG-IQ-MnK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="IA_HomeTabBar.png" selectedImage="A_HomeTabBar.png" id="xBf-lQ-Kz6"/>
+                    <navigationItem key="navigationItem" id="wha-AI-KLh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="img_banner" destination="wnL-an-nYQ" id="oeM-b4-mmA"/>
@@ -78,17 +81,46 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULU-U1-G2o" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3808.3969465648852" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oVA-vM-9rW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZfI-aD-d3Y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="IA_HomeTabBar.png" selectedImage="A_HomeTabBar.png" id="xBf-lQ-Kz6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I7l-ZG-nS1">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pG9-KH-4qG" kind="relationship" relationship="rootViewController" id="sfm-MK-dMt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRb-ab-3sP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="2881.679389312977" y="3.5211267605633805"/>
         </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="5nL-hW-hNM">
+        <!--PC-->
+        <scene sceneID="hi9-Rw-kgp">
             <objects>
-                <viewControllerPlaceholder id="Gxy-bZ-gkn" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="YTW-9m-qkT"/>
+                <viewControllerPlaceholder storyboardName="PC_Storyboard" referencedIdentifier="PC" id="e27-uo-nUM" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ll7-Nx-Kyx"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oSp-Og-T5W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoc-JS-JRC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3450" y="175"/>
+            <point key="canvasLocation" x="4521" y="-70"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="ukD-4z-2Mc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Map_Storyboard" referencedIdentifier="Map" id="fNw-qp-CGH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YfQ-HM-gGL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8DM-JL-W4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4541" y="13"/>
         </scene>
     </scenes>
     <resources>
