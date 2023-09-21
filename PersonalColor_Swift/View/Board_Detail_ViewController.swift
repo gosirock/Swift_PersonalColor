@@ -1,13 +1,13 @@
 //
-//  Home_ViewController.swift
+//  Board_Detail_ViewController.swift
 //  PersonalColor_Swift
 //
-//  Created by 이종욱 on 2023/09/19.
+//  Created by 이종욱 on 2023/09/21.
 //
 
 import UIKit
 
-class Home_ViewController: UIViewController {
+class Board_Detail_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
