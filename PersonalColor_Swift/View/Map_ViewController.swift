@@ -1,42 +1,43 @@
-//
-//  Shop_ViewController.swift
-//  PersonalColor_Swift
-//
-//  Created by 이종욱 on 2023/09/19.
-//
-
 import UIKit
-import MapKit
+import NMapsMap
 
 class Map_ViewController: UIViewController {
 
-    
-    
-    
-    @IBOutlet var map_view: MKMapView!
-    let location = CLLocationCoordinate2D(latitude: 37.494375, longitude: 127.029926)
+    private var mapView: NMFMapView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        f_map()
-     
-                
-    }
-    
-    func f_map(){
-        map_view.setRegion(MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)), animated: true)
-        
-        let annotation = MKPointAnnotation()
-        annotation.title = "더조은!!!!"
-        annotation.coordinate = location
-        map_view.addAnnotation(annotation)
 
+        mapView = NMFMapView(frame: view.frame) // 클래스 레벨에서 선언한 mapView 초기화
+        view.addSubview(mapView)
+
+        // 좌표 설정 및 마커 추가
+        setCamera()
+        setMarker()
     }
 
-    
-    @IBOutlet var smap_view: MKMapView!
-    
+    func setCamera() {
+        let camPosition = NMGLatLng(lat: 37.503730, lng: 127.044871)
+        let cameraUpdate = NMFCameraUpdate(scrollTo: camPosition)
+        mapView.moveCamera(cameraUpdate)
+    }
+
+    func setMarker() {
+        let marker = NMFMarker()
+        marker.position = NMGLatLng(lat: 37.503730, lng: 127.044871)
+        marker.iconImage = NMF_MARKER_IMAGE_BLACK
+        marker.iconTintColor = UIColor.red
+        marker.width = 50
+        marker.height = 60
+        marker.mapView = mapView
+
+        // 정보창 생성
+        let infoWindow = NMFInfoWindow()
+        let dataSource = NMFInfoWindowDefaultTextSource.data()
+        dataSource.title = "컬러홀릭 퍼스널컬러진단"
+        infoWindow.dataSource = dataSource
+
+        // 마커에 달아주기
+        infoWindow.open(with: marker)
+    }
 }
-
-
