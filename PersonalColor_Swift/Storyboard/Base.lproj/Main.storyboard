@@ -40,7 +40,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnNaver:" destination="Uwz-Ox-Gjs" eventType="touchUpInside" id="bri-V5-1Hx"/>
-                                    <action selector="btn_kakao:" destination="Uwz-Ox-Gjs" eventType="touchUpInside" id="eOi-1O-bxk"/>
                                 </connections>
                             </button>
                         </subviews>
