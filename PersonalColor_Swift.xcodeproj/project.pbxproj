@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C74321852ABC03C4003F3718 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321842ABC03C4003F3718 /* RegisterViewController.swift */; };
+		C74321892ABC0BE7003F3718 /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321882ABC0BE7003F3718 /* UserDBModel.swift */; };
+		C743218B2ABC0BFE003F3718 /* UserJSONDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743218A2ABC0BFE003F3718 /* UserJSONDBModel.swift */; };
+		C743218D2ABC0D7A003F3718 /* UserQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743218C2ABC0D7A003F3718 /* UserQuery.swift */; };
+		C74321902ABC10DD003F3718 /* UserInsert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743218F2ABC10DD003F3718 /* UserInsert.swift */; };
+		C74321922ABC110D003F3718 /* UserUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321912ABC110D003F3718 /* UserUpdate.swift */; };
+		C74321942ABC1125003F3718 /* UserDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74321932ABC1125003F3718 /* UserDelete.swift */; };
+		C74321982ABC2209003F3718 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C74321972ABC2209003F3718 /* setting.png */; };
+		C743219C2ABC290E003F3718 /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C743219B2ABC290E003F3718 /* SettingTableViewController.swift */; };
+		C79B78962ABC328200A12B3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C79B78952ABC328200A12B3E /* GoogleService-Info.plist */; };
+		C79B78992ABC331A00A12B3E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C79B78982ABC331A00A12B3E /* FirebaseAnalytics */; };
+		C79B789B2ABC331A00A12B3E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C79B789A2ABC331A00A12B3E /* FirebaseFirestore */; };
+		C79B789D2ABC331A00A12B3E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C79B789C2ABC331A00A12B3E /* FirebaseStorage */; };
+		C7FC8B362ABC3143008D8048 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FC8B352ABC3143008D8048 /* SettingTableViewCell.swift */; };
 		FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */; };
 		FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */; };
 		FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B72AB9340600C84D25 /* SceneDelegate.swift */; };
@@ -44,6 +58,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C74321842ABC03C4003F3718 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C74321882ABC0BE7003F3718 /* UserDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
+		C743218A2ABC0BFE003F3718 /* UserJSONDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSONDBModel.swift; sourceTree = "<group>"; };
+		C743218C2ABC0D7A003F3718 /* UserQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuery.swift; sourceTree = "<group>"; };
+		C743218F2ABC10DD003F3718 /* UserInsert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInsert.swift; sourceTree = "<group>"; };
+		C74321912ABC110D003F3718 /* UserUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdate.swift; sourceTree = "<group>"; };
+		C74321932ABC1125003F3718 /* UserDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDelete.swift; sourceTree = "<group>"; };
+		C74321972ABC2209003F3718 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		C743219B2ABC290E003F3718 /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		C79B78952ABC328200A12B3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C7FC8B352ABC3143008D8048 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0B22AB9340600C84D25 /* PersonalColor_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,13 +111,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6BC10F2AB995BE00C84D25 /* KakaoSDK in Frameworks */,
+				C79B789B2ABC331A00A12B3E /* FirebaseFirestore in Frameworks */,
 				FC6BC1112AB995BE00C84D25 /* KakaoSDKAuth in Frameworks */,
+				C79B789D2ABC331A00A12B3E /* FirebaseStorage in Frameworks */,
+				C79B78992ABC331A00A12B3E /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C74321862ABC0B8F003F3718 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C743218C2ABC0D7A003F3718 /* UserQuery.swift */,
+				C743218F2ABC10DD003F3718 /* UserInsert.swift */,
+				C74321912ABC110D003F3718 /* UserUpdate.swift */,
+				C74321932ABC1125003F3718 /* UserDelete.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C74321872ABC0B98003F3718 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C74321882ABC0BE7003F3718 /* UserDBModel.swift */,
+				C743218A2ABC0BFE003F3718 /* UserJSONDBModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FC6BC0A92AB9340600C84D25 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +160,9 @@
 		FC6BC0B42AB9340600C84D25 /* PersonalColor_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				C79B78952ABC328200A12B3E /* GoogleService-Info.plist */,
+				C74321872ABC0B98003F3718 /* Model */,
+				C74321862ABC0B8F003F3718 /* ViewModel */,
 				FC6BC0C92AB9381A00C84D25 /* images */,
 				FC6BC0F12AB9726200C84D25 /* View */,
 				FC6BC1122ABA9E7300C84D25 /* Storyboard */,
@@ -143,6 +194,7 @@
 		FC6BC0E02AB95F3D00C84D25 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C74321972ABC2209003F3718 /* setting.png */,
 				FC6BC0EF2AB971BB00C84D25 /* IA_ShopTabBar.png */,
 				FC6BC0E52AB9603700C84D25 /* A_MyPageTabBar.png */,
 				FC6BC0E72AB9603700C84D25 /* A_ShopTabBar.png */,
@@ -162,6 +214,9 @@
 				FC6BC1012AB978E900C84D25 /* Map_ViewController.swift */,
 				FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */,
 				FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */,
+				C74321842ABC03C4003F3718 /* RegisterViewController.swift */,
+				C743219B2ABC290E003F3718 /* SettingTableViewController.swift */,
+				C7FC8B352ABC3143008D8048 /* SettingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +263,9 @@
 			packageProductDependencies = (
 				FC6BC10E2AB995BE00C84D25 /* KakaoSDK */,
 				FC6BC1102AB995BE00C84D25 /* KakaoSDKAuth */,
+				C79B78982ABC331A00A12B3E /* FirebaseAnalytics */,
+				C79B789A2ABC331A00A12B3E /* FirebaseFirestore */,
+				C79B789C2ABC331A00A12B3E /* FirebaseStorage */,
 			);
 			productName = PersonalColor_Swift;
 			productReference = FC6BC0B22AB9340600C84D25 /* PersonalColor_Swift.app */;
@@ -239,6 +297,7 @@
 			mainGroup = FC6BC0A92AB9340600C84D25;
 			packageReferences = (
 				FC6BC10D2AB995BE00C84D25 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				C79B78972ABC331A00A12B3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FC6BC0B32AB9340600C84D25 /* Products */;
 			projectDirPath = "";
@@ -267,7 +326,9 @@
 				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
 				FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */,
+				C79B78962ABC328200A12B3E /* GoogleService-Info.plist in Resources */,
 				FC6BC0BF2AB9340800C84D25 /* Assets.xcassets in Resources */,
+				C74321982ABC2209003F3718 /* setting.png in Resources */,
 				FC6BC0F02AB971BB00C84D25 /* IA_ShopTabBar.png in Resources */,
 				FC6BC0EA2AB9603700C84D25 /* IA_MyPageTabBar.png in Resources */,
 				FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */,
@@ -291,9 +352,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */,
+				C74321942ABC1125003F3718 /* UserDelete.swift in Sources */,
+				C74321922ABC110D003F3718 /* UserUpdate.swift in Sources */,
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
+				C74321892ABC0BE7003F3718 /* UserDBModel.swift in Sources */,
+				C74321852ABC03C4003F3718 /* RegisterViewController.swift in Sources */,
+				C7FC8B362ABC3143008D8048 /* SettingTableViewCell.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
+				C743218D2ABC0D7A003F3718 /* UserQuery.swift in Sources */,
+				C743219C2ABC290E003F3718 /* SettingTableViewController.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
+				C74321902ABC10DD003F3718 /* UserInsert.swift in Sources */,
+				C743218B2ABC0BFE003F3718 /* UserJSONDBModel.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
 			);
@@ -513,6 +583,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C79B78972ABC331A00A12B3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		FC6BC10D2AB995BE00C84D25 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -524,6 +602,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C79B78982ABC331A00A12B3E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79B78972ABC331A00A12B3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C79B789A2ABC331A00A12B3E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79B78972ABC331A00A12B3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C79B789C2ABC331A00A12B3E /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C79B78972ABC331A00A12B3E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		FC6BC10E2AB995BE00C84D25 /* KakaoSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FC6BC10D2AB995BE00C84D25 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
