@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */; };
 		FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */; };
 		FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B72AB9340600C84D25 /* SceneDelegate.swift */; };
 		FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */; };
@@ -15,7 +16,6 @@
 		FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0C02AB9340800C84D25 /* LaunchScreen.storyboard */; };
 		FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0CA2AB9382400C84D25 /* kakao_login_btn.png */; };
 		FC6BC0CF2AB9390C00C84D25 /* PC_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0CE2AB9390C00C84D25 /* PC_Storyboard.storyboard */; };
-		FC6BC0D12AB9392B00C84D25 /* Shop_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0D02AB9392B00C84D25 /* Shop_Storyboard.storyboard */; };
 		FC6BC0D32AB9394600C84D25 /* Mypage_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0D22AB9394600C84D25 /* Mypage_Storyboard.storyboard */; };
 		FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0DA2AB94FB900C84D25 /* Home_Storyboard.storyboard */; };
 		FC6BC0DD2AB95E0F00C84D25 /* A_HomeTabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0DC2AB95E0F00C84D25 /* A_HomeTabBar.png */; };
@@ -32,7 +32,7 @@
 		FC6BC0FA2AB9742000C84D25 /* Shop.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0F92AB9742000C84D25 /* Shop.png */; };
 		FC6BC0FE2AB976F000C84D25 /* UploadPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0FD2AB976EF00C84D25 /* UploadPhoto.png */; };
 		FC6BC1002AB9773500C84D25 /* btn_Slelct_Photo.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0FF2AB9773500C84D25 /* btn_Slelct_Photo.png */; };
-		FC6BC1022AB978E900C84D25 /* Shop_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC1012AB978E900C84D25 /* Shop_ViewController.swift */; };
+		FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC1012AB978E900C84D25 /* Map_ViewController.swift */; };
 		FC6BC1042AB989CC00C84D25 /* b3.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC1032AB989CC00C84D25 /* b3.png */; };
 		FC6BC1062AB98A4800C84D25 /* b2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC1052AB98A4800C84D25 /* b2.png */; };
 		FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC1092AB98D0F00C84D25 /* btn_naver.png */; };
@@ -40,9 +40,11 @@
 		FC6BC10F2AB995BE00C84D25 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = FC6BC10E2AB995BE00C84D25 /* KakaoSDK */; };
 		FC6BC1112AB995BE00C84D25 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FC6BC1102AB995BE00C84D25 /* KakaoSDKAuth */; };
 		FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */; };
+		FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0B22AB9340600C84D25 /* PersonalColor_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6BC0B72AB9340600C84D25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +55,6 @@
 		FC6BC0C32AB9340800C84D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6BC0CA2AB9382400C84D25 /* kakao_login_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_login_btn.png; sourceTree = "<group>"; };
 		FC6BC0CE2AB9390C00C84D25 /* PC_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PC_Storyboard.storyboard; sourceTree = "<group>"; };
-		FC6BC0D02AB9392B00C84D25 /* Shop_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shop_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0D22AB9394600C84D25 /* Mypage_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0DA2AB94FB900C84D25 /* Home_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0DC2AB95E0F00C84D25 /* A_HomeTabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = A_HomeTabBar.png; sourceTree = "<group>"; };
@@ -68,14 +69,15 @@
 		FC6BC0F52AB973C000C84D25 /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b1.png; sourceTree = "<group>"; };
 		FC6BC0F72AB973F400C84D25 /* pctest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pctest.png; sourceTree = "<group>"; };
 		FC6BC0F92AB9742000C84D25 /* Shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shop.png; sourceTree = "<group>"; };
-		FC6BC0FD2AB976EF00C84D25 /* UploadPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = UploadPhoto.png; path = ../../../../../Downloads/UploadPhoto.png; sourceTree = "<group>"; };
+		FC6BC0FD2AB976EF00C84D25 /* UploadPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UploadPhoto.png; sourceTree = "<group>"; };
 		FC6BC0FF2AB9773500C84D25 /* btn_Slelct_Photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_Slelct_Photo.png; sourceTree = "<group>"; };
-		FC6BC1012AB978E900C84D25 /* Shop_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop_ViewController.swift; sourceTree = "<group>"; };
+		FC6BC1012AB978E900C84D25 /* Map_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map_ViewController.swift; sourceTree = "<group>"; };
 		FC6BC1032AB989CC00C84D25 /* b3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b3.png; sourceTree = "<group>"; };
 		FC6BC1052AB98A4800C84D25 /* b2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b2.png; sourceTree = "<group>"; };
 		FC6BC1092AB98D0F00C84D25 /* btn_naver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_naver.png; sourceTree = "<group>"; };
 		FC6BC10B2AB98D7F00C84D25 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PC_ViewController.swift; sourceTree = "<group>"; };
+		FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Board_Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				FC6BC0F32AB972CB00C84D25 /* Home_ViewController.swift */,
-				FC6BC1012AB978E900C84D25 /* Shop_ViewController.swift */,
+				FC6BC1012AB978E900C84D25 /* Map_ViewController.swift */,
 				FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */,
 				FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */,
 			);
@@ -179,9 +181,10 @@
 			children = (
 				FC6BC0BB2AB9340600C84D25 /* Main.storyboard */,
 				FC6BC0CE2AB9390C00C84D25 /* PC_Storyboard.storyboard */,
-				FC6BC0D02AB9392B00C84D25 /* Shop_Storyboard.storyboard */,
 				FC6BC0D22AB9394600C84D25 /* Mypage_Storyboard.storyboard */,
 				FC6BC0DA2AB94FB900C84D25 /* Home_Storyboard.storyboard */,
+				FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */,
+				FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				FC6BC1002AB9773500C84D25 /* btn_Slelct_Photo.png in Resources */,
 				FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */,
 				FC6BC0FE2AB976F000C84D25 /* UploadPhoto.png in Resources */,
+				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
 				FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */,
 				FC6BC0BF2AB9340800C84D25 /* Assets.xcassets in Resources */,
@@ -269,8 +273,8 @@
 				FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */,
 				FC6BC0FA2AB9742000C84D25 /* Shop.png in Resources */,
 				FC6BC0BD2AB9340600C84D25 /* Main.storyboard in Resources */,
-				FC6BC0D12AB9392B00C84D25 /* Shop_Storyboard.storyboard in Resources */,
 				FC6BC0E42AB95F4D00C84D25 /* A_ColorTabBar.png in Resources */,
+				FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */,
 				FC6BC0DD2AB95E0F00C84D25 /* A_HomeTabBar.png in Resources */,
 				FC6BC0E32AB95F4D00C84D25 /* IA_ColorTabBar.png in Resources */,
 				FC6BC0D32AB9394600C84D25 /* Mypage_Storyboard.storyboard in Resources */,
@@ -290,7 +294,7 @@
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
-				FC6BC1022AB978E900C84D25 /* Shop_ViewController.swift in Sources */,
+				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
