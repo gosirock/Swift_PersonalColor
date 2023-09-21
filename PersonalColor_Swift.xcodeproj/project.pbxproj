@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFBB17734FAA6506AF5BCB81 /* Pods_PersonalColor_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE22A0266C532A23FEDA9B9 /* Pods_PersonalColor_Swift.framework */; };
 		FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */; };
 		FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */; };
 		FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B72AB9340600C84D25 /* SceneDelegate.swift */; };
@@ -44,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DE22A0266C532A23FEDA9B9 /* Pods_PersonalColor_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalColor_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64046AE97BAAF2826AB49968 /* Pods-PersonalColor_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.debug.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		F90CFCA26E6588272B5AE7AB /* Pods-PersonalColor_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.release.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0B22AB9340600C84D25 /* PersonalColor_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,17 +91,38 @@
 			files = (
 				FC6BC10F2AB995BE00C84D25 /* KakaoSDK in Frameworks */,
 				FC6BC1112AB995BE00C84D25 /* KakaoSDKAuth in Frameworks */,
+				DFBB17734FAA6506AF5BCB81 /* Pods_PersonalColor_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58FFDF3A62F2AFBF70A36057 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DE22A0266C532A23FEDA9B9 /* Pods_PersonalColor_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		992595ED8D3EBBC6AFFBC08B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64046AE97BAAF2826AB49968 /* Pods-PersonalColor_Swift.debug.xcconfig */,
+				F90CFCA26E6588272B5AE7AB /* Pods-PersonalColor_Swift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FC6BC0A92AB9340600C84D25 = {
 			isa = PBXGroup;
 			children = (
 				FC6BC0B42AB9340600C84D25 /* PersonalColor_Swift */,
 				FC6BC0B32AB9340600C84D25 /* Products */,
+				992595ED8D3EBBC6AFFBC08B /* Pods */,
+				58FFDF3A62F2AFBF70A36057 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC6BC0C62AB9340800C84D25 /* Build configuration list for PBXNativeTarget "PersonalColor_Swift" */;
 			buildPhases = (
+				9A4D27A0339A57394AB00500 /* [CP] Check Pods Manifest.lock */,
 				FC6BC0AE2AB9340600C84D25 /* Sources */,
 				FC6BC0AF2AB9340600C84D25 /* Frameworks */,
 				FC6BC0B02AB9340600C84D25 /* Resources */,
+				A63CC199802D16A3F9080AF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +311,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A4D27A0339A57394AB00500 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonalColor_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A63CC199802D16A3F9080AF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC6BC0AE2AB9340600C84D25 /* Sources */ = {
@@ -437,6 +506,7 @@
 		};
 		FC6BC0C72AB9340800C84D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64046AE97BAAF2826AB49968 /* Pods-PersonalColor_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +534,7 @@
 		};
 		FC6BC0C82AB9340800C84D25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F90CFCA26E6588272B5AE7AB /* Pods-PersonalColor_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
