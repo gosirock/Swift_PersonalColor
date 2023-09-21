@@ -11,14 +11,40 @@ class Main_ViewController: UIViewController {
     
     
 
+    // 버튼 상태관리
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var kakaoButton: UIButton!
+    @IBOutlet weak var naverButton: UIButton!
     
+    var loginStatus : Bool = false
+    var registerStatus : Bool = false
+    var kakaoStatus : Bool = false
+    var naverStatus : Bool = false
+    
+    // 텍스트필드 상태관리
+    @IBOutlet weak var lblID: UILabel!
+    @IBOutlet weak var lblPW: UILabel!
+    @IBOutlet weak var tfID: UITextField!
+    @IBOutlet weak var tfPW: UITextField!
+    var idStatus : Bool = false
+    var pwStatus : Bool = false
+    
+    
+    @IBOutlet weak var btnLogin2: UIButton!
+    var logBtn : Bool = false
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        // 
+        //
+        lblID.isHidden = true
+        lblPW.isHidden = true
+        tfID.isHidden = true
+        tfPW.isHidden = true
+        btnLogin2.isHidden = true
     }
     
     
@@ -87,4 +113,55 @@ class Main_ViewController: UIViewController {
     }
     
     
-}
+    
+    @IBAction func btnLogin(_ sender: UIButton) {
+        btnChange()
+    }
+    
+    
+    
+    
+    @IBAction func btnRegister(_ sender: Any) {
+        
+    }
+    
+    
+    @IBAction func btnLog(_ sender: UIButton) {
+        btnChange()
+    }
+    
+    
+    // 로그인 버튼 클릭 시 , 버튼 사라지고 ID, PW 입력 text field 생성
+    func btnChange() {
+        //
+        loginButton.isHidden = !loginStatus
+        loginStatus = !loginStatus
+        
+        registerButton.isHidden = !registerStatus
+        registerStatus = !registerStatus
+        
+        kakaoButton.isHidden = !kakaoStatus
+        kakaoStatus = !kakaoStatus
+        
+        naverButton.isHidden = !naverStatus
+        naverStatus = !naverStatus
+        
+        //
+        lblID.isHidden = idStatus
+        lblPW.isHidden = pwStatus
+        tfID.isHidden = idStatus
+        tfPW.isHidden = idStatus
+        btnLogin2.isHidden = logBtn
+        
+        
+        idStatus = !idStatus
+        pwStatus = !pwStatus
+        logBtn = !logBtn
+        
+    }
+    
+    
+    
+    
+    
+}//Main_ViewController
