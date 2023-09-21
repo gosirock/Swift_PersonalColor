@@ -146,6 +146,8 @@
 			children = (
 				FC6BC0B42AB9340600C84D25 /* PersonalColor_Swift */,
 				FC6BC0B32AB9340600C84D25 /* Products */,
+				992595ED8D3EBBC6AFFBC08B /* Pods */,
+				58FFDF3A62F2AFBF70A36057 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC6BC0C62AB9340800C84D25 /* Build configuration list for PBXNativeTarget "PersonalColor_Swift" */;
 			buildPhases = (
+				9A4D27A0339A57394AB00500 /* [CP] Check Pods Manifest.lock */,
 				FC6BC0AE2AB9340600C84D25 /* Sources */,
 				FC6BC0AF2AB9340600C84D25 /* Frameworks */,
 				FC6BC0B02AB9340600C84D25 /* Resources */,
+				A63CC199802D16A3F9080AF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,6 +349,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A4D27A0339A57394AB00500 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonalColor_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A63CC199802D16A3F9080AF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC6BC0AE2AB9340600C84D25 /* Sources */ = {
@@ -507,6 +553,7 @@
 		};
 		FC6BC0C72AB9340800C84D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64046AE97BAAF2826AB49968 /* Pods-PersonalColor_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -534,6 +581,7 @@
 		};
 		FC6BC0C82AB9340800C84D25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F90CFCA26E6588272B5AE7AB /* Pods-PersonalColor_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
