@@ -73,7 +73,7 @@ class PC_ViewController: UIViewController {
         }
     } // func addPreviewImage() End-
     
-    // 이미지를 서버로 업로드
+    // 이미지를 서버로 업로드 , VM으로 이동 시켜야되는 부분
     func uploadImageToServer(_ image: UIImage) {
         if let imageData = image.jpegData(compressionQuality: 1.0) {
             let serverURL = URL(string: "http://127.0.0.1:5000/ai/personalcolor")! // Flask 서버 엔드포인트
@@ -111,21 +111,19 @@ class PC_ViewController: UIViewController {
         }
         
         do {
-            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
                 // JSON 데이터를 파싱하여 원하는 작업을 수행합니다.
                 print("Received JSON: \(json)")
                 
-                // 예시: JSON 결과를 사용하여 UI 업데이트
-                if json["result"] is String {
-                    DispatchQueue.main.async {
-                        // UI 업데이트 코드 작성
-                    }
+                DispatchQueue.main.async {
+                    print(json.values.contains("겨울쿨톤"))
                 }
+                
             }
         } catch {
             print("Error parsing JSON: \(error)")
         }
-    } // 서버에서 데이터 받아오기 끝
+    } // 서버에서 데이터 받아오기 끝, VM이동 끝
 } // VIEW END
 
 
