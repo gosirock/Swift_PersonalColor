@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */; };
+		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
+		C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */; };
+		C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */; };
+		C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */; };
+		C7F4E2BA2ABD36EA0053C44F /* UserQueryMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */; };
+		C7F4E2BC2ABD37090053C44F /* UserUpdateMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */; };
+		C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2BD2ABD37110053C44F /* UserDeleteMo.swift */; };
+		C7F4E2C02ABD3FC10053C44F /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F4E2BF2ABD3FC10053C44F /* setting.png */; };
+		C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2C12ABD45670053C44F /* SettingViewController.swift */; };
+		C7F4E2C42ABD600F0053C44F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */; };
+		C7F4E2C62ABD8E6C0053C44F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7F4E2C52ABD8E6C0053C44F /* GoogleService-Info.plist */; };
+		C7F4E2C92ABD8EA80053C44F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C7F4E2C82ABD8EA80053C44F /* FirebaseAnalytics */; };
+		C7F4E2CB2ABD8EA80053C44F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C7F4E2CA2ABD8EA80053C44F /* FirebaseFirestore */; };
+		C7F4E2CD2ABD8EA80053C44F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C7F4E2CC2ABD8EA80053C44F /* FirebaseStorage */; };
+		D82E375D06E1D34D0035BF99 /* Pods_PersonalColor_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */; };
 		FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */; };
 		FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */; };
 		FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B72AB9340600C84D25 /* SceneDelegate.swift */; };
@@ -44,6 +60,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53A4FB0A32A8D691CA0C92C9 /* Pods-PersonalColor_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.debug.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalColor_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B3C36DEC156571F545A3E24 /* Pods-PersonalColor_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.release.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
+		C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
+		C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
+		C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSONDBModel.swift; sourceTree = "<group>"; };
+		C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQueryMo.swift; sourceTree = "<group>"; };
+		C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdateMo.swift; sourceTree = "<group>"; };
+		C7F4E2BD2ABD37110053C44F /* UserDeleteMo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteMo.swift; sourceTree = "<group>"; };
+		C7F4E2BF2ABD3FC10053C44F /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		C7F4E2C12ABD45670053C44F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		C7F4E2C52ABD8E6C0053C44F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0B22AB9340600C84D25 /* PersonalColor_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,17 +118,60 @@
 			files = (
 				FC6BC10F2AB995BE00C84D25 /* KakaoSDK in Frameworks */,
 				FC6BC1112AB995BE00C84D25 /* KakaoSDKAuth in Frameworks */,
+				C7F4E2C92ABD8EA80053C44F /* FirebaseAnalytics in Frameworks */,
+				C7F4E2CB2ABD8EA80053C44F /* FirebaseFirestore in Frameworks */,
+				D82E375D06E1D34D0035BF99 /* Pods_PersonalColor_Swift.framework in Frameworks */,
+				C7F4E2CD2ABD8EA80053C44F /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06CB003C8A73CE937190AE42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EC3AE2DBC3D14B6FC8D51CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53A4FB0A32A8D691CA0C92C9 /* Pods-PersonalColor_Swift.debug.xcconfig */,
+				8B3C36DEC156571F545A3E24 /* Pods-PersonalColor_Swift.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C7F4E2B12ABD33A00053C44F /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */,
+				C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */,
+				C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */,
+				C7F4E2BD2ABD37110053C44F /* UserDeleteMo.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		C7F4E2B42ABD33D30053C44F /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */,
+				C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		FC6BC0A92AB9340600C84D25 = {
 			isa = PBXGroup;
 			children = (
 				FC6BC0B42AB9340600C84D25 /* PersonalColor_Swift */,
 				FC6BC0B32AB9340600C84D25 /* Products */,
+				9EC3AE2DBC3D14B6FC8D51CC /* Pods */,
+				06CB003C8A73CE937190AE42 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +186,9 @@
 		FC6BC0B42AB9340600C84D25 /* PersonalColor_Swift */ = {
 			isa = PBXGroup;
 			children = (
+				C7F4E2C52ABD8E6C0053C44F /* GoogleService-Info.plist */,
+				C7F4E2B42ABD33D30053C44F /* DTO */,
+				C7F4E2B12ABD33A00053C44F /* VM */,
 				FC6BC0C92AB9381A00C84D25 /* images */,
 				FC6BC0F12AB9726200C84D25 /* View */,
 				FC6BC1122ABA9E7300C84D25 /* Storyboard */,
@@ -143,6 +220,7 @@
 		FC6BC0E02AB95F3D00C84D25 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				C7F4E2BF2ABD3FC10053C44F /* setting.png */,
 				FC6BC0EF2AB971BB00C84D25 /* IA_ShopTabBar.png */,
 				FC6BC0E52AB9603700C84D25 /* A_MyPageTabBar.png */,
 				FC6BC0E72AB9603700C84D25 /* A_ShopTabBar.png */,
@@ -158,10 +236,14 @@
 		FC6BC0F12AB9726200C84D25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */,
+				C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */,
 				FC6BC0F32AB972CB00C84D25 /* Home_ViewController.swift */,
 				FC6BC1012AB978E900C84D25 /* Map_ViewController.swift */,
 				FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */,
 				FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */,
+				C7F4E2C12ABD45670053C44F /* SettingViewController.swift */,
+				C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,9 +278,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC6BC0C62AB9340800C84D25 /* Build configuration list for PBXNativeTarget "PersonalColor_Swift" */;
 			buildPhases = (
+				8465A7D47F8B82BE6C88B0EE /* [CP] Check Pods Manifest.lock */,
 				FC6BC0AE2AB9340600C84D25 /* Sources */,
 				FC6BC0AF2AB9340600C84D25 /* Frameworks */,
 				FC6BC0B02AB9340600C84D25 /* Resources */,
+				003234B392E1B6CE1A514FE9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +292,9 @@
 			packageProductDependencies = (
 				FC6BC10E2AB995BE00C84D25 /* KakaoSDK */,
 				FC6BC1102AB995BE00C84D25 /* KakaoSDKAuth */,
+				C7F4E2C82ABD8EA80053C44F /* FirebaseAnalytics */,
+				C7F4E2CA2ABD8EA80053C44F /* FirebaseFirestore */,
+				C7F4E2CC2ABD8EA80053C44F /* FirebaseStorage */,
 			);
 			productName = PersonalColor_Swift;
 			productReference = FC6BC0B22AB9340600C84D25 /* PersonalColor_Swift.app */;
@@ -239,6 +326,7 @@
 			mainGroup = FC6BC0A92AB9340600C84D25;
 			packageReferences = (
 				FC6BC10D2AB995BE00C84D25 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				C7F4E2C72ABD8EA80053C44F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = FC6BC0B32AB9340600C84D25 /* Products */;
 			projectDirPath = "";
@@ -267,7 +355,9 @@
 				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
 				FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */,
+				C7F4E2C62ABD8E6C0053C44F /* GoogleService-Info.plist in Resources */,
 				FC6BC0BF2AB9340800C84D25 /* Assets.xcassets in Resources */,
+				C7F4E2C02ABD3FC10053C44F /* setting.png in Resources */,
 				FC6BC0F02AB971BB00C84D25 /* IA_ShopTabBar.png in Resources */,
 				FC6BC0EA2AB9603700C84D25 /* IA_MyPageTabBar.png in Resources */,
 				FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */,
@@ -285,15 +375,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		003234B392E1B6CE1A514FE9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8465A7D47F8B82BE6C88B0EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PersonalColor_Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC6BC0AE2AB9340600C84D25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7F4E2BC2ABD37090053C44F /* UserUpdateMo.swift in Sources */,
+				C7F4E2C42ABD600F0053C44F /* UserInfoViewController.swift in Sources */,
+				C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */,
+				C7F4E2BA2ABD36EA0053C44F /* UserQueryMo.swift in Sources */,
 				FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */,
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
+				C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */,
+				C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */,
+				C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */,
+				C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
+				C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
+				C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
 			);
@@ -437,6 +579,7 @@
 		};
 		FC6BC0C72AB9340800C84D25 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53A4FB0A32A8D691CA0C92C9 /* Pods-PersonalColor_Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -464,6 +607,7 @@
 		};
 		FC6BC0C82AB9340800C84D25 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B3C36DEC156571F545A3E24 /* Pods-PersonalColor_Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -513,6 +657,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C7F4E2C72ABD8EA80053C44F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
 		FC6BC10D2AB995BE00C84D25 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
@@ -524,6 +676,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C7F4E2C82ABD8EA80053C44F /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7F4E2C72ABD8EA80053C44F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		C7F4E2CA2ABD8EA80053C44F /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7F4E2C72ABD8EA80053C44F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C7F4E2CC2ABD8EA80053C44F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7F4E2C72ABD8EA80053C44F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		FC6BC10E2AB995BE00C84D25 /* KakaoSDK */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FC6BC10D2AB995BE00C84D25 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
