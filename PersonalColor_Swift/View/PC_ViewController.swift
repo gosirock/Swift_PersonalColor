@@ -9,19 +9,19 @@ import UIKit
 import PhotosUI
 
 class PC_ViewController: UIViewController {
- 
+    
     
     // 앨범이미지 담는곳~
     var itemProviders: [NSItemProvider] = []
     
     @IBOutlet var img_upload: UIImageView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func btn_Slect_photo(_ sender: UIButton) {
         presentPicker()
         
@@ -47,8 +47,8 @@ class PC_ViewController: UIViewController {
         self.present(imagePicker, animated: true)
         
     } // func presentPicker() End-
-
-  
+    
+    
     // 앨범선택사진 img에 띄우기
     func addPreviewImage(){
         
@@ -57,23 +57,76 @@ class PC_ViewController: UIViewController {
         
         // 만약 itemProvider에서 UIImage로 로드가 가능하다면?
         if itemProvider.canLoadObject(ofClass: UIImage.self) {
-        // 로드 핸들러를 통해 UIImage를 처리해 줍시다.
-        itemProvider.loadObject(ofClass: UIImage.self) {
-            [weak self] image, error in
+            // 로드 핸들러를 통해 UIImage를 처리해 줍시다.
+            itemProvider.loadObject(ofClass: UIImage.self) {
+                [weak self] image, error in
+                guard let self = self,
+                      let image = image as? UIImage else { return }
                 
-            guard let self = self,
-            let image = image as? UIImage else { return }
-            
-        // loadObject가 비동기적으로 처리되기 때문에 UI 업데이트를 위해 메인쓰레드로 변경
-        DispatchQueue.main.async {
-            self.img_upload.image = image
-        
+                // loadObject가 비동기적으로 처리되기 때문에 UI 업데이트를 위해 메인쓰레드로 변경
+                DispatchQueue.main.async {
+                    self.img_upload.image = image
+                    // 이미지를 서버로 전송
+                    self.uploadImageToServer(image)
                 }
             }
         }
     } // func addPreviewImage() End-
     
-}
+    // 이미지를 서버로 업로드
+    func uploadImageToServer(_ image: UIImage) {
+        if let imageData = image.jpegData(compressionQuality: 1.0) {
+            let serverURL = URL(string: "http://127.0.0.1:5000/ai/personalcolor")! // Flask 서버 엔드포인트
+            var request = URLRequest(url: serverURL)
+            request.httpMethod = "POST" // POST 요청으로 수정
+            request.httpBody = imageData
+            request.setValue("image/jpeg", forHTTPHeaderField: "Content-Type") // Content-Type 설정
+            
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                    return
+                }
+                
+                if let data = data {
+                    // 서버에서 반환한 데이터를 처리합니다.
+                    DispatchQueue.global().async {
+                        
+                        let data = Data(data) // 데이터가 있으면 가져옵니다.
+                        DispatchQueue.main.async {
+                            self.handleServerResponse(data)
+                        }
+                    }
+                }
+                
+            }.resume() // URLSession 태스크 실행
+        }
+    }// 서버 업로드 끝
+    
+    // 서버에서 데이터 받아오기
+    func handleServerResponse(_ data: Data?) {
+        guard let data = data else {
+            print("Error: No data received from server")
+            return
+        }
+        
+        do {
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                // JSON 데이터를 파싱하여 원하는 작업을 수행합니다.
+                print("Received JSON: \(json)")
+                
+                // 예시: JSON 결과를 사용하여 UI 업데이트
+                if json["result"] is String {
+                    DispatchQueue.main.async {
+                        // UI 업데이트 코드 작성
+                    }
+                }
+            }
+        } catch {
+            print("Error parsing JSON: \(error)")
+        }
+    } // 서버에서 데이터 받아오기 끝
+} // VIEW END
 
 
 
@@ -91,47 +144,8 @@ extension PC_ViewController: PHPickerViewControllerDelegate {
         // 앨범에서 이미지 선택시 imgview에 보이기
         if !itemProviders.isEmpty {
             addPreviewImage()
-            
-            // 이미지가 골라지면 정면사진인지 확인
-            
-            if let image = img_upload.image {
-                if let imageData = image.jpegData(compressionQuality: 1.0) {
-                    // 이미지 데이터가 준비되었습니다.
-                    let serverURL = URL(string: "http://127.0.0.1:5000/rgb")! // Flask 서버 엔드포인트
-                    var request = URLRequest(url: serverURL)
-                    request.httpMethod = "POST" // POST 요청으로 수정
-
-                    // POST 요청 본문에 이미지 데이터 추가
-                    request.httpBody = imageData
-                    request.setValue("image/jpeg", forHTTPHeaderField: "Content-Type") // Content-Type 설정
-
-                    let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                        if let error = error {
-                            print("Error: \(error)")
-                            return
-                        }
-
-                        if let data = data {
-                            // 서버에서 반환한 데이터를 처리합니다.
-                            do {
-                                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                                    // JSON 데이터를 파싱하여 원하는 작업을 수행합니다.
-                                    print("Received JSON: \(json)")
-                                }
-                            } catch {
-                                print("Error parsing JSON: \(error)")
-                            }
-                        }
-                    }
-
-                    task.resume() // URLSession 태스크 실행
-                }
-            }
-
         }
     }
-    
-
 }
 
-
+    
