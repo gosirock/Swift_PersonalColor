@@ -47,7 +47,9 @@ class Main_ViewController: UIViewController {
         btnLogin2.isHidden = true
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        UserDefaults.standard.removeObject(forKey: "id")
+    }
     
     @IBAction func btn_kakao(_ sender: UIButton) {
         
@@ -127,7 +129,20 @@ class Main_ViewController: UIViewController {
     
     
     @IBAction func btnLog(_ sender: UIButton) {
-        btnChange()
+        // 메인페이지로 넘어가기
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "TabBarView")
+                vcName?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
+                vcName?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
+                self.present(vcName!, animated: true, completion: nil)
+        if let text = tfID.text?.trimmingCharacters(in: .whitespaces) {
+            UserDefaults.standard.set(text, forKey: "id")
+            print("input")
+        } else {
+            // 텍스트가 nil 또는 공백 문자로 구성되어 있을 경우에 대한 처리
+            UserDefaults.standard.removeObject(forKey: "id")
+            print("fail")
+        }
+
     }
     
     
