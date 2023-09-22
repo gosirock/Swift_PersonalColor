@@ -31,3 +31,15 @@ class UserJSON : Codable{
     var uname : String
 }
 
+// 회원정보불러오기
+class UserJSON2 : Codable{
+    // 순서도 똑같이 하기
+    //   key     value
+    var uid : String
+    var upassword : String
+    var ustatus : Int
+    var ucolor : Int
+    var uinsertdate : String
+    var uname : String
+}
+

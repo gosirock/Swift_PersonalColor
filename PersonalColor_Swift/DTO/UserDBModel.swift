@@ -17,7 +17,7 @@ class UserDBModel{
     var ustatus : Int
     var ucolor : Int
     var uinsertdate : String
-    var udeletedate : String
+    var udeletedate : String?
     var uname : String
     
     
@@ -28,6 +28,16 @@ class UserDBModel{
         self.ucolor = ucolor
         self.uinsertdate = uinsertdate
         self.udeletedate = udeletedate
+        self.uname = uname
+    }
+    
+    
+    init(uid: String, upassword: String, ustatus: Int, ucolor: Int, uinsertdate: String, uname: String) {
+        self.uid = uid
+        self.upassword = upassword
+        self.ustatus = ustatus
+        self.ucolor = ucolor
+        self.uinsertdate = uinsertdate
         self.uname = uname
     }
     
