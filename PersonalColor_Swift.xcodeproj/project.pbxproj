@@ -56,6 +56,9 @@
 		FC6BC10F2AB995BE00C84D25 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = FC6BC10E2AB995BE00C84D25 /* KakaoSDK */; };
 		FC6BC1112AB995BE00C84D25 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FC6BC1102AB995BE00C84D25 /* KakaoSDKAuth */; };
 		FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */; };
+		FC7978862ABD971C007350D0 /* Board_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7978832ABD971B007350D0 /* Board_ViewController.swift */; };
+		FC7978872ABD971C007350D0 /* Cell_Board_CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7978842ABD971B007350D0 /* Cell_Board_CollectionView.swift */; };
+		FC7978882ABD971C007350D0 /* Detail_Board_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7978852ABD971C007350D0 /* Detail_Board_ViewController.swift */; };
 		FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +111,9 @@
 		FC6BC1092AB98D0F00C84D25 /* btn_naver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_naver.png; sourceTree = "<group>"; };
 		FC6BC10B2AB98D7F00C84D25 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PC_ViewController.swift; sourceTree = "<group>"; };
+		FC7978832ABD971B007350D0 /* Board_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board_ViewController.swift; sourceTree = "<group>"; };
+		FC7978842ABD971B007350D0 /* Cell_Board_CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_Board_CollectionView.swift; sourceTree = "<group>"; };
+		FC7978852ABD971C007350D0 /* Detail_Board_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail_Board_ViewController.swift; sourceTree = "<group>"; };
 		FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Board_Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +250,9 @@
 				FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */,
 				C7F4E2C12ABD45670053C44F /* SettingViewController.swift */,
 				C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */,
+				FC7978832ABD971B007350D0 /* Board_ViewController.swift */,
+				FC7978842ABD971B007350D0 /* Cell_Board_CollectionView.swift */,
+				FC7978852ABD971C007350D0 /* Detail_Board_ViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,12 +439,15 @@
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
 				C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */,
 				C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */,
+				FC7978862ABD971C007350D0 /* Board_ViewController.swift in Sources */,
 				C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */,
 				C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
 				C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
 				C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */,
+				FC7978872ABD971C007350D0 /* Cell_Board_CollectionView.swift in Sources */,
+				FC7978882ABD971C007350D0 /* Detail_Board_ViewController.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
 			);
