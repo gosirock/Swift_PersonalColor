@@ -111,12 +111,21 @@ class PC_ViewController: UIViewController {
         }
         
         do {
-            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: String] {
-                // JSON 데이터를 파싱하여 원하는 작업을 수행합니다.
-                print("Received JSON: \(json)")
-                
+            if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                 DispatchQueue.main.async {
-                    print(json.values.contains("겨울쿨톤"))
+                    //print(json.values.contains("겨울쿨톤"))
+                    // 데이터 전송
+                    let pctViewController = PCT_ViewController()
+                    // 퍼스널 컬러 데이터
+                    if let pcType = json["result"] as? String{
+                        print(pcType)
+                        pctViewController.pcType = pcType
+                    }
+                    
+                    // rgb 데이터
+                    if let rgb = json["rgb"]{
+                        print(rgb)
+                    }
                 }
                 
             }
@@ -124,6 +133,11 @@ class PC_ViewController: UIViewController {
             print("Error parsing JSON: \(error)")
         }
     } // 서버에서 데이터 받아오기 끝, VM이동 끝
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//    }
+    
 } // VIEW END
 
 
