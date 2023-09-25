@@ -42,3 +42,13 @@ class UserDBModel{
     }
     
 }
+
+class LoginUser{
+    var rs : Int
+    var ustatus : Int
+    
+    init(rs: Int, ustatus: Int) {
+        self.rs = rs
+        self.ustatus = ustatus
+    }
+}
