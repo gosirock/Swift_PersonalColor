@@ -10,14 +10,10 @@ import PhotosUI
 
 class PC_ViewController: UIViewController {
     
-    
-    // 사진 등록
-    var images = [ "spring.png", "summer.png", "fail.png","winter.png"]
     // 카메라 셋팅
     let imgPicker = UIImagePickerController()
     
     
-    @IBOutlet weak var imgColor: UIImageView!
     @IBOutlet var img_upload: UIImageView!
     @IBOutlet weak var indicator_loding: UIActivityIndicatorView!
 
@@ -113,16 +109,19 @@ class PC_ViewController: UIViewController {
                     
                     // 퍼스널 컬러 데이터
                     if let pcType = json["result"] as? String {
-                        self.personalColor(pcType)
+                        //self.personalColor(pcType)
                         
-                        // 옵셔널 바인딩 없이 뷰 컨트롤러 인스턴스를 가져와서 화면 전환
-                        let pctStoryboardName = "pctview"
-                        let pctStoryboard = UIStoryboard(name: pctStoryboardName, bundle: nil)
-                        let viewControllerIdentifier = "PCT_ViewController"
-                        let pctViewController = pctStoryboard.instantiateViewController(withIdentifier: viewControllerIdentifier)
+                        // PCT_ViewController 인스턴스 생성
+                        let pctViewController = self.storyboard?.instantiateViewController(identifier: "pctview") as? PCT_ViewController
                         
-                        // 화면 전환을 수행합니다.
-                        self.navigationController?.pushViewController(pctViewController, animated: true)
+                        // 데이터를 뷰 컨트롤러의 프로퍼티에 할당
+                        pctViewController?.name = pcType
+                        
+                        // 모달로 화면 전환
+                        pctViewController?.modalPresentationStyle = .overFullScreen
+                        
+
+                        self.present(pctViewController ?? UIViewController(), animated: true)
                     }
                     
                     // rgb 데이터
@@ -137,18 +136,7 @@ class PC_ViewController: UIViewController {
 
     }// 서버에서 데이터 받아오기 끝, VM이동 끝
     
-    func personalColor(_ pctype: String){
-        switch pctype{
-        case "봄웜톤":
-            self.imgColor.image = UIImage(named: images[0])
-        case "여름쿨톤":
-            self.imgColor.image = UIImage(named: images[1])
-        case "가을웜톤":
-            self.imgColor.image = UIImage(named: images[2])
-        default:
-            self.imgColor.image = UIImage(named: images[3])
-        }
-    }
+
     
     
 } // VIEW END
