@@ -9,11 +9,11 @@ import UIKit
 
 class Detail_Board_ViewController: UIViewController {
 
-    
+    var name = ""
     @IBOutlet var lbl: UILabel!
     
     
-    var name = ""
+    
     
     
     override func viewDidLoad() {
