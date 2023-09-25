@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7702F382ABEA4CC009B87B1 /* EditIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7702F372ABEA4CC009B87B1 /* EditIDViewController.swift */; };
 		C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */; };
 		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
+		C797D9592ABF4F55003DF694 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C797D9582ABF4F55003DF694 /* ColorViewController.swift */; };
+		C797D95B2ABF4F60003DF694 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C797D95A2ABF4F60003DF694 /* RecommendViewController.swift */; };
+		C7AEAB5B2AC07992000AF83A /* winterRecommend.png in Resources */ = {isa = PBXBuildFile; fileRef = C7AEAB5A2AC07992000AF83A /* winterRecommend.png */; };
+		C7AEAB5D2AC07E4F000AF83A /* DataBase_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AEAB5C2AC07E4F000AF83A /* DataBase_Handler.swift */; };
+		C7AEAB5F2AC07E85000AF83A /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AEAB5E2AC07E85000AF83A /* ImageModel.swift */; };
 		C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */; };
 		C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */; };
 		C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */; };
@@ -66,8 +72,14 @@
 		53A4FB0A32A8D691CA0C92C9 /* Pods-PersonalColor_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.debug.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalColor_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3C36DEC156571F545A3E24 /* Pods-PersonalColor_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.release.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		C7702F372ABEA4CC009B87B1 /* EditIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIDViewController.swift; sourceTree = "<group>"; };
 		C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
+		C797D9582ABF4F55003DF694 /* ColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		C797D95A2ABF4F60003DF694 /* RecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		C7AEAB5A2AC07992000AF83A /* winterRecommend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winterRecommend.png; sourceTree = "<group>"; };
+		C7AEAB5C2AC07E4F000AF83A /* DataBase_Handler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase_Handler.swift; sourceTree = "<group>"; };
+		C7AEAB5E2AC07E85000AF83A /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
 		C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
 		C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
 		C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSONDBModel.swift; sourceTree = "<group>"; };
@@ -158,6 +170,7 @@
 				C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */,
 				C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */,
 				C7F4E2BD2ABD37110053C44F /* UserDeleteMo.swift */,
+				C7AEAB5C2AC07E4F000AF83A /* DataBase_Handler.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -167,6 +180,7 @@
 			children = (
 				C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */,
 				C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */,
+				C7AEAB5E2AC07E85000AF83A /* ImageModel.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 		FC6BC0C92AB9381A00C84D25 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C7AEAB5A2AC07992000AF83A /* winterRecommend.png */,
 				FC6BC1032AB989CC00C84D25 /* b3.png */,
 				FC6BC1052AB98A4800C84D25 /* b2.png */,
 				FC6BC10B2AB98D7F00C84D25 /* bg.png */,
@@ -253,6 +268,9 @@
 				FC7978832ABD971B007350D0 /* Board_ViewController.swift */,
 				FC7978842ABD971B007350D0 /* Cell_Board_CollectionView.swift */,
 				FC7978852ABD971C007350D0 /* Detail_Board_ViewController.swift */,
+				C7702F372ABEA4CC009B87B1 /* EditIDViewController.swift */,
+				C797D9582ABF4F55003DF694 /* ColorViewController.swift */,
+				C797D95A2ABF4F60003DF694 /* RecommendViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +375,7 @@
 				FC6BC0F62AB973C000C84D25 /* b1.png in Resources */,
 				FC6BC0E92AB9603700C84D25 /* A_MyPageTabBar.png in Resources */,
 				FC6BC1042AB989CC00C84D25 /* b3.png in Resources */,
+				C7AEAB5B2AC07992000AF83A /* winterRecommend.png in Resources */,
 				FC6BC0DF2AB95EBF00C84D25 /* IA_HomeTabBar.png in Resources */,
 				FC6BC1002AB9773500C84D25 /* btn_Slelct_Photo.png in Resources */,
 				FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */,
@@ -431,10 +450,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7AEAB5D2AC07E4F000AF83A /* DataBase_Handler.swift in Sources */,
 				C7F4E2BC2ABD37090053C44F /* UserUpdateMo.swift in Sources */,
 				C7F4E2C42ABD600F0053C44F /* UserInfoViewController.swift in Sources */,
 				C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */,
+				C7702F382ABEA4CC009B87B1 /* EditIDViewController.swift in Sources */,
+				C797D9592ABF4F55003DF694 /* ColorViewController.swift in Sources */,
 				C7F4E2BA2ABD36EA0053C44F /* UserQueryMo.swift in Sources */,
+				C7AEAB5F2AC07E85000AF83A /* ImageModel.swift in Sources */,
 				FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */,
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
 				C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */,
@@ -450,6 +473,7 @@
 				FC7978882ABD971C007350D0 /* Detail_Board_ViewController.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
+				C797D95B2ABF4F60003DF694 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
