@@ -11,9 +11,7 @@ import PhotosUI
 class PC_ViewController: UIViewController {
     
     
-    // 앨범이미지 담는곳~
-    var itemProviders: [NSItemProvider] = []
-    var timer: Timer? // 타이머 추가
+    // 사진 등록
     var images = [ "spring.png", "summer.png", "fail.png","winter.png"]
     // 카메라 셋팅
     let imgPicker = UIImagePickerController()
@@ -25,13 +23,35 @@ class PC_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imgPicker.delegate = self
         indicator_loding.isHidden = true
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func btn_camera_photo(_ sender: UIButton) {
-        openCamera()
+    @IBAction func btn_Slect_photo(_ sender: UIButton) {
+        // 앨범, 카메라
+        choicePhoto()
+    }
+    
+    func choicePhoto(){
+        let alert =  UIAlertController(title: "Title", message: "message", preferredStyle: .actionSheet)
+        let library =  UIAlertAction(title: "앨범에서 가져오기", style: .default, handler: {ACTION in
+            self.openLibrary()
+        })
+        let camera =  UIAlertAction(title: "카메라", style: .default, handler: {ACTION in
+            self.openCamera()
+        })
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // 라이브러리(앨범)
+    func openLibrary(){
+        imgPicker.sourceType = .photoLibrary
+        present(imgPicker, animated: false, completion: nil)
     }
     
     // 카메라 설정
@@ -43,57 +63,6 @@ class PC_ViewController: UIViewController {
         imgPicker.delegate = self
         present(imgPicker, animated: true, completion: nil)
     }
-    
-    @IBAction func btn_Slect_photo(_ sender: UIButton) {
-        // 앨범
-        presentPicker()
-    }
-    
-    // 앨범띄우기
-    func presentPicker() {
-        
-        // PHPickerConfiguration 생성 및 정의
-        var config = PHPickerConfiguration()
-        
-        // 라이브러리에서 보여줄 Assets을 필터를 한다. (기본값: 이미지, 비디오, 라이브포토)
-        config.filter = .images
-        
-        // 다중 선택 갯수 설정 (0 = 무제한)
-        config.selectionLimit = 1
-        
-        // 컨트롤러 연결
-        let imagePicker = PHPickerViewController(configuration: config)
-        imagePicker.delegate = self
-        
-        // 앨범띄우기
-        self.present(imagePicker, animated: true)
-        
-    } // func presentPicker() End-
-    
-    
-    // 앨범선택사진 img에 띄우기
-    func addPreviewImage(){
-        
-        // 사진이 한 개이므로 first로 접근하여 itemProvider를 생성
-        guard let itemProvider = itemProviders.first else { return }
-        
-        // 만약 itemProvider에서 UIImage로 로드가 가능하다면?
-        if itemProvider.canLoadObject(ofClass: UIImage.self) {
-            // 로드 핸들러를 통해 UIImage를 처리해 줍시다.
-            itemProvider.loadObject(ofClass: UIImage.self) {
-                [weak self] image, error in
-                guard let self = self,
-                      let image = image as? UIImage else { return }
-                
-                // loadObject가 비동기적으로 처리되기 때문에 UI 업데이트를 위해 메인쓰레드로 변경
-                DispatchQueue.main.async {
-                    self.img_upload.image = image
-                    // 이미지를 서버로 전송
-                    self.uploadImageToServer(image)
-                }
-            }
-        }
-    } // func addPreviewImage() End-
     
     // 이미지를 서버로 업로드 , VM으로 이동 시켜야되는 부분
     func uploadImageToServer(_ image: UIImage) {
@@ -141,28 +110,32 @@ class PC_ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.indicator_loding.isHidden = true
                     self.indicator_loding.stopAnimating()
-                    //print(json.values.contains("겨울쿨톤"))
-                    // 데이터 전송
-                    let pctViewController = PCT_ViewController()
+                    
                     // 퍼스널 컬러 데이터
-                    if let pcType = json["result"] as? String{
+                    if let pcType = json["result"] as? String {
                         self.personalColor(pcType)
-                        pctViewController.test = pcType
-                        self.navigationController?.pushViewController(pctViewController, animated: true)
                         
+                        // 옵셔널 바인딩 없이 뷰 컨트롤러 인스턴스를 가져와서 화면 전환
+                        let pctStoryboardName = "pctview"
+                        let pctStoryboard = UIStoryboard(name: pctStoryboardName, bundle: nil)
+                        let viewControllerIdentifier = "PCT_ViewController"
+                        let pctViewController = pctStoryboard.instantiateViewController(withIdentifier: viewControllerIdentifier)
+                        
+                        // 화면 전환을 수행합니다.
+                        self.navigationController?.pushViewController(pctViewController, animated: true)
                     }
                     
                     // rgb 데이터
-                    if let rgb = json["rgb"]{
+                    if let rgb = json["rgb"] {
                         print(rgb)
                     }
                 }
-                
             }
         } catch {
             print("Error parsing JSON: \(error)")
         }
-    } // 서버에서 데이터 받아오기 끝, VM이동 끝
+
+    }// 서버에서 데이터 받아오기 끝, VM이동 끝
     
     func personalColor(_ pctype: String){
         switch pctype{
@@ -179,26 +152,6 @@ class PC_ViewController: UIViewController {
     
     
 } // VIEW END
-
-
-
-// 앨범
-extension PC_ViewController: PHPickerViewControllerDelegate {
-    // picker가 종료되면 동작 함
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-        
-        // picker가 선택이 완료되면 화면 내리기
-        picker.dismiss(animated: true)
-        
-        // 만들어준 itemProviders에 Picker로 선택한 이미지정보를 전달
-        itemProviders = results.map(\.itemProvider)
-        
-        // 앨범에서 이미지 선택시 imgview에 보이기
-        if !itemProviders.isEmpty {
-            addPreviewImage()
-        }
-    }
-}
 
 // 선택한 이미지를 가져와 이미지 뷰에 설정
 extension PC_ViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
