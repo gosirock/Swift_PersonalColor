@@ -2,21 +2,21 @@
 //  PCT_ViewController.swift
 //  PersonalColor_Swift
 //
-//  Created by 강대규 on 2023/09/23.
+//  Created by 강대규 on 2023/09/25.
 //
 
 import UIKit
 
 class PCT_ViewController: UIViewController {
     
+    var test = ""
 
-    @IBOutlet weak var lblType: UILabel!
-    var pcType : String = ""
-
+    @IBOutlet weak var lbltest: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(pcType)
-        lblType.text = pcType
+//        print("pct:",test)
+        //lbltest.text = test
         // Do any additional setup after loading the view.
     }
     

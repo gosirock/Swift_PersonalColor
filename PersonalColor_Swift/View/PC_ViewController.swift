@@ -13,18 +13,40 @@ class PC_ViewController: UIViewController {
     
     // 앨범이미지 담는곳~
     var itemProviders: [NSItemProvider] = []
+    var timer: Timer? // 타이머 추가
+    var images = [ "spring.png", "summer.png", "fail.png","winter.png"]
+    // 카메라 셋팅
+    let imgPicker = UIImagePickerController()
     
+    
+    @IBOutlet weak var imgColor: UIImageView!
     @IBOutlet var img_upload: UIImageView!
-    
+    @IBOutlet weak var indicator_loding: UIActivityIndicatorView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        indicator_loding.isHidden = true
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btn_camera_photo(_ sender: UIButton) {
+        openCamera()
+    }
+    
+    // 카메라 설정
+    func openCamera(){
+        imgPicker.sourceType = .camera
+        imgPicker.allowsEditing = true
+        imgPicker.cameraDevice = .rear
+        imgPicker.cameraCaptureMode = .photo
+        imgPicker.delegate = self
+        present(imgPicker, animated: true, completion: nil)
+    }
+    
     @IBAction func btn_Slect_photo(_ sender: UIButton) {
+        // 앨범
         presentPicker()
-        
     }
     
     // 앨범띄우기
@@ -94,6 +116,10 @@ class PC_ViewController: UIViewController {
                         
                         let data = Data(data) // 데이터가 있으면 가져옵니다.
                         DispatchQueue.main.async {
+                            // loding
+                            self.indicator_loding.isHidden = false
+                            self.indicator_loding.startAnimating()
+
                             self.handleServerResponse(data)
                         }
                     }
@@ -113,13 +139,17 @@ class PC_ViewController: UIViewController {
         do {
             if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                 DispatchQueue.main.async {
+                    self.indicator_loding.isHidden = true
+                    self.indicator_loding.stopAnimating()
                     //print(json.values.contains("겨울쿨톤"))
                     // 데이터 전송
                     let pctViewController = PCT_ViewController()
                     // 퍼스널 컬러 데이터
                     if let pcType = json["result"] as? String{
-                        print(pcType)
-                        pctViewController.pcType = pcType
+                        self.personalColor(pcType)
+                        pctViewController.test = pcType
+                        self.navigationController?.pushViewController(pctViewController, animated: true)
+                        
                     }
                     
                     // rgb 데이터
@@ -134,9 +164,19 @@ class PC_ViewController: UIViewController {
         }
     } // 서버에서 데이터 받아오기 끝, VM이동 끝
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    }
+    func personalColor(_ pctype: String){
+        switch pctype{
+        case "봄웜톤":
+            self.imgColor.image = UIImage(named: images[0])
+        case "여름쿨톤":
+            self.imgColor.image = UIImage(named: images[1])
+        case "가을웜톤":
+            self.imgColor.image = UIImage(named: images[2])
+        default:
+            self.imgColor.image = UIImage(named: images[3])
+        }
+    }
+    
     
 } // VIEW END
 
@@ -157,6 +197,17 @@ extension PC_ViewController: PHPickerViewControllerDelegate {
         if !itemProviders.isEmpty {
             addPreviewImage()
         }
+    }
+}
+
+// 선택한 이미지를 가져와 이미지 뷰에 설정
+extension PC_ViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            img_upload.image = image
+            uploadImageToServer(image)
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
 }
 
