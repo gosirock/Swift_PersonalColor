@@ -24,10 +24,13 @@ class Board_ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let cell = sender as! Cell_Board_CollectionView
-        let indexPath = collectionView.indexPath(for: cell)
-        let detailView = segue.destination as! Detail_Board_ViewController
-        detailView.name = dataArray[indexPath!.row]
+        if segue.identifier == "review" {
+            let cell = sender as! Cell_Board_CollectionView
+            let indexPath = collectionView.indexPath(for: cell)
+            let detailView = segue.destination as! Detail_Board_ViewController
+            detailView.name = dataArray[indexPath!.row]
+        }
+        
         
       
     }
