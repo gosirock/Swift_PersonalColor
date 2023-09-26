@@ -7,11 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA3616BE2ABF3E190071D557 /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BA2ABF3E190071D557 /* summer.png */; };
-		AA3616BF2ABF3E190071D557 /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BB2ABF3E190071D557 /* fail.png */; };
-		AA3616C02ABF3E190071D557 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BC2ABF3E190071D557 /* winter.png */; };
-		AA3616C12ABF3E190071D557 /* spring.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BD2ABF3E190071D557 /* spring.png */; };
 		AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */; };
+		AAF3E80B2AC2A54E00971CD6 /* spring.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E8072AC2A54E00971CD6 /* spring.png */; };
+		AAF3E80F2AC2A8C500971CD6 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80C2AC2A8C500971CD6 /* winter.png */; };
+		AAF3E8102AC2A8C500971CD6 /* fall.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80D2AC2A8C500971CD6 /* fall.png */; };
+		AAF3E8112AC2A8C500971CD6 /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80E2AC2A8C500971CD6 /* summer.png */; };
+		AAF3E8132AC2AFEF00971CD6 /* EditIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */; };
+		AAF3E8162AC2B00300971CD6 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */; };
+		AAF3E8172AC2B00300971CD6 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */; };
+		C78B7FAA2AC2AC28009687C9 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */; };
+		C78B7FAE2AC2AC7E009687C9 /* User_Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */; };
+		C78B7FAF2AC2AC7E009687C9 /* User_AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */; };
+		C78B7FB02AC2AC7E009687C9 /* User_Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */; };
+		C78B7FB22AC2AC88009687C9 /* ImageDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */; };
 		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
 		C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */; };
 		C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */; };
@@ -68,8 +76,6 @@
 		FC9DFB032AC186A000824BEA /* Insert_Board_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9DFB022AC186A000824BEA /* Insert_Board_ViewController.swift */; };
 		FCB6EE512AC18BC900A295D4 /* Board_insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE502AC18BC900A295D4 /* Board_insert.swift */; };
 		FCB6EE532AC18BF800A295D4 /* Firebase_image_upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE522AC18BF800A295D4 /* Firebase_image_upload.swift */; };
-		FCB6EE552AC2ADDB00A295D4 /* Board_review_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE542AC2ADDB00A295D4 /* Board_review_list.swift */; };
-		FCB6EE572AC2ADFC00A295D4 /* Board_review_list_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE562AC2ADFC00A295D4 /* Board_review_list_model.swift */; };
 		FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -77,11 +83,19 @@
 		53A4FB0A32A8D691CA0C92C9 /* Pods-PersonalColor_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.debug.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalColor_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3C36DEC156571F545A3E24 /* Pods-PersonalColor_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.release.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.release.xcconfig"; sourceTree = "<group>"; };
-		AA3616BA2ABF3E190071D557 /* summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summer.png; sourceTree = "<group>"; };
-		AA3616BB2ABF3E190071D557 /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
-		AA3616BC2ABF3E190071D557 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
-		AA3616BD2ABF3E190071D557 /* spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spring.png; sourceTree = "<group>"; };
 		AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCT_ViewController.swift; sourceTree = "<group>"; };
+		AAF3E8072AC2A54E00971CD6 /* spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spring.png; sourceTree = "<group>"; };
+		AAF3E80C2AC2A8C500971CD6 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
+		AAF3E80D2AC2A8C500971CD6 /* fall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fall.png; sourceTree = "<group>"; };
+		AAF3E80E2AC2A8C500971CD6 /* summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summer.png; sourceTree = "<group>"; };
+		AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIDViewController.swift; sourceTree = "<group>"; };
+		AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Insert.swift; sourceTree = "<group>"; };
+		C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_AddUser.swift; sourceTree = "<group>"; };
+		C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Select.swift; sourceTree = "<group>"; };
+		C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDBModel.swift; sourceTree = "<group>"; };
 		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
 		C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
 		C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
@@ -134,8 +148,6 @@
 		FC9DFB022AC186A000824BEA /* Insert_Board_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insert_Board_ViewController.swift; sourceTree = "<group>"; };
 		FCB6EE502AC18BC900A295D4 /* Board_insert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_insert.swift; sourceTree = "<group>"; };
 		FCB6EE522AC18BF800A295D4 /* Firebase_image_upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_image_upload.swift; sourceTree = "<group>"; };
-		FCB6EE542AC2ADDB00A295D4 /* Board_review_list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_review_list.swift; sourceTree = "<group>"; };
-		FCB6EE562AC2ADFC00A295D4 /* Board_review_list_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_review_list_model.swift; sourceTree = "<group>"; };
 		FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Board_Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +188,9 @@
 		C7F4E2B12ABD33A00053C44F /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */,
+				C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */,
+				C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */,
 				C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */,
 				C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */,
 				C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */,
@@ -183,7 +198,6 @@
 				FC9DFAFE2AC130AC00824BEA /* Board_List.swift */,
 				FCB6EE502AC18BC900A295D4 /* Board_insert.swift */,
 				FCB6EE522AC18BF800A295D4 /* Firebase_image_upload.swift */,
-				FCB6EE542AC2ADDB00A295D4 /* Board_review_list.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -191,10 +205,10 @@
 		C7F4E2B42ABD33D30053C44F /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */,
 				C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */,
 				C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */,
 				FC9DFB002AC1315200824BEA /* Board_List_Model.swift */,
-				FCB6EE562AC2ADFC00A295D4 /* Board_review_list_model.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -238,10 +252,10 @@
 		FC6BC0C92AB9381A00C84D25 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				AA3616BB2ABF3E190071D557 /* fail.png */,
-				AA3616BD2ABF3E190071D557 /* spring.png */,
-				AA3616BA2ABF3E190071D557 /* summer.png */,
-				AA3616BC2ABF3E190071D557 /* winter.png */,
+				AAF3E8072AC2A54E00971CD6 /* spring.png */,
+				AAF3E80D2AC2A8C500971CD6 /* fall.png */,
+				AAF3E80E2AC2A8C500971CD6 /* summer.png */,
+				AAF3E80C2AC2A8C500971CD6 /* winter.png */,
 				FC6BC1032AB989CC00C84D25 /* b3.png */,
 				FC6BC1052AB98A4800C84D25 /* b2.png */,
 				FC6BC10B2AB98D7F00C84D25 /* bg.png */,
@@ -274,6 +288,10 @@
 		FC6BC0F12AB9726200C84D25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */,
+				AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */,
+				AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */,
+				C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */,
 				FC9DFB022AC186A000824BEA /* Insert_Board_ViewController.swift */,
 				C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */,
 				FC6BC0F32AB972CB00C84D25 /* Home_ViewController.swift */,
@@ -384,9 +402,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3616BE2ABF3E190071D557 /* summer.png in Resources */,
 				FC6BC10C2AB98D8000C84D25 /* bg.png in Resources */,
 				FC6BC0EB2AB9603700C84D25 /* A_ShopTabBar.png in Resources */,
+				AAF3E8102AC2A8C500971CD6 /* fall.png in Resources */,
 				FC6BC1062AB98A4800C84D25 /* b2.png in Resources */,
 				FC6BC0F62AB973C000C84D25 /* b1.png in Resources */,
 				FC6BC0E92AB9603700C84D25 /* A_MyPageTabBar.png in Resources */,
@@ -395,12 +413,10 @@
 				FC6BC1002AB9773500C84D25 /* btn_Slelct_Photo.png in Resources */,
 				FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */,
 				FC6BC0FE2AB976F000C84D25 /* UploadPhoto.png in Resources */,
-				AA3616BF2ABF3E190071D557 /* fail.png in Resources */,
 				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
 				FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */,
 				C7F4E2C62ABD8E6C0053C44F /* GoogleService-Info.plist in Resources */,
-				AA3616C12ABF3E190071D557 /* spring.png in Resources */,
 				FC6BC0BF2AB9340800C84D25 /* Assets.xcassets in Resources */,
 				C7F4E2C02ABD3FC10053C44F /* setting.png in Resources */,
 				FC6BC0F02AB971BB00C84D25 /* IA_ShopTabBar.png in Resources */,
@@ -408,13 +424,15 @@
 				FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */,
 				FC6BC0FA2AB9742000C84D25 /* Shop.png in Resources */,
 				FC6BC0BD2AB9340600C84D25 /* Main.storyboard in Resources */,
+				AAF3E8112AC2A8C500971CD6 /* summer.png in Resources */,
+				AAF3E80B2AC2A54E00971CD6 /* spring.png in Resources */,
+				AAF3E80F2AC2A8C500971CD6 /* winter.png in Resources */,
 				FC6BC0E42AB95F4D00C84D25 /* A_ColorTabBar.png in Resources */,
 				FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */,
 				FC6BC0DD2AB95E0F00C84D25 /* A_HomeTabBar.png in Resources */,
 				FC6BC0E32AB95F4D00C84D25 /* IA_ColorTabBar.png in Resources */,
 				FC6BC0D32AB9394600C84D25 /* Mypage_Storyboard.storyboard in Resources */,
 				FC6BC0F82AB973F400C84D25 /* pctest.png in Resources */,
-				AA3616C02ABF3E190071D557 /* winter.png in Resources */,
 				FC6BC0CF2AB9390C00C84D25 /* PC_Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +486,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C78B7FAA2AC2AC28009687C9 /* AddUserViewController.swift in Sources */,
 				C7F4E2BC2ABD37090053C44F /* UserUpdateMo.swift in Sources */,
 				FCB6EE512AC18BC900A295D4 /* Board_insert.swift in Sources */,
 				C7F4E2C42ABD600F0053C44F /* UserInfoViewController.swift in Sources */,
@@ -475,6 +494,7 @@
 				C7F4E2BA2ABD36EA0053C44F /* UserQueryMo.swift in Sources */,
 				FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */,
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
+				AAF3E8132AC2AFEF00971CD6 /* EditIDViewController.swift in Sources */,
 				FCB6EE532AC18BF800A295D4 /* Firebase_image_upload.swift in Sources */,
 				C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */,
 				C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */,
@@ -483,17 +503,21 @@
 				C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */,
 				FC9DFAFF2AC130AC00824BEA /* Board_List.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
+				AAF3E8172AC2B00300971CD6 /* RecommendViewController.swift in Sources */,
 				C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */,
-				FCB6EE572AC2ADFC00A295D4 /* Board_review_list_model.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
 				C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */,
 				FC7978872ABD971C007350D0 /* Cell_Board_CollectionView.swift in Sources */,
 				AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */,
-				FCB6EE552AC2ADDB00A295D4 /* Board_review_list.swift in Sources */,
 				FC7978882ABD971C007350D0 /* Detail_Board_ViewController.swift in Sources */,
+				C78B7FB02AC2AC7E009687C9 /* User_Select.swift in Sources */,
 				FC9DFB032AC186A000824BEA /* Insert_Board_ViewController.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
+				AAF3E8162AC2B00300971CD6 /* ColorViewController.swift in Sources */,
+				C78B7FAF2AC2AC7E009687C9 /* User_AddUser.swift in Sources */,
+				C78B7FB22AC2AC88009687C9 /* ImageDBModel.swift in Sources */,
+				C78B7FAE2AC2AC7E009687C9 /* User_Insert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
