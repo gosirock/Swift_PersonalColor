@@ -12,25 +12,7 @@ class User_UpdateModel{
     
     
     var db = Firestore.firestore()
-    
-//    func updateItems(DocumentId: String, image:String, upassword:String, uname:String){
-//
-//
-//        db.collection("user").document(DocumentId).updateData([
-//            "image" : image,
-//            "uname" : uname,
-//            "upassword" : upassword
-//        ]){error in
-//            if error != nil{
-//                print("Update fail")
-//            }else{
-//
-//            }
-//        }
-//
-//
-//    }
-//
+
     func updateItems(DocumentId: String, image:String, upassword:String, uname:String){
         db.collection("user").document(DocumentId).updateData([
             "image" : image,
@@ -41,6 +23,18 @@ class User_UpdateModel{
                 print("Update fail")
             }else{
                 print("Update success")
+            }
+        }
+    }
+    
+    func deleteItems(DocumentId: String){
+        db.collection("user").document(DocumentId).updateData([
+            "ustatus" : 1,
+        ]){error in
+            if error != nil {
+                print("delete fail")
+            }else{
+                print("delete success")
             }
         }
     }

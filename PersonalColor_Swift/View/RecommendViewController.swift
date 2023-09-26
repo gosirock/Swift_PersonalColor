@@ -15,14 +15,35 @@ class RecommendViewController: UIViewController {
     @IBOutlet weak var lblPC: UILabel!
     
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        imgView.image = UIImage(named: "winterRecommend.png")
-        lblPC.text = "Winter Cool"
+        
+        
+        
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let message = ColorMessage.self
+        
+        switch message.color{
+        case 0: lblPC.text = "Spring Warm"
+            imgView.image = UIImage(named: "spring.png")
+        case 1: lblPC.text = "Summer Cool"
+            imgView.image = UIImage(named: "summer.png")
+        case 2: lblPC.text = "Fall Warm"
+            imgView.image = UIImage(named: "fall.png")
+        default: lblPC.text = "Winter Cool"
+            imgView.image = UIImage(named: "winter.png")
+        }
+
+        
+    }
 
     /*
     // MARK: - Navigation
