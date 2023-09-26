@@ -72,7 +72,9 @@ extension Board_ViewController:UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! Cell_Board_CollectionView
         // 셀 배경화면
-        cell.backgroundColor = .white
+//        cell.backgroundColor = .white
+        let frame_list = ["frame01","frame02","frame03","frame04",]
+        cell.board_frame.image = UIImage(named: frame_list[indexPath.row % 4])
         // 셀 타이틀이름
         cell.board_label.text = collection_data[indexPath.row].title
         // 이미지주소 data로 바꾸기
@@ -102,7 +104,7 @@ extension Board_ViewController:UICollectionViewDataSource, UICollectionViewDeleg
 extension Board_ViewController:UICollectionViewDelegateFlowLayout{
     // 위아래 간격
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1 // 1픽셀 띄우겠다
+        return 150 // 1픽셀 띄우겠다
     }
     // 좌우 간격
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
