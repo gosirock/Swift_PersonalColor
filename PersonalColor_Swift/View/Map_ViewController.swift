@@ -2,18 +2,23 @@ import UIKit
 import NMapsMap
 import CoreLocation
 
-class Map_ViewController: UIViewController, NMFMapViewDelegate{
+class Map_ViewController: UIViewController, NMFMapViewDelegate {
     
     private var mapView: NMFMapView!
     let locationManager = CLLocationManager()
     private var zoomInButton: UIButton!
     private var zoomOutButton: UIButton!
     private var centerMapButton: UIButton!
-//    private var centerNearButton: UIButton!
     private var markers = [NMFMarker]()
     
+    
+    var locationDatas: [(Double, Double, String)] = []
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loadLocationsFromCSV()
         
         mapView = NMFMapView(frame: view.frame)
         mapView.delegate = self // mapView의 delegate 설정
@@ -41,23 +46,36 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
         let initialCoordinate = NMGLatLng(lat: 37.4947909, lng: 127.0300783)
         mapView.moveCamera(NMFCameraUpdate(scrollTo: initialCoordinate))
         setMarker(latitude: 37.4947909, longitude: 127.0300783, title: "더조은 아카데미")
-
         
-        
-        // 경도, 위도, 지점명 데이터 배열
-        let locationData: [(Double, Double, String)] = [
-            
-            (37.5433349, 126.9537990, "퍼스널컬러 트렌드연구소 컬러 인사이트"),
-             (37.5562697, 126.9320554, "피엘컬러 퍼스널컬러 진단"),
-             (37.5530486, 126.9376538, "더빠른퍼스널컬러컨설팅"),
-             (37.5317256, 126.9715196, "주얼인유 퍼스널컬러"),
-        ]
         
         // 데이터 배열을 순환하며 마커 추가
-        for (latitude, longitude, title) in locationData {
-            setMarker(latitude: latitude, longitude: longitude, title: title)
+        for location in locationDatas {
+            setMarker(latitude: location.0, longitude: location.1, title: location.2)
         }
     }
+    
+
+    // 데이터를 로드하고 마커를 설정하는 메서드
+    func loadLocationsFromCSV() {
+        if let path = Bundle.main.path(forResource: "location", ofType: "csv") { //csv파일 경로지정
+            do {
+                let csvData = try String(contentsOfFile: path, encoding: .utf8)
+                let csvLines = csvData.components(separatedBy: "\n")
+                
+                for line in csvLines {
+                    let components = line.components(separatedBy: ",")
+                    if components.count == 3, let latitude = Double(components[2]), let longitude = Double(components[1]) {
+                        let name = components[0]
+                        locationDatas.append((latitude, longitude, name))
+                    }
+                }
+            } catch {
+                print("Error reading CSV file")
+            }
+        }
+    }
+    
+
     
     func setMarker(latitude: Double, longitude: Double, title: String) {
         // 마커 추가
@@ -72,28 +90,28 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
         
         markers.append(marker)
         
-        
-
         // 정보창 생성 (사용자 정의 정보창)
         let infoWindow = NMFInfoWindow()
         let dataSource = NMFInfoWindowDefaultTextSource.data()
         dataSource.title = title
         infoWindow.dataSource = dataSource
-
+        
         // 마커에 정보창 연결
         marker.touchHandler = { [weak self] overlay in
-              if let self = self {
-                  if infoWindow.mapView != nil {
-                      // 정보창이 열려 있으면 닫습니다.
-                      infoWindow.close()
-                  } else {
-                      // 정보창이 열려 있지 않으면 엽니다.
-                      infoWindow.open(with: marker)
-                  }
-              }
-              return true
-          }
-      }
+            if let self = self {
+                if infoWindow.mapView != nil {
+                    // 정보창이 열려 있으면 닫습니다.
+                    infoWindow.close()
+                } else {
+                    // 정보창이 열려 있지 않으면 엽니다.
+                    infoWindow.open(with: marker)
+                }
+            }
+            return true
+        }
+    }
+    
+
     
     func addZoomButtons() {
         let buttonSize = CGSize(width: 45, height: 45)
@@ -115,6 +133,7 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
         zoomOutButton.addTarget(self, action: #selector(zoomOut), for: .touchUpInside)
         mapView.addSubview(zoomOutButton)
     }
+  
     
     func addCenterMapButton() {
         let buttonWidth: CGFloat = 160
@@ -128,8 +147,8 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
         centerMapButton.addTarget(self, action: #selector(centerMapOnUserButtonTapped), for: .touchUpInside)
         mapView.addSubview(centerMapButton)
     }
-
     
+
     
     func addMapNearButton(){
         let buttonWidth: CGFloat = 160
@@ -138,38 +157,36 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
         centerMapButton.setTitle("가까운 매장 찾기", for: .normal)
         centerMapButton.setTitleColor(.white, for: .normal)
         centerMapButton.titleLabel?.font = UIFont.systemFont(ofSize: 15) // 폰트 크기 조정
-        centerMapButton.backgroundColor = .tintColor
+        centerMapButton.backgroundColor = .systemBlue
         centerMapButton.layer.cornerRadius = 10
-        centerMapButton.layer.cornerRadius = 10
-        centerMapButton.addTarget(self, action: #selector(centerMapOnUserButtonTapped), for: .touchUpInside)
+        centerMapButton.addTarget(self, action: #selector(findNearestMarker), for: .touchUpInside)
         mapView.addSubview(centerMapButton)
     }
     
 
     
-    
-    //<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Current Location>>>>>>>>>>>>>>>>
+    //<<<<<<<<<<<<<<<<<<<<<<<<<<<Current Location>>>>>>>>>>>>>>>>
     //사용자 디바이스의 위치서비스가 활성화 된 상태라면 앱권한 상태를 확인해야한다.
     func checkUserDeviceLocationServiceAuthorization() {
-            
+        
         // 3.1
         guard CLLocationManager.locationServicesEnabled() else {
             // 시스템 설정으로 유도하는 커스텀 얼럿
             showRequestLocationServiceAlert()
             return
         }
-            
-            
+        
+        
         // 3.2
         let authorizationStatus: CLAuthorizationStatus
-            
+        
         // 앱의 권한 상태 가져오는 코드 (iOS 버전에 따라 분기처리)
         if #available(iOS 14.0, *) {
             authorizationStatus = locationManager.authorizationStatus
         }else {
             authorizationStatus = CLLocationManager.authorizationStatus()
         }
-            
+        
         // 권한 상태값에 따라 분기처리를 수행하는 메서드 실행
         checkUserCurrentLocationAuthorization(authorizationStatus)
     }
@@ -203,7 +220,7 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
             
             // 권한 요청을 보낸다.
             locationManager.requestWhenInUseAuthorization()
-                
+            
         case .denied, .restricted:
             // 사용자가 명시적으로 권한을 거부했거나, 위치 서비스 활성화가 제한된 상태
             // 시스템 설정에서 설정값을 변경하도록 유도한다.
@@ -249,7 +266,7 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
         // 현재 위치로 지도 중앙을 이동.
         mapView.positionMode = .direction
         mapView.moveCamera(NMFCameraUpdate(scrollTo: userLocation))
-
+        
         // 현재 위치를 파란색 원으로 표시.
         let circleOverlay = NMFCircleOverlay()
         circleOverlay.center = userLocation
@@ -292,62 +309,37 @@ class Map_ViewController: UIViewController, NMFMapViewDelegate{
             print("사용자 위치를 가져올 수 없음")
         }
     }
-
+    
 }
 
 
 //extension>>>>>>>>>>>>>>>>>
 extension Map_ViewController: CLLocationManagerDelegate {
-
+    
     // 사용자의 위치를 성공적으로 가져왔을 때 호출
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-
+        
         // 위치 정보를 배열로 입력받는데, 마지막 index값이 가장 정확하다고 한다.
         if let coordinate = locations.last?.coordinate {
             // ⭐️ 사용자 위치 정보 사용
-//             UI 업데이트나 다른 비동기 작업을 처리할 때는 메인 스레드로 돌아가서 실행
+            //             UI 업데이트나 다른 비동기 작업을 처리할 때는 메인 스레드로 돌아가서 실행
             DispatchQueue.main.async {
-                       let userLocation = NMGLatLng(lat: coordinate.latitude, lng: coordinate.longitude)
-
-                       // 지도상에서 사용자 위치를 업데이트하는 나머지 코드
-                   }
-               }
-               
-               // 위치 업데이트를 중지합니다.
-               locationManager.stopUpdatingLocation()
-           }
-            
-            
-            
-//----------------------------------------------------
-//                            DispatchQueue.main.async {
-//                                // 사용자의 현재 위치를 가져옵니다.
-//                                let userLocation = NMGLatLng(lat: coordinate.latitude, lng: coordinate.longitude)
-//
-//                                // 현재 위치로 지도 중앙을 이동합니다.
-////                                self.mapView.positionMode = .direction
-////                                self.mapView.moveCamera(NMFCameraUpdate(scrollTo: userLocation))
-//
-//                                // 현재 위치를 파란색 원으로 표시합니다.
-//                                let circleOverlay = NMFCircleOverlay()
-//                                circleOverlay.center = userLocation
-//                                circleOverlay.radius = 100
-//                                circleOverlay.fillColor = UIColor.blue.withAlphaComponent(0.5)
-//                                circleOverlay.mapView = self.mapView
-//                            }
-//
-//        }
-//        // startUpdatingLocation()을 사용하여 사용자 위치를 가져왔다면
-//        // 불필요한 업데이트를 방지하기 위해 stopUpdatingLocation을 호출
-//        locationManager.stopUpdatingLocation()
-//    }
-//---------------------------------------------------
-
+                let userLocation = NMGLatLng(lat: coordinate.latitude, lng: coordinate.longitude)
+                
+                // 지도상에서 사용자 위치를 업데이트하는 나머지 코드
+            }
+        }
+        
+        // 위치 업데이트를 중지합니다.
+        locationManager.stopUpdatingLocation()
+    }
+    
+    
     // 사용자가 GPS 사용이 불가한 지역에 있는 등 위치 정보를 가져오지 못했을 때 호출
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(#function)
     }
-
+    
     // 앱에 대한 권한 설정이 변경되면 호출 (iOS 14 이상)
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         // 사용자 디바이스의 위치 서비스가 활성화 상태인지 확인하는 메서드 호출
@@ -362,9 +354,3 @@ extension Map_ViewController: CLLocationManagerDelegate {
 
 //extension>>>>>>>>>>>>>>>>>END
 
-
-
-
-//
-
-//
