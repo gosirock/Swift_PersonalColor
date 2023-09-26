@@ -12,14 +12,14 @@
 		AAF3E80F2AC2A8C500971CD6 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80C2AC2A8C500971CD6 /* winter.png */; };
 		AAF3E8102AC2A8C500971CD6 /* fall.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80D2AC2A8C500971CD6 /* fall.png */; };
 		AAF3E8112AC2A8C500971CD6 /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80E2AC2A8C500971CD6 /* summer.png */; };
+		AAF3E8132AC2AFEF00971CD6 /* EditIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */; };
+		AAF3E8162AC2B00300971CD6 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */; };
+		AAF3E8172AC2B00300971CD6 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */; };
 		C78B7FAA2AC2AC28009687C9 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */; };
 		C78B7FAE2AC2AC7E009687C9 /* User_Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */; };
 		C78B7FAF2AC2AC7E009687C9 /* User_AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */; };
 		C78B7FB02AC2AC7E009687C9 /* User_Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */; };
 		C78B7FB22AC2AC88009687C9 /* ImageDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */; };
-		C78B7FB82AC2AE22009687C9 /* EditIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FB72AC2AE22009687C9 /* EditIDViewController.swift */; };
-		C78B7FBA2AC2AE29009687C9 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FB92AC2AE28009687C9 /* ColorViewController.swift */; };
-		C78B7FBC2AC2AE35009687C9 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FBB2AC2AE35009687C9 /* RecommendViewController.swift */; };
 		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
 		C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */; };
 		C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */; };
@@ -88,14 +88,14 @@
 		AAF3E80C2AC2A8C500971CD6 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
 		AAF3E80D2AC2A8C500971CD6 /* fall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fall.png; sourceTree = "<group>"; };
 		AAF3E80E2AC2A8C500971CD6 /* summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summer.png; sourceTree = "<group>"; };
+		AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIDViewController.swift; sourceTree = "<group>"; };
+		AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
+		AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Insert.swift; sourceTree = "<group>"; };
 		C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_AddUser.swift; sourceTree = "<group>"; };
 		C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Select.swift; sourceTree = "<group>"; };
 		C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDBModel.swift; sourceTree = "<group>"; };
-		C78B7FB72AC2AE22009687C9 /* EditIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditIDViewController.swift; path = ../../../pc/PersonalColor_Swift/View/EditIDViewController.swift; sourceTree = "<group>"; };
-		C78B7FB92AC2AE28009687C9 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorViewController.swift; path = ../../../pc/PersonalColor_Swift/View/ColorViewController.swift; sourceTree = "<group>"; };
-		C78B7FBB2AC2AE35009687C9 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecommendViewController.swift; path = ../../../pc/PersonalColor_Swift/View/RecommendViewController.swift; sourceTree = "<group>"; };
 		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
 		C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
 		C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
@@ -288,9 +288,9 @@
 		FC6BC0F12AB9726200C84D25 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C78B7FBB2AC2AE35009687C9 /* RecommendViewController.swift */,
-				C78B7FB92AC2AE28009687C9 /* ColorViewController.swift */,
-				C78B7FB72AC2AE22009687C9 /* EditIDViewController.swift */,
+				AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */,
+				AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */,
+				AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */,
 				C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */,
 				FC9DFB022AC186A000824BEA /* Insert_Board_ViewController.swift */,
 				C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */,
@@ -489,12 +489,12 @@
 				C78B7FAA2AC2AC28009687C9 /* AddUserViewController.swift in Sources */,
 				C7F4E2BC2ABD37090053C44F /* UserUpdateMo.swift in Sources */,
 				FCB6EE512AC18BC900A295D4 /* Board_insert.swift in Sources */,
-				C78B7FB82AC2AE22009687C9 /* EditIDViewController.swift in Sources */,
 				C7F4E2C42ABD600F0053C44F /* UserInfoViewController.swift in Sources */,
 				C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */,
 				C7F4E2BA2ABD36EA0053C44F /* UserQueryMo.swift in Sources */,
 				FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */,
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
+				AAF3E8132AC2AFEF00971CD6 /* EditIDViewController.swift in Sources */,
 				FCB6EE532AC18BF800A295D4 /* Firebase_image_upload.swift in Sources */,
 				C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */,
 				C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */,
@@ -503,7 +503,7 @@
 				C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */,
 				FC9DFAFF2AC130AC00824BEA /* Board_List.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
-				C78B7FBC2AC2AE35009687C9 /* RecommendViewController.swift in Sources */,
+				AAF3E8172AC2B00300971CD6 /* RecommendViewController.swift in Sources */,
 				C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
 				C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */,
@@ -514,7 +514,7 @@
 				FC9DFB032AC186A000824BEA /* Insert_Board_ViewController.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
-				C78B7FBA2AC2AE29009687C9 /* ColorViewController.swift in Sources */,
+				AAF3E8162AC2B00300971CD6 /* ColorViewController.swift in Sources */,
 				C78B7FAF2AC2AC7E009687C9 /* User_AddUser.swift in Sources */,
 				C78B7FB22AC2AC88009687C9 /* ImageDBModel.swift in Sources */,
 				C78B7FAE2AC2AC7E009687C9 /* User_Insert.swift in Sources */,

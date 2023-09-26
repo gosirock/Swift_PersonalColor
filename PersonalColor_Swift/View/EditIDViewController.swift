@@ -322,11 +322,11 @@ class EditIDViewController: UIViewController {
 
         
         //UIImage -> Data
-        let imageData: Data = image.pngData()! as Data
+//        let imageData: Data = image.pngData()! as Data
         
         
-        let database_Handler = DataBase_Handler_Wook()
-        database_Handler.updateAction(id: UserDefaults.standard.string(forKey: "id")!, imageName: imageName, image: imageData)
+//        let database_Handler = DataBase_Handler_Wook()
+//        database_Handler.updateAction(id: UserDefaults.standard.string(forKey: "id")!, imageName: imageName, image: imageData)
     }
     
 } //EditIDViewController
