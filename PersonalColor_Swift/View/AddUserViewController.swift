@@ -151,8 +151,8 @@ class AddUserViewController: UIViewController {
             }
         
         func validid(myid: String) -> Bool {
-            // "@" 기호가 반드시 포함되어야 하고, 총 길이가 5에서 45 사이의 문자열을 체크하는 정규표현식
-            let idreg = "^(?=.*[@])[A-Za-z0-9@#$%^&*!]{5,45}$"
+            // "@, ." 기호가 반드시 포함되어야 하고, 총 길이가 5에서 45 사이의 문자열을 체크하는 정규표현식
+            let idreg = "^(?=.*[@])(?=.*[.])[A-Za-z0-9@#$%^&*!.]{5,45}$"
             let idtesting = NSPredicate(format: "SELF MATCHES %@", idreg)
             return idtesting.evaluate(with: myid)
         }
@@ -205,7 +205,7 @@ class AddUserViewController: UIViewController {
         func firebase_insertAction(_ image : UIImage){
             
             // InsertModel 연결
-            let insertDB = User_InsertModel()
+            //let insertDB = User_InsertModel()
             let upload = User_ImageUpload()
             
             // preview text 체크
@@ -218,21 +218,6 @@ class AddUserViewController: UIViewController {
             //UIImage -> Data
             let imageData: Data = image.pngData()! as Data
             upload.imageUpload(image: imageData, uid: uid, upassword: upassword, uname: uname)
-
-    //        //  앨범에서 이미지 선택시
-    //        if imageInsert{
-    //            // 이미지업로드
-    //            //UIImage -> Data
-    //            let imageData: Data = image.pngData()! as Data
-    //            upload.imageUpload(image: imageData, uid: uid, upassword: upassword, uname: uname)
-    //
-    //        }else{
-    //            // 앨범에서 이미지 선택하지 않았을 떄
-    //            let rawImage : UIImage = UIImage(systemName: "person")!
-    //            let imageData: Data = rawImage.pngData()! as Data
-    //            upload.imageUpload(image: imageData, uid: uid, upassword: upassword, uname: uname)
-    //
-    //        }
                
             print("firebase insert success")
             
