@@ -12,6 +12,10 @@
 		AA3616C02ABF3E190071D557 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BC2ABF3E190071D557 /* winter.png */; };
 		AA3616C12ABF3E190071D557 /* spring.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BD2ABF3E190071D557 /* spring.png */; };
 		AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */; };
+		C79002012AC26B5A002F99E5 /* User_Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79002002AC26B5A002F99E5 /* User_Select.swift */; };
+		C79002032AC26D36002F99E5 /* ImageDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79002022AC26D36002F99E5 /* ImageDBModel.swift */; };
+		C79002052AC2703C002F99E5 /* User_Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79002042AC2703C002F99E5 /* User_Insert.swift */; };
+		C79002072AC271F0002F99E5 /* User_AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79002062AC271F0002F99E5 /* User_AddUser.swift */; };
 		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
 		C7DD3F612AC184C5003D9D49 /* Mypage_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD3F602AC184C5003D9D49 /* Mypage_Storyboard.storyboard */; };
 		C7DD3F642AC18540003D9D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD3F622AC18540003D9D49 /* Main.storyboard */; };
@@ -82,6 +86,10 @@
 		AA3616BC2ABF3E190071D557 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
 		AA3616BD2ABF3E190071D557 /* spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spring.png; sourceTree = "<group>"; };
 		AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCT_ViewController.swift; sourceTree = "<group>"; };
+		C79002002AC26B5A002F99E5 /* User_Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Select.swift; sourceTree = "<group>"; };
+		C79002022AC26D36002F99E5 /* ImageDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDBModel.swift; sourceTree = "<group>"; };
+		C79002042AC2703C002F99E5 /* User_Insert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_Insert.swift; sourceTree = "<group>"; };
+		C79002062AC271F0002F99E5 /* User_AddUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User_AddUser.swift; sourceTree = "<group>"; };
 		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
 		C7DD3F602AC184C5003D9D49 /* Mypage_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage_Storyboard.storyboard; sourceTree = "<group>"; };
 		C7DD3F632AC18540003D9D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,9 +181,20 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C79001FF2AC26B1E002F99E5 /* firebase_User */ = {
+			isa = PBXGroup;
+			children = (
+				C79002002AC26B5A002F99E5 /* User_Select.swift */,
+				C79002042AC2703C002F99E5 /* User_Insert.swift */,
+				C79002062AC271F0002F99E5 /* User_AddUser.swift */,
+			);
+			path = firebase_User;
+			sourceTree = "<group>";
+		};
 		C7F4E2B12ABD33A00053C44F /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				C79001FF2AC26B1E002F99E5 /* firebase_User */,
 				C7DD3F6B2AC18612003D9D49 /* UserDeleteMo.swift */,
 				C7DD3F6C2AC18612003D9D49 /* UserInsertMo.swift */,
 				C7DD3F6A2AC18612003D9D49 /* UserQueryMo.swift */,
@@ -191,6 +210,7 @@
 				C7DD3F712AC18625003D9D49 /* ImageModel.swift */,
 				C7DD3F732AC18625003D9D49 /* UserDBModel.swift */,
 				C7DD3F722AC18625003D9D49 /* UserJSONDBModel.swift */,
+				C79002022AC26D36002F99E5 /* ImageDBModel.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -469,12 +489,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79002012AC26B5A002F99E5 /* User_Select.swift in Sources */,
 				C7DD3F6E2AC18612003D9D49 /* UserQueryMo.swift in Sources */,
 				C7DD3F702AC18612003D9D49 /* UserInsertMo.swift in Sources */,
 				C7DD3F6F2AC18612003D9D49 /* UserDeleteMo.swift in Sources */,
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
 				C7DD3F682AC18605003D9D49 /* DataBase_Handler.swift in Sources */,
 				C7DD3F762AC18625003D9D49 /* UserDBModel.swift in Sources */,
+				C79002052AC2703C002F99E5 /* User_Insert.swift in Sources */,
 				C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */,
 				FC7978862ABD971C007350D0 /* Board_ViewController.swift in Sources */,
 				C7DD3F752AC18625003D9D49 /* UserJSONDBModel.swift in Sources */,
@@ -493,6 +515,8 @@
 				C7DD3F662AC185E8003D9D49 /* Main_ViewController.swift in Sources */,
 				C7DD3F7E2AC18656003D9D49 /* RegisterViewController.swift in Sources */,
 				C7DD3F6D2AC18612003D9D49 /* UserUpdateMo.swift in Sources */,
+				C79002032AC26D36002F99E5 /* ImageDBModel.swift in Sources */,
+				C79002072AC271F0002F99E5 /* User_AddUser.swift in Sources */,
 				C7DD3F8E2AC1CB9E003D9D49 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

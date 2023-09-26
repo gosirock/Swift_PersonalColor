@@ -11,23 +11,15 @@ class UserInfoViewController: UIViewController {
     
     @IBOutlet weak var tfID: UITextField!
     @IBOutlet weak var tfName: UITextField!
-    
     @IBOutlet weak var tfDate: UITextField!
-    
     @IBOutlet weak var tfColor: UITextField!
-    
-    
-    
+
     // user info : UserDBModel generic 배열
     var user : [UserDBModel] = []
     
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
         
         tfID.isUserInteractionEnabled = false
         tfName.isUserInteractionEnabled = false
@@ -42,11 +34,12 @@ class UserInfoViewController: UIViewController {
         
     }
     
+    
     @IBAction func btnBack(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
-        
-        print("Back")
     }
+    
+    
     
     // selectAction
     func selectAction(){
