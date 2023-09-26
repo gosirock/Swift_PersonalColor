@@ -22,6 +22,7 @@
 		C78B7FB02AC2AC7E009687C9 /* User_Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */; };
 		C78B7FB22AC2AC88009687C9 /* ImageDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */; };
 		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
+		C7CE68992AC30DD400F40193 /* User_Update.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CE68982AC30DD400F40193 /* User_Update.swift */; };
 		C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */; };
 		C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */; };
 		C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */; };
@@ -103,6 +104,7 @@
 		C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Select.swift; sourceTree = "<group>"; };
 		C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDBModel.swift; sourceTree = "<group>"; };
 		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
+		C7CE68982AC30DD400F40193 /* User_Update.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Update.swift; sourceTree = "<group>"; };
 		C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
 		C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
 		C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSONDBModel.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 		C7F4E2B12ABD33A00053C44F /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				C7CE68982AC30DD400F40193 /* User_Update.swift */,
 				C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */,
 				C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */,
 				C78B7FAD2AC2AC7E009687C9 /* User_Select.swift */,
@@ -520,6 +523,7 @@
 				C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */,
 				FC9DFB012AC1315200824BEA /* Board_List_Model.swift in Sources */,
 				FC7978862ABD971C007350D0 /* Board_ViewController.swift in Sources */,
+				C7CE68992AC30DD400F40193 /* User_Update.swift in Sources */,
 				C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */,
 				FC9DFAFF2AC130AC00824BEA /* Board_List.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
