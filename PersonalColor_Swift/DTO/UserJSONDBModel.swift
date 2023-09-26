@@ -43,3 +43,15 @@ class UserJSON2 : Codable{
     var uname : String
 }
 
+
+
+// 로그인체크받아오기
+class LoginResult : Codable{
+    //     key        value
+    let result : [Login]
+}
+class Login : Codable {
+    var count : Int
+    var ustatus : Int
+}
+
