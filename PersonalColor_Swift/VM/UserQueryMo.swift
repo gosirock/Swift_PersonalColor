@@ -19,6 +19,10 @@ protocol LoginModelProtocol{
    func itemDownloaded(items : [LoginUser])
 }
 
+protocol ColorModelProtocol{
+   func itemDownloaded(items : [ColorQuery])
+}
+
 class UserQueryModel{
    var delegate : QueryModelProtocol!
    
@@ -80,8 +84,11 @@ class UserQueryModel{
            
            for user in users{ // for in 문 범위에서 students / students.results
                let query = UserDBModel(uid: user.uid, upassword: user.upassword, ustatus: user.ustatus, ucolor: user.ucolor, uinsertdate: user.uinsertdate, uname: user.uname)
-               print(query.uid)
-               print(query.uname)
+
+               // static에 ucolor넣어두기
+               let message = ColorMessage.self
+               message.color = query.ucolor
+               print("가져온색상:\(query.ucolor)")
                locations.append(query)
                // 배열에 가져온 값을 넣어주기
            }
@@ -216,6 +223,84 @@ class LoginCheck{
 //       }
 //
 //   }
+   
+} // class
+
+
+class ColorSelect{
+   var delegate : ColorModelProtocol!
+   
+   // [ {key:value} ] 형태 데e이터가져오기
+   var urlPath  = "http://localhost:8080/swift/project/color_select.jsp"
+   
+   // 데이터 가져오는 함수
+   
+    func downloadItems(id : String){
+       // dispatch , async
+        urlPath = urlPath + "?uid=\(id)"
+       let url : URL = URL(string : urlPath)!
+       
+       
+       //DispatchQueue global 은 1,2페이지 둘다 작동, main은 보이는 페이지만 작동
+       // DispatchQueue.global.async : Future async
+       // DispatchQueue.main.async : await
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                
+                DispatchQueue.main.async {
+                    self.parseJSON(data)
+                }
+            } catch {
+                // 오류 처리
+                print("Error: \(error)")
+                // 필요한 오류 처리 로직을 여기에 추가하세요.
+            }
+        }
+
+       
+   }
+    func parseJSON(_ data:Data){
+        // 가져오는지 확인하기
+        // JSON to String
+        print("가져왔나 ?")
+                let str = String(decoding: data, as: UTF8.self)
+                print(str)
+        
+        
+        
+        let docoder = JSONDecoder()
+        var locations : [ColorQuery] = []
+        
+        do{
+            // users에 가져온 데이터를 디코딩해서 넣기
+            
+            // [{key:value}]
+            let users = try docoder.decode([Colors].self, from: data)
+            
+            
+            for user in users{ // for in 문 범위에서 students / students.results
+                let query = ColorQuery(red: user.red, green: user.green, blue: user.blue, ucolor: user.ucolor)
+                
+
+                locations.append(query)
+                // 배열에 가져온 값을 넣어주기
+            }
+
+        }catch let error{
+            print("Fail : \(error.localizedDescription)")
+        }
+        
+        // protocol에 받아온 데이터값 넣어주기  => protocol에 값 넣어주기
+        DispatchQueue.main.async {
+            // 가져온 데이터를 넣어둔 locations를 delegate에 넣어줌 -- 2
+            self.delegate.itemDownloaded(items: locations)
+            
+            
+        }
+        
+    }
+  
    
 } // class
 

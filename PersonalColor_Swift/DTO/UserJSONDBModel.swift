@@ -55,3 +55,15 @@ class Login : Codable {
     var ustatus : Int
 }
 
+
+// 색상받아오기
+class ColorResult : Codable{
+    //     key        value
+    let result : [Colors]
+}
+class Colors : Codable {
+    var red : Int
+    var green : Int
+    var blue : Int
+    var ucolor : Int
+}

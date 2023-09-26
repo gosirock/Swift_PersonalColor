@@ -52,3 +52,22 @@ class LoginUser{
         self.ustatus = ustatus
     }
 }
+
+class ColorQuery{
+    var red : Int
+    var green : Int
+    var blue : Int
+    var ucolor : Int
+    
+    init(red: Int, green: Int, blue: Int, ucolor: Int) {
+        self.red = red
+        self.green = green
+        self.blue = blue
+        self.ucolor = ucolor
+    }
+}
+
+
+class ColorMessage{
+    static var color : Int = 0
+}

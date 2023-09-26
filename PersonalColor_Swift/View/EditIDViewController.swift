@@ -189,6 +189,7 @@ class EditIDViewController: UIViewController {
             let resultAlert = UIAlertController(title: "Delete", message: "회원탈퇴가 완료되었습니다.", preferredStyle: .actionSheet)
             
             let onAction = UIAlertAction(title: "OK", style: .default,handler: {ACTION in
+                self.firebase_deleteAction()
                 self.navigationController?.popViewController(animated: true)
                 self.dismiss(animated: true, completion: nil)
             })
@@ -245,6 +246,14 @@ class EditIDViewController: UIViewController {
         //UIImage -> Data
         let imageData: Data = image.pngData()! as Data
         upload.imageUploadUpdate(DocumentId: docID, image: imageData, upassword: pw, uname: name)
+    }
+    
+    // firebase 업데이트하기
+    func firebase_deleteAction(){
+        // UpdateModel 연결
+        let delete = User_UpdateModel()
+        delete.deleteItems(DocumentId: docID)
+        
     }
     
     
@@ -355,7 +364,7 @@ class EditIDViewController: UIViewController {
     
     
 } //EditIDViewController
-
+// mysql select
 extension EditIDViewController : QueryModelProtocol{
     func itemDownloaded(items : [UserDBModel]) {
         self.user = items
@@ -389,7 +398,7 @@ extension EditIDViewController: UIImagePickerControllerDelegate,UINavigationCont
     }
     
 }
-// selectProtocol
+// firebase selectProtocol
 extension EditIDViewController: User_SelectModelProtocols{
     func itemDownLoad(items: [Image_DBModel]){
         self.userinfoList = items

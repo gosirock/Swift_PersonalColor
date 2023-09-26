@@ -20,6 +20,13 @@ class ColorViewController: UIViewController {
     @IBOutlet weak var greenImage: UIImageView!
     @IBOutlet weak var blueImage: UIImageView!
     
+    // db데이터 가져온리스트
+    var colorList : [ColorQuery] = []
+    var redValue : Int = 0
+    var greenValue : Int = 0
+    var blueValue : Int = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +63,7 @@ class ColorViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        imgView.backgroundColor = UIColor(red: 100 / 255.0, green: 100 / 255.0, blue: 100 / 255.0, alpha: 1.0)
+        selectAction()
     }
 
  
@@ -64,4 +71,36 @@ class ColorViewController: UIViewController {
     @IBAction func btnBack(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    
+    // selectAction
+    func selectAction(){
+        colorList.removeAll()
+        let queryModel = ColorSelect()
+        // extension 과 protocol이 연결
+        queryModel.delegate = self
+        // 데이터 가져와서 화면 구성
+        queryModel.downloadItems(id: UserDefaults.standard.string(forKey: "id")!)
+    }
+    
+    
+}//ColorViewController
+
+
+extension ColorViewController : ColorModelProtocol{
+    func itemDownloaded(items : [ColorQuery]) {
+        self.colorList = items
+        lblRed.text = String(colorList[0].red)
+        lblGreen.text = String(colorList[0].green)
+        lblBlue.text = String(colorList[0].blue)
+        
+        imgView.backgroundColor = UIColor(red: CGFloat(colorList[0].red) / 255.0, green: CGFloat(colorList[0].green) / 255.0, blue: CGFloat(colorList[0].blue) / 255.0, alpha: 1.0)
+
+        redValue=colorList[0].red
+        greenValue=colorList[0].green
+        blueValue=colorList[0].blue
+        
+    }
 }
+
