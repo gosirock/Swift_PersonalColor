@@ -65,12 +65,10 @@ class PC_ViewController: UIViewController {
     // 얼굴인식 오류 일떼
     func notFase(){
         let alert =  UIAlertController(title: "얼굴인식 오류", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .alert)
+        let close =  UIAlertAction(title: "확인", style: .cancel)
+        
+        alert.addAction(close)
         present(alert, animated: true, completion: nil)
-    }
-    
-    // 다른 부분 터치시 alert창 종료
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            dismiss(animated: true, completion: nil)
     }
 
     
