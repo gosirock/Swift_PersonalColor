@@ -13,14 +13,27 @@ class Board_ViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     
     let dataArray = ["g","g","a", "gg", "gg"]
+    var collection_data:[Board_List_Model] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         collectionView.dataSource = self
         collectionView.delegate = self
+        readValues()
+        print("hi")
+        print(collection_data)
+      
     }
     
+    func readValues(){
+        let selectModel = Board_List()
+        selectModel.delegate = self
+        selectModel.downloadItems(tableName: "board") // todolist Table 불러오기
+        collectionView.reloadData()
+        
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -47,17 +60,28 @@ extension Board_ViewController:UICollectionViewDataSource, UICollectionViewDeleg
     
     // Cell 갯수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataArray.count
+        return collection_data.count
     }
     
     // cell 구성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! Cell_Board_CollectionView
+        // 셀 배경화면
+        cell.backgroundColor = .gray
+        // 셀 타이틀이름
+        cell.board_label.text = collection_data[indexPath.row].title
+        // 이미지주소 data로 바꾸기
+        let url = URL(string: collection_data[indexPath.row].image)
         
-        cell.backgroundColor = .white
-        cell.board_img.image = UIImage(named: "b3")
-        cell.board_label.text = dataArray[indexPath.row]
-        
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url!){
+                DispatchQueue.main.async {
+                    cell.board_img.image = UIImage(data: data)
+                }
+            }else{
+                    print("이미지불러오기실패")
+                }
+        }
         return cell
                                                       
     }
@@ -79,12 +103,22 @@ extension Board_ViewController:UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
-    
-    // Cell Size (옆 라인을 고려하여 설정)
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width / 3 - 1
-        let size = CGSize(width: width, height: width)
-        return size
+
+//    // Cell Size (옆 라인을 고려하여 설정)
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let width = collectionView.frame.width / 3 - 1
+//        let size = CGSize(width: width, height: width)
+//        return size
+//    }
+
+}
+
+
+extension Board_ViewController:Board_List_Model_Protocol{
+    func itemDownLoaded(items: [Board_List_Model]) {
+        // self 전역변수 todolist_data에 itmes 넣기
+        collection_data = items
+        // data는 들어갔으니 TableView 화면 재구성하기
+        self.collectionView.reloadData()
     }
-    
 }
