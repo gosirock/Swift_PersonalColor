@@ -8,34 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */; };
-<<<<<<< HEAD
 		AAF3E7F02AC27DD000971CD6 /* fall.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E7EC2AC27DD000971CD6 /* fall.png */; };
 		AAF3E7F12AC27DD000971CD6 /* spring.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E7ED2AC27DD000971CD6 /* spring.png */; };
 		AAF3E7F22AC27DD000971CD6 /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E7EE2AC27DD000971CD6 /* summer.png */; };
 		AAF3E7F32AC27DD000971CD6 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E7EF2AC27DD000971CD6 /* winter.png */; };
 		C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */; };
-=======
->>>>>>> 1d18b087176068e4fc6915b0f2a9ab6628061ddc
 		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
-		C7DD3F612AC184C5003D9D49 /* Mypage_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD3F602AC184C5003D9D49 /* Mypage_Storyboard.storyboard */; };
-		C7DD3F642AC18540003D9D49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7DD3F622AC18540003D9D49 /* Main.storyboard */; };
-		C7DD3F662AC185E8003D9D49 /* Main_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F652AC185E8003D9D49 /* Main_ViewController.swift */; };
-		C7DD3F682AC18605003D9D49 /* DataBase_Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F672AC18605003D9D49 /* DataBase_Handler.swift */; };
-		C7DD3F6D2AC18612003D9D49 /* UserUpdateMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F692AC18612003D9D49 /* UserUpdateMo.swift */; };
-		C7DD3F6E2AC18612003D9D49 /* UserQueryMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F6A2AC18612003D9D49 /* UserQueryMo.swift */; };
-		C7DD3F6F2AC18612003D9D49 /* UserDeleteMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F6B2AC18612003D9D49 /* UserDeleteMo.swift */; };
-		C7DD3F702AC18612003D9D49 /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F6C2AC18612003D9D49 /* UserInsertMo.swift */; };
-		C7DD3F742AC18625003D9D49 /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F712AC18625003D9D49 /* ImageModel.swift */; };
-		C7DD3F752AC18625003D9D49 /* UserJSONDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F722AC18625003D9D49 /* UserJSONDBModel.swift */; };
-		C7DD3F762AC18625003D9D49 /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F732AC18625003D9D49 /* UserDBModel.swift */; };
-		C7DD3F782AC1863D003D9D49 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F772AC1863D003D9D49 /* ColorViewController.swift */; };
-		C7DD3F7A2AC18642003D9D49 /* EditIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F792AC18642003D9D49 /* EditIDViewController.swift */; };
-		C7DD3F7E2AC18656003D9D49 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F7D2AC18656003D9D49 /* RegisterViewController.swift */; };
-		C7DD3F812AC1866E003D9D49 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F7F2AC1866E003D9D49 /* SettingViewController.swift */; };
-		C7DD3F822AC1866E003D9D49 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F802AC1866E003D9D49 /* UserInfoViewController.swift */; };
-		C7DD3F8C2AC1CB5B003D9D49 /* winterRecommend.png in Resources */ = {isa = PBXBuildFile; fileRef = C7DD3F8B2AC1CB5B003D9D49 /* winterRecommend.png */; };
-		C7DD3F8E2AC1CB9E003D9D49 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD3F8D2AC1CB9E003D9D49 /* RecommendViewController.swift */; };
+		C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */; };
+		C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */; };
+		C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */; };
+		C7F4E2BA2ABD36EA0053C44F /* UserQueryMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */; };
+		C7F4E2BC2ABD37090053C44F /* UserUpdateMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */; };
+		C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2BD2ABD37110053C44F /* UserDeleteMo.swift */; };
 		C7F4E2C02ABD3FC10053C44F /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = C7F4E2BF2ABD3FC10053C44F /* setting.png */; };
+		C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2C12ABD45670053C44F /* SettingViewController.swift */; };
+		C7F4E2C42ABD600F0053C44F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */; };
 		C7F4E2C62ABD8E6C0053C44F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7F4E2C52ABD8E6C0053C44F /* GoogleService-Info.plist */; };
 		C7F4E2C92ABD8EA80053C44F /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C7F4E2C82ABD8EA80053C44F /* FirebaseAnalytics */; };
 		C7F4E2CB2ABD8EA80053C44F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C7F4E2CA2ABD8EA80053C44F /* FirebaseFirestore */; };
@@ -44,10 +31,13 @@
 		FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */; };
 		FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */; };
 		FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B72AB9340600C84D25 /* SceneDelegate.swift */; };
+		FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */; };
+		FC6BC0BD2AB9340600C84D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0BB2AB9340600C84D25 /* Main.storyboard */; };
 		FC6BC0BF2AB9340800C84D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0BE2AB9340800C84D25 /* Assets.xcassets */; };
 		FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0C02AB9340800C84D25 /* LaunchScreen.storyboard */; };
 		FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0CA2AB9382400C84D25 /* kakao_login_btn.png */; };
 		FC6BC0CF2AB9390C00C84D25 /* PC_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0CE2AB9390C00C84D25 /* PC_Storyboard.storyboard */; };
+		FC6BC0D32AB9394600C84D25 /* Mypage_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0D22AB9394600C84D25 /* Mypage_Storyboard.storyboard */; };
 		FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0DA2AB94FB900C84D25 /* Home_Storyboard.storyboard */; };
 		FC6BC0DD2AB95E0F00C84D25 /* A_HomeTabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0DC2AB95E0F00C84D25 /* A_HomeTabBar.png */; };
 		FC6BC0DF2AB95EBF00C84D25 /* IA_HomeTabBar.png in Resources */ = {isa = PBXBuildFile; fileRef = FC6BC0DE2AB95EBF00C84D25 /* IA_HomeTabBar.png */; };
@@ -82,44 +72,34 @@
 		88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalColor_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3C36DEC156571F545A3E24 /* Pods-PersonalColor_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.release.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCT_ViewController.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		AAF3E7EC2AC27DD000971CD6 /* fall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fall.png; sourceTree = "<group>"; };
 		AAF3E7ED2AC27DD000971CD6 /* spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spring.png; path = ../../../../../../Downloads/persnol/spring.png; sourceTree = "<group>"; };
 		AAF3E7EE2AC27DD000971CD6 /* summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = summer.png; path = ../../../../../../Downloads/persnol/summer.png; sourceTree = "<group>"; };
 		AAF3E7EF2AC27DD000971CD6 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = winter.png; path = ../../../../../../Downloads/persnol/winter.png; sourceTree = "<group>"; };
 		C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-=======
->>>>>>> 1d18b087176068e4fc6915b0f2a9ab6628061ddc
 		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
-		C7DD3F602AC184C5003D9D49 /* Mypage_Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Mypage_Storyboard.storyboard; sourceTree = "<group>"; };
-		C7DD3F632AC18540003D9D49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C7DD3F652AC185E8003D9D49 /* Main_ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Main_ViewController.swift; sourceTree = "<group>"; };
-		C7DD3F672AC18605003D9D49 /* DataBase_Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase_Handler.swift; sourceTree = "<group>"; };
-		C7DD3F692AC18612003D9D49 /* UserUpdateMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserUpdateMo.swift; sourceTree = "<group>"; };
-		C7DD3F6A2AC18612003D9D49 /* UserQueryMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserQueryMo.swift; sourceTree = "<group>"; };
-		C7DD3F6B2AC18612003D9D49 /* UserDeleteMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDeleteMo.swift; sourceTree = "<group>"; };
-		C7DD3F6C2AC18612003D9D49 /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
-		C7DD3F712AC18625003D9D49 /* ImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		C7DD3F722AC18625003D9D49 /* UserJSONDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserJSONDBModel.swift; sourceTree = "<group>"; };
-		C7DD3F732AC18625003D9D49 /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
-		C7DD3F772AC1863D003D9D49 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
-		C7DD3F792AC18642003D9D49 /* EditIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIDViewController.swift; sourceTree = "<group>"; };
-		C7DD3F7D2AC18656003D9D49 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = "../../../main_project_before 2/PersonalColor_Swift/View/RegisterViewController.swift"; sourceTree = "<group>"; };
-		C7DD3F7F2AC1866E003D9D49 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "../../../main_project_before 2/PersonalColor_Swift/View/SettingViewController.swift"; sourceTree = "<group>"; };
-		C7DD3F802AC1866E003D9D49 /* UserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
-		C7DD3F8B2AC1CB5B003D9D49 /* winterRecommend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winterRecommend.png; sourceTree = "<group>"; };
-		C7DD3F8D2AC1CB9E003D9D49 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
+		C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
+		C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJSONDBModel.swift; sourceTree = "<group>"; };
+		C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQueryMo.swift; sourceTree = "<group>"; };
+		C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUpdateMo.swift; sourceTree = "<group>"; };
+		C7F4E2BD2ABD37110053C44F /* UserDeleteMo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDeleteMo.swift; sourceTree = "<group>"; };
 		C7F4E2BF2ABD3FC10053C44F /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		C7F4E2C12ABD45670053C44F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		C7F4E2C52ABD8E6C0053C44F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0B22AB9340600C84D25 /* PersonalColor_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6BC0B52AB9340600C84D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC6BC0B72AB9340600C84D25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_ViewController.swift; sourceTree = "<group>"; };
+		FC6BC0BC2AB9340600C84D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC6BC0BE2AB9340800C84D25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC6BC0C12AB9340800C84D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC6BC0C32AB9340800C84D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6BC0CA2AB9382400C84D25 /* kakao_login_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_login_btn.png; sourceTree = "<group>"; };
 		FC6BC0CE2AB9390C00C84D25 /* PC_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PC_Storyboard.storyboard; sourceTree = "<group>"; };
+		FC6BC0D22AB9394600C84D25 /* Mypage_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0DA2AB94FB900C84D25 /* Home_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home_Storyboard.storyboard; sourceTree = "<group>"; };
 		FC6BC0DC2AB95E0F00C84D25 /* A_HomeTabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = A_HomeTabBar.png; sourceTree = "<group>"; };
 		FC6BC0DE2AB95EBF00C84D25 /* IA_HomeTabBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IA_HomeTabBar.png; sourceTree = "<group>"; };
@@ -184,11 +164,10 @@
 		C7F4E2B12ABD33A00053C44F /* VM */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD3F6B2AC18612003D9D49 /* UserDeleteMo.swift */,
-				C7DD3F6C2AC18612003D9D49 /* UserInsertMo.swift */,
-				C7DD3F6A2AC18612003D9D49 /* UserQueryMo.swift */,
-				C7DD3F692AC18612003D9D49 /* UserUpdateMo.swift */,
-				C7DD3F672AC18605003D9D49 /* DataBase_Handler.swift */,
+				C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */,
+				C7F4E2B92ABD36EA0053C44F /* UserQueryMo.swift */,
+				C7F4E2BB2ABD37090053C44F /* UserUpdateMo.swift */,
+				C7F4E2BD2ABD37110053C44F /* UserDeleteMo.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -196,9 +175,8 @@
 		C7F4E2B42ABD33D30053C44F /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD3F712AC18625003D9D49 /* ImageModel.swift */,
-				C7DD3F732AC18625003D9D49 /* UserDBModel.swift */,
-				C7DD3F722AC18625003D9D49 /* UserJSONDBModel.swift */,
+				C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */,
+				C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -242,18 +220,10 @@
 		FC6BC0C92AB9381A00C84D25 /* images */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				AAF3E7EC2AC27DD000971CD6 /* fall.png */,
 				AAF3E7ED2AC27DD000971CD6 /* spring.png */,
 				AAF3E7EE2AC27DD000971CD6 /* summer.png */,
 				AAF3E7EF2AC27DD000971CD6 /* winter.png */,
-=======
-				C7DD3F8B2AC1CB5B003D9D49 /* winterRecommend.png */,
-				AA3616BB2ABF3E190071D557 /* fail.png */,
-				AA3616BD2ABF3E190071D557 /* spring.png */,
-				AA3616BA2ABF3E190071D557 /* summer.png */,
-				AA3616BC2ABF3E190071D557 /* winter.png */,
->>>>>>> 1d18b087176068e4fc6915b0f2a9ab6628061ddc
 				FC6BC1032AB989CC00C84D25 /* b3.png */,
 				FC6BC1052AB98A4800C84D25 /* b2.png */,
 				FC6BC10B2AB98D7F00C84D25 /* bg.png */,
@@ -286,17 +256,14 @@
 		FC6BC0F12AB9726200C84D25 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD3F8D2AC1CB9E003D9D49 /* RecommendViewController.swift */,
-				C7DD3F7F2AC1866E003D9D49 /* SettingViewController.swift */,
-				C7DD3F802AC1866E003D9D49 /* UserInfoViewController.swift */,
-				C7DD3F7D2AC18656003D9D49 /* RegisterViewController.swift */,
-				C7DD3F792AC18642003D9D49 /* EditIDViewController.swift */,
-				C7DD3F772AC1863D003D9D49 /* ColorViewController.swift */,
-				C7DD3F652AC185E8003D9D49 /* Main_ViewController.swift */,
 				C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */,
+				C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */,
 				FC6BC0F32AB972CB00C84D25 /* Home_ViewController.swift */,
 				FC6BC1012AB978E900C84D25 /* Map_ViewController.swift */,
 				FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */,
+				FC6BC0B92AB9340600C84D25 /* Main_ViewController.swift */,
+				C7F4E2C12ABD45670053C44F /* SettingViewController.swift */,
+				C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */,
 				FC7978832ABD971B007350D0 /* Board_ViewController.swift */,
 				FC7978842ABD971B007350D0 /* Cell_Board_CollectionView.swift */,
 				FC7978852ABD971C007350D0 /* Detail_Board_ViewController.swift */,
@@ -318,9 +285,9 @@
 		FC6BC1122ABA9E7300C84D25 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				C7DD3F622AC18540003D9D49 /* Main.storyboard */,
-				C7DD3F602AC184C5003D9D49 /* Mypage_Storyboard.storyboard */,
+				FC6BC0BB2AB9340600C84D25 /* Main.storyboard */,
 				FC6BC0CE2AB9390C00C84D25 /* PC_Storyboard.storyboard */,
+				FC6BC0D22AB9394600C84D25 /* Mypage_Storyboard.storyboard */,
 				FC6BC0DA2AB94FB900C84D25 /* Home_Storyboard.storyboard */,
 				FC53D4422ABBE95300A5AF96 /* Map_Storyboard.storyboard */,
 				FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */,
@@ -410,11 +377,6 @@
 				FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */,
 				AAF3E7F22AC27DD000971CD6 /* summer.png in Resources */,
 				FC6BC0FE2AB976F000C84D25 /* UploadPhoto.png in Resources */,
-<<<<<<< HEAD
-=======
-				C7DD3F642AC18540003D9D49 /* Main.storyboard in Resources */,
-				AA3616BF2ABF3E190071D557 /* fail.png in Resources */,
->>>>>>> 1d18b087176068e4fc6915b0f2a9ab6628061ddc
 				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				AAF3E7F02AC27DD000971CD6 /* fall.png in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
@@ -426,23 +388,15 @@
 				FC6BC0EA2AB9603700C84D25 /* IA_MyPageTabBar.png in Resources */,
 				FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */,
 				FC6BC0FA2AB9742000C84D25 /* Shop.png in Resources */,
-<<<<<<< HEAD
 				AAF3E7F32AC27DD000971CD6 /* winter.png in Resources */,
 				FC6BC0BD2AB9340600C84D25 /* Main.storyboard in Resources */,
-=======
->>>>>>> 1d18b087176068e4fc6915b0f2a9ab6628061ddc
 				FC6BC0E42AB95F4D00C84D25 /* A_ColorTabBar.png in Resources */,
 				FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */,
 				AAF3E7F12AC27DD000971CD6 /* spring.png in Resources */,
 				FC6BC0DD2AB95E0F00C84D25 /* A_HomeTabBar.png in Resources */,
 				FC6BC0E32AB95F4D00C84D25 /* IA_ColorTabBar.png in Resources */,
+				FC6BC0D32AB9394600C84D25 /* Mypage_Storyboard.storyboard in Resources */,
 				FC6BC0F82AB973F400C84D25 /* pctest.png in Resources */,
-<<<<<<< HEAD
-=======
-				AA3616C02ABF3E190071D557 /* winter.png in Resources */,
-				C7DD3F8C2AC1CB5B003D9D49 /* winterRecommend.png in Resources */,
-				C7DD3F612AC184C5003D9D49 /* Mypage_Storyboard.storyboard in Resources */,
->>>>>>> 1d18b087176068e4fc6915b0f2a9ab6628061ddc
 				FC6BC0CF2AB9390C00C84D25 /* PC_Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,41 +450,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7DD3F6E2AC18612003D9D49 /* UserQueryMo.swift in Sources */,
-				C7DD3F702AC18612003D9D49 /* UserInsertMo.swift in Sources */,
-				C7DD3F6F2AC18612003D9D49 /* UserDeleteMo.swift in Sources */,
+				C7F4E2BC2ABD37090053C44F /* UserUpdateMo.swift in Sources */,
+				C7F4E2C42ABD600F0053C44F /* UserInfoViewController.swift in Sources */,
+				C7F4E2B82ABD33F20053C44F /* UserJSONDBModel.swift in Sources */,
+				C7F4E2BA2ABD36EA0053C44F /* UserQueryMo.swift in Sources */,
+				FC6BC0BA2AB9340600C84D25 /* Main_ViewController.swift in Sources */,
 				FC6BC0B62AB9340600C84D25 /* AppDelegate.swift in Sources */,
-				C7DD3F682AC18605003D9D49 /* DataBase_Handler.swift in Sources */,
-				C7DD3F762AC18625003D9D49 /* UserDBModel.swift in Sources */,
+				C7F4E2C22ABD45670053C44F /* SettingViewController.swift in Sources */,
 				C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */,
 				FC7978862ABD971C007350D0 /* Board_ViewController.swift in Sources */,
-				C7DD3F752AC18625003D9D49 /* UserJSONDBModel.swift in Sources */,
-				C7DD3F812AC1866E003D9D49 /* SettingViewController.swift in Sources */,
+				C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */,
+				C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
-				C7DD3F742AC18625003D9D49 /* ImageModel.swift in Sources */,
+				C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
-				C7DD3F7A2AC18642003D9D49 /* EditIDViewController.swift in Sources */,
-				C7DD3F782AC1863D003D9D49 /* ColorViewController.swift in Sources */,
+				C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */,
 				FC7978872ABD971C007350D0 /* Cell_Board_CollectionView.swift in Sources */,
 				AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */,
 				FC7978882ABD971C007350D0 /* Detail_Board_ViewController.swift in Sources */,
-				C7DD3F822AC1866E003D9D49 /* UserInfoViewController.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,
 				FC6BC0F42AB972CB00C84D25 /* Home_ViewController.swift in Sources */,
-				C7DD3F662AC185E8003D9D49 /* Main_ViewController.swift in Sources */,
-				C7DD3F7E2AC18656003D9D49 /* RegisterViewController.swift in Sources */,
-				C7DD3F6D2AC18612003D9D49 /* UserUpdateMo.swift in Sources */,
-				C7DD3F8E2AC1CB9E003D9D49 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C7DD3F622AC18540003D9D49 /* Main.storyboard */ = {
+		FC6BC0BB2AB9340600C84D25 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C7DD3F632AC18540003D9D49 /* Base */,
+				FC6BC0BC2AB9340600C84D25 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
