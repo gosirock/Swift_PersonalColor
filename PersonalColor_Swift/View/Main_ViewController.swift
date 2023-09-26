@@ -10,7 +10,7 @@ import KakaoSDKUser
 class Main_ViewController: UIViewController {
     
     
-    
+    // MARK: - 전역변수
     // 버튼 상태관리
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
@@ -21,35 +21,28 @@ class Main_ViewController: UIViewController {
     var registerStatus : Bool = false
     var kakaoStatus : Bool = false
     var naverStatus : Bool = false
-    
+    //--------------------------------
     // 텍스트필드 상태관리
-    @IBOutlet weak var lblID: UILabel!
-    @IBOutlet weak var lblPW: UILabel!
     @IBOutlet weak var tfID: UITextField!
     @IBOutlet weak var tfPW: UITextField!
     var idStatus : Bool = false
     var pwStatus : Bool = false
     
-    
+    // 버튼상태관리
     @IBOutlet weak var btnOtherBtn: UIButton!
     @IBOutlet weak var btnLogin2: UIButton!
     var logBtn : Bool = false
     var otherBtn : Bool = false
-    
+    //-----------------------------------
     // 로그인성공여부 가져오기
     var successLogin : [LoginUser] = []
     var okfail : Bool = false
-    
 
     
-    
-    
+    // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        //
-        
-        
+        // 초기 화면켜질 때, 텍스트필드와 버튼들 가려지기
         tfID.isHidden = true
         tfPW.isHidden = true
         btnLogin2.isHidden = true
@@ -59,19 +52,26 @@ class Main_ViewController: UIViewController {
         // 키보드 올림 내림함수
         setKeyBoadEvent()
         
-        // SQLite DB  앱 켜질 시 DB생성
-        //let database_Handler = DataBase_Handler_Wook()
-        //database_Handler.createDB()
+//        // SQLite DB  앱 켜질 시 DB생성
+//        let database_Handler = DataBase_Handler_Wook()
+//        database_Handler.createDB()
         
 
     }
     
+    // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
+        // shared preferences id 제거하기
         UserDefaults.standard.removeObject(forKey: "id")
+        // 텍스트필드 초기화
         tfID.text = ""
         tfPW.text = ""
     }
     
+    
+    // MARK: - Buttons function
+    
+    // 카카오 로그인 버튼
     @IBAction func btn_kakao(_ sender: UIButton) {
         
         UserApi.shared.loginWithKakaoAccount(prompts:[.Login]) {(oauthToken, error) in
@@ -114,23 +114,16 @@ class Main_ViewController: UIViewController {
                 }
             }
         }
-        
-        
-        
-        
-        
     }
     
-    
+    // 다른 방법으로 로그인 버튼
     @IBAction func otherBTNs(_ sender: UIButton) {
         btnChange()
     }
     
     
-    
+    // 네이버 로그인 버튼
     @IBAction func btnNaver(_ sender: UIButton) {
-        
-        
         // 메인페이지로 넘어가기
         let vcName = self.storyboard?.instantiateViewController(withIdentifier: "TabBarView")
         vcName?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
@@ -139,27 +132,24 @@ class Main_ViewController: UIViewController {
     }
     
     
-    
+    // 로그인 버튼 -> 텍스트필드 뜨기
     @IBAction func btnLogin(_ sender: UIButton) {
         btnChange()
         
     }
     
-    
-    
-    
+    // 회원가입버튼 Segue로 대신함
     @IBAction func btnRegister(_ sender: Any) {
-        
     }
     
-    
+    // 로그인 로직 버튼
     @IBAction func btnLog(_ sender: UIButton) {
         //var loginOkFail =
         _ = loginCheck()
-    
-        
     }
     
+    
+    // MARK: - functions
     
     // 로그인 버튼 클릭 시 , 버튼 사라지고 ID, PW 입력 text field 생성
     func btnChange() {
@@ -199,16 +189,12 @@ class Main_ViewController: UIViewController {
         // extension 과 protocol이 연결
         login.delegate = self
         login.downloadItems(id: (tfID.text?.trimmingCharacters(in: .whitespaces))!, pw: (tfPW.text?.trimmingCharacters(in: .whitespaces))!)
-        
-        
-        
         return okfail
-        
     }
     
  
     
-    
+    // MARK: - keyboard controll
     // 키보드 내리기
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -220,9 +206,6 @@ class Main_ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisAppear(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil  )
     }
-    
-    
-    
     // 화면 올리기
     @objc func keyboardWillAppear(_ sender : NotificationCenter){
         // 메모리에 상주하면서 관찰하는 observer
@@ -231,7 +214,6 @@ class Main_ViewController: UIViewController {
         // 화면의 y값을 0 에서 -250 으로 바꾸기
         self.view.frame.origin.y = -250
     }
-    
     // 화면 내리기
     @objc func keyboardWillDisAppear(_ sender : NotificationCenter){
         // 메모리에 상주하면서 관찰하는 observer
@@ -243,7 +225,7 @@ class Main_ViewController: UIViewController {
     
     
 }//Main_ViewController
-
+// MARK: - extension
 
 extension Main_ViewController : LoginModelProtocol{
     func itemDownloaded(items : [LoginUser]) {
