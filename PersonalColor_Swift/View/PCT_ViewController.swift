@@ -13,7 +13,7 @@ class PCT_ViewController: UIViewController {
     var name = ""
     
     // 사진 등록
-    var images = [ "springwarm.png", "summercool.png", "fallwarm.png","wintercool.png"]
+    var images = [ "spring.png", "summer.png", "fall.png","winter.png"]
 
  
     // 퍼스널 컬러 이미지

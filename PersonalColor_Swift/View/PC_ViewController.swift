@@ -8,7 +8,7 @@
 import UIKit
 import PhotosUI
 
-class PC_ViewController: UIViewController {
+class PC_ViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
     // 카메라 셋팅
     let imgPicker = UIImagePickerController()
@@ -66,7 +66,14 @@ class PC_ViewController: UIViewController {
     // 얼굴인식 오류 일떼
     func notFase(){
         let alert =  UIAlertController(title: "얼굴인식 오류", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .alert)
-        popupStatus = true
+        // .isModalInPresentation을 false로 설정하여 화면 터치로 닫기 가능하게 함
+        if let popoverPresentationController = alert.popoverPresentationController {
+            popoverPresentationController.sourceView = self.view // 팝오버의 위치를 설정해야 합니다.
+            popoverPresentationController.sourceRect = CGRect(x: 0, y: 0, width: 1, height: 1) // 팝오버의 위치를 설정해야 합니다.
+            popoverPresentationController.permittedArrowDirections = [] // 팝오버의 화살표 방향을 설정해야 합니다.
+            popoverPresentationController.delegate = self // delegate 설정
+        }
+        
         present(alert, animated: true, completion: nil)
     }
     
