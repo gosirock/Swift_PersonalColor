@@ -280,11 +280,10 @@ extension Main_ViewController : LoginModelProtocol{
             self.present(vcName!, animated: true, completion: nil)
             if let text = tfID.text?.trimmingCharacters(in: .whitespaces) {
                 UserDefaults.standard.set(text, forKey: "id")
-                print("input")
+                print("shared preferences input")
             } else {
                 // 텍스트가 nil 또는 공백 문자로 구성되어 있을 경우에 대한 처리
                 UserDefaults.standard.removeObject(forKey: "id")
-                print("fail")
             }
         }else{
             print("로그인실패")
