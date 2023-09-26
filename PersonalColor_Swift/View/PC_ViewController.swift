@@ -12,8 +12,6 @@ class PC_ViewController: UIViewController {
     
     // 카메라 셋팅
     let imgPicker = UIImagePickerController()
-    // popup
-    var popupStatus = false
     
     
     @IBOutlet var img_upload: UIImageView!
@@ -31,9 +29,8 @@ class PC_ViewController: UIViewController {
         choicePhoto()
     }
     
-    // 앨범, 카메라 선택
     func choicePhoto(){
-        let alert =  UIAlertController(title: "PHOTO", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .actionSheet)
+        let alert =  UIAlertController(title: "Title", message: "message", preferredStyle: .actionSheet)
         let library =  UIAlertAction(title: "앨범에서 가져오기", style: .default, handler: {ACTION in
             self.openLibrary()
         })
@@ -63,23 +60,6 @@ class PC_ViewController: UIViewController {
         present(imgPicker, animated: true, completion: nil)
     }
     
-    // 얼굴인식 오류 일떼
-    func notFase(){
-        let alert =  UIAlertController(title: "얼굴인식 오류", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .alert)
-        popupStatus = true
-        present(alert, animated: true, completion: nil)
-    }
-    
-    // 다른 부분 터치시 alert창 종료
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
-        if popupStatus{
-            dismiss(animated: true, completion: nil)
-            popupStatus = true
-        }
-    }
-
-    
     // 이미지를 서버로 업로드 , VM으로 이동 시켜야되는 부분
     func uploadImageToServer(_ image: UIImage) {
         if let imageData = image.jpegData(compressionQuality: 1.0) {
@@ -95,41 +75,24 @@ class PC_ViewController: UIViewController {
                     return
                 }
                 
-                if let httpResponse = response as? HTTPURLResponse {
-                    // 200 통신 성공 시
-                    if httpResponse.statusCode == 200 {
-                        print("Review deleted successfully")
-                        if let data = data {
-                            // 서버에서 반환한 데이터를 처리합니다.
-                            DispatchQueue.global().async {
-                                
-                                let data = Data(data) // 데이터가 있으면 가져옵니다.
-                                DispatchQueue.main.async {
-                                    // loding
-                                    self.indicator_loding.isHidden = false
-                                    self.indicator_loding.startAnimating()
-                                    
-                                    // 받아온 데이터 처리 작업
-                                    self.handleServerResponse(data)
-                                }
-                            }
-                        }
-                    } else {
-                        // alart 띄어줘야됨 <<<<<<<<<<<<<<<<<<<<<<<<<<<
-                        print("Failed to delete review. Status code: \(httpResponse.statusCode)")
+                if let data = data {
+                    // 서버에서 반환한 데이터를 처리합니다.
+                    DispatchQueue.global().async {
+                        
+                        let data = Data(data) // 데이터가 있으면 가져옵니다.
                         DispatchQueue.main.async {
-                            // UI 업데이트 코드 작성
-                            self.notFase()
+                            // loding
+                            self.indicator_loding.isHidden = false
+                            self.indicator_loding.startAnimating()
+
+                            self.handleServerResponse(data)
                         }
-                        return
                     }
                 }
-                
                 
             }.resume() // URLSession 태스크 실행
         }
     }// 서버 업로드 끝
-
     
     // 서버에서 데이터 받아오기
     func handleServerResponse(_ data: Data?) {
@@ -157,10 +120,7 @@ class PC_ViewController: UIViewController {
                         // 모달로 화면 전환
                         pctViewController?.modalPresentationStyle = .overFullScreen
                         
-                        // 모달 이벤트
-                        pctViewController?.modalTransitionStyle = .crossDissolve
 
-                        // 모달 띄우기
                         self.present(pctViewController ?? UIViewController(), animated: true)
                     }
                     
