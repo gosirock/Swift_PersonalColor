@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */; };
-		AAF3E80B2AC2A54E00971CD6 /* spring.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E8072AC2A54E00971CD6 /* spring.png */; };
-		AAF3E80F2AC2A8C500971CD6 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80C2AC2A8C500971CD6 /* winter.png */; };
 		AAF3E8102AC2A8C500971CD6 /* fall.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80D2AC2A8C500971CD6 /* fall.png */; };
-		AAF3E8112AC2A8C500971CD6 /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E80E2AC2A8C500971CD6 /* summer.png */; };
 		AAF3E8132AC2AFEF00971CD6 /* EditIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */; };
 		AAF3E8162AC2B00300971CD6 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */; };
 		AAF3E8172AC2B00300971CD6 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */; };
+		AAF3E81B2AC2CA6000971CD6 /* sprintwarm.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E8182AC2CA6000971CD6 /* sprintwarm.png */; };
+		AAF3E81C2AC2CA6000971CD6 /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E8192AC2CA6000971CD6 /* summer.png */; };
+		AAF3E81D2AC2CA6000971CD6 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E81A2AC2CA6000971CD6 /* winter.png */; };
 		C78B7FAA2AC2AC28009687C9 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */; };
 		C78B7FAE2AC2AC7E009687C9 /* User_Insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */; };
 		C78B7FAF2AC2AC7E009687C9 /* User_AddUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */; };
@@ -84,13 +84,13 @@
 		88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonalColor_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B3C36DEC156571F545A3E24 /* Pods-PersonalColor_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonalColor_Swift.release.xcconfig"; path = "Target Support Files/Pods-PersonalColor_Swift/Pods-PersonalColor_Swift.release.xcconfig"; sourceTree = "<group>"; };
 		AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCT_ViewController.swift; sourceTree = "<group>"; };
-		AAF3E8072AC2A54E00971CD6 /* spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spring.png; sourceTree = "<group>"; };
-		AAF3E80C2AC2A8C500971CD6 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
 		AAF3E80D2AC2A8C500971CD6 /* fall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fall.png; sourceTree = "<group>"; };
-		AAF3E80E2AC2A8C500971CD6 /* summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summer.png; sourceTree = "<group>"; };
 		AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIDViewController.swift; sourceTree = "<group>"; };
 		AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		AAF3E8182AC2CA6000971CD6 /* sprintwarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sprintwarm.png; sourceTree = "<group>"; };
+		AAF3E8192AC2CA6000971CD6 /* summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summer.png; sourceTree = "<group>"; };
+		AAF3E81A2AC2CA6000971CD6 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
 		C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		C78B7FAB2AC2AC7E009687C9 /* User_Insert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_Insert.swift; sourceTree = "<group>"; };
 		C78B7FAC2AC2AC7E009687C9 /* User_AddUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User_AddUser.swift; sourceTree = "<group>"; };
@@ -252,10 +252,10 @@
 		FC6BC0C92AB9381A00C84D25 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				AAF3E8072AC2A54E00971CD6 /* spring.png */,
+				AAF3E8182AC2CA6000971CD6 /* sprintwarm.png */,
+				AAF3E8192AC2CA6000971CD6 /* summer.png */,
+				AAF3E81A2AC2CA6000971CD6 /* winter.png */,
 				AAF3E80D2AC2A8C500971CD6 /* fall.png */,
-				AAF3E80E2AC2A8C500971CD6 /* summer.png */,
-				AAF3E80C2AC2A8C500971CD6 /* winter.png */,
 				FC6BC1032AB989CC00C84D25 /* b3.png */,
 				FC6BC1052AB98A4800C84D25 /* b2.png */,
 				FC6BC10B2AB98D7F00C84D25 /* bg.png */,
@@ -411,22 +411,22 @@
 				FC6BC1042AB989CC00C84D25 /* b3.png in Resources */,
 				FC6BC0DF2AB95EBF00C84D25 /* IA_HomeTabBar.png in Resources */,
 				FC6BC1002AB9773500C84D25 /* btn_Slelct_Photo.png in Resources */,
+				AAF3E81C2AC2CA6000971CD6 /* summer.png in Resources */,
 				FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */,
 				FC6BC0FE2AB976F000C84D25 /* UploadPhoto.png in Resources */,
 				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
 				FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */,
+				AAF3E81B2AC2CA6000971CD6 /* sprintwarm.png in Resources */,
 				C7F4E2C62ABD8E6C0053C44F /* GoogleService-Info.plist in Resources */,
 				FC6BC0BF2AB9340800C84D25 /* Assets.xcassets in Resources */,
 				C7F4E2C02ABD3FC10053C44F /* setting.png in Resources */,
 				FC6BC0F02AB971BB00C84D25 /* IA_ShopTabBar.png in Resources */,
 				FC6BC0EA2AB9603700C84D25 /* IA_MyPageTabBar.png in Resources */,
 				FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */,
+				AAF3E81D2AC2CA6000971CD6 /* winter.png in Resources */,
 				FC6BC0FA2AB9742000C84D25 /* Shop.png in Resources */,
 				FC6BC0BD2AB9340600C84D25 /* Main.storyboard in Resources */,
-				AAF3E8112AC2A8C500971CD6 /* summer.png in Resources */,
-				AAF3E80B2AC2A54E00971CD6 /* spring.png in Resources */,
-				AAF3E80F2AC2A8C500971CD6 /* winter.png in Resources */,
 				FC6BC0E42AB95F4D00C84D25 /* A_ColorTabBar.png in Resources */,
 				FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */,
 				FC6BC0DD2AB95E0F00C84D25 /* A_HomeTabBar.png in Resources */,
