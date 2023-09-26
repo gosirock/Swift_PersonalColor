@@ -13,8 +13,6 @@ class PC_ViewController: UIViewController {
     // 카메라 셋팅
     let imgPicker = UIImagePickerController()
 
-    
-    
     @IBOutlet var img_upload: UIImageView!
     @IBOutlet weak var indicator_loding: UIActivityIndicatorView!
 
@@ -22,7 +20,18 @@ class PC_ViewController: UIViewController {
         super.viewDidLoad()
         imgPicker.delegate = self
         indicator_loding.isHidden = true
-        // Do any additional setup after loading the view.
+        
+        // 뷰 배경 색상 변경
+        view.backgroundColor = UIColor.white
+        
+        // 이미지 뷰 스타일링
+        img_upload.contentMode = .scaleAspectFit // 이미지 비율 유지
+        img_upload.layer.cornerRadius = 10 // 이미지 뷰에 라운드 모양 적용
+        img_upload.clipsToBounds = true
+        
+        // 로딩 인디케이터 색상 설정
+        indicator_loding.color = UIColor.systemBlue
+        // ... (기존 코드 계속)
     }
     
     @IBAction func btn_Slect_photo(_ sender: UIButton) {
@@ -32,11 +41,11 @@ class PC_ViewController: UIViewController {
     
     // 앨범, 카메라 선택
     func choicePhoto(){
-        let alert =  UIAlertController(title: "PHOTO", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .actionSheet)
-        let library =  UIAlertAction(title: "앨범에서 가져오기", style: .default, handler: {ACTION in
+        let alert = UIAlertController(title: "PHOTO", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .actionSheet)
+        let library = UIAlertAction(title: "앨범에서 가져오기", style: .default, handler: { ACTION in
             self.openLibrary()
         })
-        let camera =  UIAlertAction(title: "카메라", style: .default, handler: {ACTION in
+        let camera = UIAlertAction(title: "카메라", style: .default, handler: { ACTION in
             self.openCamera()
         })
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -62,15 +71,14 @@ class PC_ViewController: UIViewController {
         present(imgPicker, animated: true, completion: nil)
     }
     
-    // 얼굴인식 오류 일떼
-    func notFase(){
-        let alert =  UIAlertController(title: "얼굴인식 오류", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .alert)
-        let close =  UIAlertAction(title: "확인", style: .cancel)
+    // 얼굴인식 오류 일 때
+    func notFace() {
+        let alert = UIAlertController(title: "얼굴인식 오류", message: "정면으로 된 사진으로 골라주세요!!", preferredStyle: .alert)
+        let close = UIAlertAction(title: "확인", style: .cancel)
         
         alert.addAction(close)
         present(alert, animated: true, completion: nil)
     }
-
     
     // 이미지를 서버로 업로드 , VM으로 이동 시켜야되는 부분
     func uploadImageToServer(_ image: UIImage) {
@@ -111,17 +119,15 @@ class PC_ViewController: UIViewController {
                         print("Failed to delete review. Status code: \(httpResponse.statusCode)")
                         DispatchQueue.main.async {
                             // UI 업데이트 코드 작성
-                            self.notFase()
+                            self.notFace()
                         }
                         return
                     }
                 }
                 
-                
             }.resume() // URLSession 태스크 실행
         }
-    }// 서버 업로드 끝
-
+    } // 서버 업로드 끝
     
     // 서버에서 데이터 받아오기
     func handleServerResponse(_ data: Data?) {
@@ -135,11 +141,11 @@ class PC_ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.indicator_loding.isHidden = true
                     self.indicator_loding.stopAnimating()
+                
                     
                     // 퍼스널 컬러 데이터
-                    if let pcType = json["result"] as? String {
-                        //self.personalColor(pcType)
-                        
+                    if let pcType = json["result"] as? String,
+                       let rNumber = json["r"] as? NSNumber, let gNumber = json["g"] as? NSNumber, let bNumber = json["b"] as? NSNumber{
                         // PCT_ViewController 인스턴스 생성
                         let pctViewController = self.storyboard?.instantiateViewController(identifier: "pctview") as? PCT_ViewController
                         
@@ -151,27 +157,38 @@ class PC_ViewController: UIViewController {
                         
                         // 모달 이벤트
                         pctViewController?.modalTransitionStyle = .crossDissolve
-
+                        
                         // 모달 띄우기
                         self.present(pctViewController ?? UIViewController(), animated: true)
+                        
+                        // 유저 퍼스널컬러 업데이트
+                        let userColorUpdate = ColorUpdateModel()
+                        var personalName: Int?
+
+                        // 퍼스널 컬러를 숫자로 변환
+                        switch pcType {
+                            case "봄웜톤": personalName = 0
+                            case "여름쿨톤": personalName = 1
+                            case "가을웜톤": personalName = 2
+                            default: personalName = 3
+                        }
+                        
+                        let r = rNumber.intValue
+                        let g = gNumber.intValue
+                        let b = bNumber.intValue
+
+                        _ = userColorUpdate.colorInsert(r, g, b, personalName!, UserDefaults.standard.string(forKey: "id")!)
+            
                     }
-                    
-                    // rgb 데이터
-                    if let rgb = json["rgb"] {
-                        print(rgb)
-                    }
+
                 }
             }
         } catch {
             print("Error parsing JSON: \(error)")
         }
+    } // 서버에서 데이터 받아오기 끝, VM 이동 끝
+}
 
-    }// 서버에서 데이터 받아오기 끝, VM이동 끝
-    
-
-    
-    
-} // VIEW END
 
 // 선택한 이미지를 가져와 이미지 뷰에 설정
 extension PC_ViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{

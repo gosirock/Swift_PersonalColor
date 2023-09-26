@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UploadPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="cUl-DZ-h8X">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UploadPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="cUl-DZ-h8X">
                                 <rect key="frame" x="76" y="227" width="240" height="222"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -65,61 +65,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xH5-cB-1yn">
-                                <rect key="frame" x="16" y="59" width="361" height="759"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdW-OH-gfI">
-                                        <rect key="frame" x="8" y="8" width="345" height="1700"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saB-A6-k87">
-                                                <rect key="frame" x="8" y="52" width="329" height="803"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="당신의 퍼스널 컬러는???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LW1-Sa-ysG">
-                                                <rect key="frame" x="53" y="8" width="238" height="48"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqR-Fu-V6i">
-                                                <rect key="frame" x="145" y="889" width="54" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="닫기"/>
-                                                <connections>
-                                                    <action selector="viewBack:" destination="XsO-46-KcP" eventType="touchUpInside" id="2op-R9-Juw"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1700" id="EXF-a3-oI1"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="vdW-OH-gfI" firstAttribute="bottom" secondItem="M6s-Rd-lcJ" secondAttribute="bottom" constant="751" id="Fir-2R-ZB6"/>
-                                    <constraint firstItem="vdW-OH-gfI" firstAttribute="leading" secondItem="M6s-Rd-lcJ" secondAttribute="leading" constant="8" id="Yj5-uj-4CY"/>
-                                    <constraint firstItem="vdW-OH-gfI" firstAttribute="trailing" secondItem="M6s-Rd-lcJ" secondAttribute="trailing" constant="353" id="hGd-Q6-bDn"/>
-                                    <constraint firstItem="vdW-OH-gfI" firstAttribute="width" secondItem="ipi-7E-Pl9" secondAttribute="width" multiplier="0.955679" id="mVE-Fn-ySS"/>
-                                    <constraint firstItem="vdW-OH-gfI" firstAttribute="top" secondItem="M6s-Rd-lcJ" secondAttribute="top" constant="8" id="rMv-C3-KmM"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="M6s-Rd-lcJ"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="ipi-7E-Pl9"/>
-                            </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLS-t4-3GJ">
+                                <rect key="frame" x="16" y="184" width="361" height="485"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nEr-zQ-uS0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="nEr-zQ-uS0" firstAttribute="trailing" secondItem="xH5-cB-1yn" secondAttribute="trailing" constant="16" id="2aJ-2B-0N0"/>
-                            <constraint firstItem="xH5-cB-1yn" firstAttribute="bottom" secondItem="nEr-zQ-uS0" secondAttribute="bottom" id="C6s-nt-G0J"/>
-                            <constraint firstItem="xH5-cB-1yn" firstAttribute="top" secondItem="nEr-zQ-uS0" secondAttribute="top" id="Uwd-9n-fxI"/>
-                            <constraint firstItem="xH5-cB-1yn" firstAttribute="leading" secondItem="nEr-zQ-uS0" secondAttribute="leading" constant="16" id="fPv-s5-jfQ"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="personalColorImg" destination="saB-A6-k87" id="xn2-Pe-crh"/>
+                        <outlet property="personalColorImg" destination="KLS-t4-3GJ" id="TYZ-PT-Jv1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZJ-gb-gtN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

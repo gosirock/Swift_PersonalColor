@@ -28,11 +28,6 @@ class PCT_ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func viewBack(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     // 이미지 설정
     func personalColor(_ pctype: String){
         print(pctype)
@@ -53,6 +48,10 @@ class PCT_ViewController: UIViewController {
         self.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.7)
         self.view.isOpaque = true
        // modalview.setViewShadow (backView: modalview, colorName: "000", width: -4, height:5)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation
