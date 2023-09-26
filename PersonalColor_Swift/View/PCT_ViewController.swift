@@ -12,22 +12,15 @@ class PCT_ViewController: UIViewController {
     // 이전 페이지에서 받아온 퍼스널컬러값
     var name = ""
     
-    // 사진 등록
+    // 퍼스널 사진1
     var images = [ "spring.png", "summer.png", "fail.png","winter.png"]
-
-    // 퍼스널 컬러
-    @IBOutlet weak var personalColorName: UILabel!
+    
     // 퍼스널 컬러 이미지
     @IBOutlet weak var personalColorImg: UIImageView!
-    // 퍼스널컬러에 맞는 색상 추천
-    @IBOutlet weak var personalColorCustom: UIImageView!
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("pct:",name)
-        personalColorName.text = name
         personalColor(name)
         backgroundSetting ()
         // Do any additional setup after loading the view.
@@ -43,16 +36,12 @@ class PCT_ViewController: UIViewController {
         switch pctype{
         case "봄웜톤":
             self.personalColorImg.image = UIImage(named: images[0])
-            self.personalColorCustom.image = UIImage(named: images[0])
         case "여름쿨톤":
             self.personalColorImg.image = UIImage(named: images[1])
-            self.personalColorCustom.image = UIImage(named: images[1])
         case "가을웜톤":
             self.personalColorImg.image = UIImage(named: images[2])
-            self.personalColorCustom.image = UIImage(named: images[2])
         default:
             self.personalColorImg.image = UIImage(named: images[3])
-            self.personalColorCustom.image = UIImage(named: images[3])
         }
     }
     
@@ -60,8 +49,8 @@ class PCT_ViewController: UIViewController {
     func backgroundSetting () {
         self.view.backgroundColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 0.7)
         self.view.isOpaque = true
-       // modalview.setViewShadow (backView: modalview, colorName: "000", width: -4, height:5)
     }
+    
     /*
     // MARK: - Navigation
 

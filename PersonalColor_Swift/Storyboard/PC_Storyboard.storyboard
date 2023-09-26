@@ -72,7 +72,7 @@
                                         <rect key="frame" x="8" y="8" width="345" height="1700"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="saB-A6-k87">
-                                                <rect key="frame" x="8" y="52" width="329" height="240"/>
+                                                <rect key="frame" x="8" y="52" width="329" height="835"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="당신의 퍼스널 컬러는???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LW1-Sa-ysG">
@@ -82,19 +82,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clO-xm-bA1">
-                                                <rect key="frame" x="8" y="385" width="329" height="426"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P9I-84-dqL">
-                                                <rect key="frame" x="0.0" y="300" width="329" height="77"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqR-Fu-V6i">
-                                                <rect key="frame" x="146" y="865" width="54" height="35"/>
+                                                <rect key="frame" x="145" y="895" width="54" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="닫기"/>
@@ -130,9 +119,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="personalColorCustom" destination="clO-xm-bA1" id="3kX-jL-cr1"/>
                         <outlet property="personalColorImg" destination="saB-A6-k87" id="xn2-Pe-crh"/>
-                        <outlet property="personalColorName" destination="P9I-84-dqL" id="pWV-wt-aF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZJ-gb-gtN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
