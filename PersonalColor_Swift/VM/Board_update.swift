@@ -1,8 +1,8 @@
 //
-//  Board_insert.swift
+//  Board_update.swift
 //  PersonalColor_Swift
 //
-//  Created by 이종욱 on 2023/09/25.
+//  Created by 이종욱 on 2023/09/27.
 //
 
 import Foundation
@@ -10,20 +10,19 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 
-class Board_insert{
+class Board_update{
     
     
     let db = Firestore.firestore()
     
-    func insertItems(image:String, title:String, content:String, id:String, time:String){
+    func updateItems(documnetID: String, image:String, title:String, content:String){
 
         
-        db.collection("board").addDocument(data: [
+        db.collection("board").document(documnetID).updateData([
             "image": image,
             "Title": title,
-            "Content": content,
-            "id": id,
-            "time": time,
+            "Content": content
+           
         ]){error in
  
         } // // FireBase Query Insert End-

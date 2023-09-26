@@ -1,62 +1,71 @@
 //
-//  Insert_Board_ViewController.swift
+//  Board_Update_ViewController.swift
 //  PersonalColor_Swift
 //
-//  Created by 이종욱 on 2023/09/25.
+//  Created by 이종욱 on 2023/09/26.
 //
 
 import UIKit
 import PhotosUI // 앨범
-
-class Insert_Board_ViewController: UIViewController {
+class Board_Update_ViewController: UIViewController {
 
     
-    
-    @IBOutlet var img: UIButton!
-    @IBOutlet var tfTitle: UITextField!
-    @IBOutlet var text_view: UITextView!
+    var img:String = ""
+    var titleText:String = ""
+    var contentText:String = ""
+    var documentID:String = ""
     
     // 앨범 사진 데이터 넣는곳
     var itemProviders: [NSItemProvider] = []
     var imageCheck:Bool = false
     
+    
+    @IBOutlet var btn_img: UIButton!
+    
+    
+    @IBOutlet var tfTitle: UITextField!
+    
+    @IBOutlet var tvContent: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        pre_setting()
-    }
-    
-    func pre_setting(){
-        // 키보드위치에 따른 화면이동
-        setKeyboardEvent()
-        
-        imageCheck = false
-        // 업로드버튼 이미지 사이즈 맞추기
-        img.imageView?.contentMode = .scaleToFill
-        text_view.layer.borderWidth = 1
-        text_view.layer.borderColor = UIColor.black.cgColor
-    }
 
+        print(documentID)
+        imageCheck = false
+        tfTitle.text = titleText
+        tvContent.text = contentText
+        btn_img.imageView?.contentMode = .scaleToFill
+        
+        let url = URL(string: img)
+    
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url!){
+                DispatchQueue.main.async {
+
+                    self.btn_img.setBackgroundImage(UIImage(data: data), for: .normal)
+                    
+                }
+            }else{
+                    print("이미지불러오기실패")
+                }
+        }
+        
+    }
     
     
-    @IBAction func btn_img(_ sender: UIButton) {
+    @IBAction func btn_image(_ sender: UIButton) {
         presentPicker()
     }
     
     
-    
-    
-    @IBAction func btn_add(_ sender: UIButton) {
+
+    @IBAction func btn_update(_ sender: UIButton) {
         
         
-        guard let imageData = self.img.imageView?.image?.pngData() else {return}
         guard let tfTitle_text = tfTitle.text else {return}
-        guard let tvContent_text = text_view.text else {return}
+        guard let tvContent_text = tvContent.text else {return}
         
-        if imageCheck == false{
-            callAlert(alert_title: "Error", alert_Message: "Plase Enter Image", tfName: "image")
-            return
-        }
+        
         
         if tfTitle_text.trimmingCharacters(in: .whitespaces).isEmpty{
             callAlert(alert_title: "Error", alert_Message: "Plase Enter Title", tfName: "title")
@@ -68,16 +77,21 @@ class Insert_Board_ViewController: UIViewController {
         }
         
         
-        let upload = Firebase_image_upload()
-        upload.imageUpload(image: imageData, titleText: tfTitle_text, contentText: text_view.text, id: UserDefaults.standard.string(forKey: "id")!)
         
-        var detailview = Detail_Board_ViewController.self
         
-        callAlert(alert_title: "Write Complete", alert_Message: "Your Content has been added", tfName: "add")
+        if imageCheck{
+            guard let imageData = self.btn_img.backgroundImage(for: .normal)!.pngData() else {return}
+            let upload = Firebase_image_upload()
+            upload.updateimageUpload(documnetID: documentID, image: imageData, titleText: tfTitle_text, contentText: tvContent.text)
+        }else{
+            let update = Board_update()
+            update.updateItems(documnetID: documentID, image: img, title: tfTitle_text, content: tvContent.text)
+        }
         
+        
+        callAlert(alert_title: "Update Complete", alert_Message: "Your Content has been Update", tfName: "update")
+      
     }
-    
-    
     
     // Alert 띄우기
     func callAlert(alert_title:String, alert_Message: String, tfName: String){
@@ -89,8 +103,8 @@ class Insert_Board_ViewController: UIViewController {
             switch tfName{
             case "image": self.presentPicker()
             case "title": self.tfTitle.becomeFirstResponder()
-            case "add" : self.navigationController?.popViewController(animated: true)
-            default: self.text_view.becomeFirstResponder()
+            case "update" : self.navigationController?.popViewController(animated: true)
+            default: self.tvContent.becomeFirstResponder()
                 
             }
             
@@ -100,7 +114,6 @@ class Insert_Board_ViewController: UIViewController {
         alert.addAction(yes)
         present(alert, animated: true)
     } // func callAlert End-
-    
     
     // 앨범띄우기
     func presentPicker() {
@@ -141,44 +154,21 @@ class Insert_Board_ViewController: UIViewController {
             
         // loadObject가 비동기적으로 처리되기 때문에 UI 업데이트를 위해 메인쓰레드로 변경
         DispatchQueue.main.async {
-            self.img.imageView?.image = image
+            //self.btn_img.imageView?.image = image
+            self.btn_img.setBackgroundImage(image, for: .normal)
                 }
             }
             imageCheck = true
         }
     } // func addPreviewImage() End-
     
-    // 키보드 외부 클릭시 내리기
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            self.view.endEditing(true)
-        }
-    
-    // 키보드에 따른 화면옮기기
-    func setKeyboardEvent(){
-            // 키보드가 생성될때
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear(_ :)), name: UIResponder.keyboardWillShowNotification, object: nil)
-            // 키보드가 사라질때
-            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear(_ :)), name: UIResponder.keyboardWillHideNotification, object: nil)
-            
-        
-        }
-        
-        @objc func keyboardWillAppear(_ sender: NotificationCenter){
-            // 본인의 뷰의 틀의 원본의 Y값 = -150
-            self.view.frame.origin.y = -250
-        }
-
-        @objc func keyboardWillDisappear(_ sender:NotificationCenter){
-            self.view.frame.origin.y = 0
-        }
-    // 키보드에 따른 화면 옮기기 끗
 }
 
 
 
 
 // 앨범
-extension Insert_Board_ViewController: PHPickerViewControllerDelegate{
+extension Board_Update_ViewController: PHPickerViewControllerDelegate{
 
         // picker가 종료되면 동작 함
         func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {

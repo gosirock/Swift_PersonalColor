@@ -12,7 +12,6 @@ class Board_ViewController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    let dataArray = ["g","g","a", "gg", "gg"]
     var collection_data:[Board_List_Model] = []
     
     
@@ -21,13 +20,18 @@ class Board_ViewController: UIViewController {
 
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+  
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         readValues()
-        print("hi")
-        print(collection_data)
-      
+        
     }
     
     func readValues(){
+        
+   
         let selectModel = Board_List()
         selectModel.delegate = self
         selectModel.downloadItems(tableName: "board") // todolist Table 불러오기
@@ -41,9 +45,8 @@ class Board_ViewController: UIViewController {
             let cell = sender as! Cell_Board_CollectionView
             let indexPath = collectionView.indexPath(for: cell)
             let detailView = segue.destination as! Detail_Board_ViewController
-            detailView.title_text = collection_data[indexPath!.row].title
-            detailView.content_text = collection_data[indexPath!.row].content
-            detailView.image_data = collection_data[indexPath!.row].image
+            detailView.documentID = collection_data[indexPath!.row].documentID
+            detailView.id = collection_data[indexPath!.row].id
             
             
 
@@ -71,6 +74,7 @@ extension Board_ViewController:UICollectionViewDataSource, UICollectionViewDeleg
     // cell 구성
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! Cell_Board_CollectionView
+        
         // 셀 배경화면
 //        cell.backgroundColor = .white
         let frame_list = ["frame01","frame02","frame03","frame04",]
@@ -129,3 +133,5 @@ extension Board_ViewController:Board_List_Model_Protocol{
         self.collectionView.reloadData()
     }
 }
+
+

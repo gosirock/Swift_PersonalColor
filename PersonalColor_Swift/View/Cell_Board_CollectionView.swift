@@ -14,6 +14,7 @@ class Cell_Board_CollectionView: UICollectionViewCell {
     
     @IBOutlet var board_label: UILabel!
     
+
     
     @IBOutlet var board_frame: UIImageView!
 }
