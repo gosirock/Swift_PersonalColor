@@ -117,7 +117,7 @@ class EditIDViewController: UIViewController {
             if (validpassword(mypassword: upassword)&&validid(myid: uid)) {
                 updateAction()
                 if imageInsert{
-                    updateImage(selectedImage!)
+                    
                 }
             }else{
                 showD()
@@ -316,18 +316,6 @@ class EditIDViewController: UIViewController {
             present(imagePickerController, animated: false)
     }
     
-    
-    func updateImage(_ image : UIImage){
-        guard let id = tfID.text?.trimmingCharacters(in: .whitespaces) else {return}
-
-        
-        //UIImage -> Data
-        let imageData: Data = image.pngData()! as Data
-        
-        
-        let database_Handler = DataBase_Handler_Wook()
-        database_Handler.updateAction(id: UserDefaults.standard.string(forKey: "id")!, imageName: imageName, image: imageData)
-    }
     
 } //EditIDViewController
 
