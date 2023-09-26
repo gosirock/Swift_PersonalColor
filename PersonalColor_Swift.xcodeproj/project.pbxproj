@@ -13,7 +13,7 @@
 		AAF3E8132AC2AFEF00971CD6 /* EditIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */; };
 		AAF3E8162AC2B00300971CD6 /* ColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */; };
 		AAF3E8172AC2B00300971CD6 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */; };
-		AAF3E81B2AC2CA6000971CD6 /* sprintwarm.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E8182AC2CA6000971CD6 /* sprintwarm.png */; };
+		AAF3E81B2AC2CA6000971CD6 /* spring.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E8182AC2CA6000971CD6 /* spring.png */; };
 		AAF3E81C2AC2CA6000971CD6 /* summer.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E8192AC2CA6000971CD6 /* summer.png */; };
 		AAF3E81D2AC2CA6000971CD6 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AAF3E81A2AC2CA6000971CD6 /* winter.png */; };
 		C78B7FAA2AC2AC28009687C9 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */; };
@@ -94,7 +94,7 @@
 		AAF3E8122AC2AFEF00971CD6 /* EditIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIDViewController.swift; sourceTree = "<group>"; };
 		AAF3E8142AC2B00300971CD6 /* ColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorViewController.swift; sourceTree = "<group>"; };
 		AAF3E8152AC2B00300971CD6 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
-		AAF3E8182AC2CA6000971CD6 /* sprintwarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sprintwarm.png; sourceTree = "<group>"; };
+		AAF3E8182AC2CA6000971CD6 /* spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spring.png; sourceTree = "<group>"; };
 		AAF3E8192AC2CA6000971CD6 /* summer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = summer.png; sourceTree = "<group>"; };
 		AAF3E81A2AC2CA6000971CD6 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
 		C78B7FA92AC2AC28009687C9 /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 		FC6BC0C92AB9381A00C84D25 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				AAF3E8182AC2CA6000971CD6 /* sprintwarm.png */,
+				AAF3E8182AC2CA6000971CD6 /* spring.png */,
 				AAF3E8192AC2CA6000971CD6 /* summer.png */,
 				AAF3E81A2AC2CA6000971CD6 /* winter.png */,
 				AAF3E80D2AC2A8C500971CD6 /* fall.png */,
@@ -435,7 +435,7 @@
 				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
 				FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */,
-				AAF3E81B2AC2CA6000971CD6 /* sprintwarm.png in Resources */,
+				AAF3E81B2AC2CA6000971CD6 /* spring.png in Resources */,
 				C7F4E2C62ABD8E6C0053C44F /* GoogleService-Info.plist in Resources */,
 				FC6BC0BF2AB9340800C84D25 /* Assets.xcassets in Resources */,
 				C7F4E2C02ABD3FC10053C44F /* setting.png in Resources */,

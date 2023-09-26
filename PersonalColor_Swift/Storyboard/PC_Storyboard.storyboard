@@ -126,11 +126,11 @@
             </objects>
             <point key="canvasLocation" x="2887.7862595419847" y="-5.6338028169014089"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="Avj-b9-Rjn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7xa-OU-vVe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="A_ColorTabBar.png" id="5A6-Jn-k6Z"/>
+                    <tabBarItem key="tabBarItem" title="" image="IA_ColorTabBar.png" selectedImage="A_ColorTabBar.png" id="5A6-Jn-k6Z"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8UW-Vr-l5b">
@@ -149,6 +149,7 @@
     </scenes>
     <resources>
         <image name="A_ColorTabBar.png" width="79" height="66"/>
+        <image name="IA_ColorTabBar.png" width="79" height="50"/>
         <image name="UploadPhoto.png" width="203" height="168"/>
         <image name="btn_Slelct_Photo.png" width="301" height="34"/>
         <namedColor name="AccentColor">

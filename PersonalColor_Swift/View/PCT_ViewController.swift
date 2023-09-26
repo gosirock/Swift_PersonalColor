@@ -13,7 +13,7 @@ class PCT_ViewController: UIViewController {
     var name = ""
     
     // 사진 등록
-    var images = [ "spring.png", "summer.png", "fail.png","winter.png"]
+    var images = [ "spring.png", "summer.png", "fall.png","winter.png"]
 
     // 퍼스널 컬러 이미지
     @IBOutlet weak var personalColorImg: UIImageView!
@@ -35,6 +35,7 @@ class PCT_ViewController: UIViewController {
     
     // 이미지 설정
     func personalColor(_ pctype: String){
+        print(pctype)
         switch pctype{
         case "봄웜톤":
             self.personalColorImg.image = UIImage(named: images[0])
