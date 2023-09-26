@@ -12,7 +12,6 @@
 		AA3616C02ABF3E190071D557 /* winter.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BC2ABF3E190071D557 /* winter.png */; };
 		AA3616C12ABF3E190071D557 /* spring.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3616BD2ABF3E190071D557 /* spring.png */; };
 		AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */; };
-		C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */; };
 		C7972E702ABD3232006F2EA3 /* NaverMapview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */; };
 		C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */; };
 		C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */; };
@@ -69,6 +68,8 @@
 		FC9DFB032AC186A000824BEA /* Insert_Board_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9DFB022AC186A000824BEA /* Insert_Board_ViewController.swift */; };
 		FCB6EE512AC18BC900A295D4 /* Board_insert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE502AC18BC900A295D4 /* Board_insert.swift */; };
 		FCB6EE532AC18BF800A295D4 /* Firebase_image_upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE522AC18BF800A295D4 /* Firebase_image_upload.swift */; };
+		FCB6EE552AC2ADDB00A295D4 /* Board_review_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE542AC2ADDB00A295D4 /* Board_review_list.swift */; };
+		FCB6EE572AC2ADFC00A295D4 /* Board_review_list_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB6EE562AC2ADFC00A295D4 /* Board_review_list_model.swift */; };
 		FCE2384E2ABBEF64005E6ADB /* Board_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +82,6 @@
 		AA3616BC2ABF3E190071D557 /* winter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winter.png; sourceTree = "<group>"; };
 		AA3616BD2ABF3E190071D557 /* spring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spring.png; sourceTree = "<group>"; };
 		AAAB91542AC115A50088DA51 /* PCT_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCT_ViewController.swift; sourceTree = "<group>"; };
-		C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaverMapview.swift; sourceTree = "<group>"; };
 		C7F4E2B22ABD33AC0053C44F /* UserInsertMo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInsertMo.swift; sourceTree = "<group>"; };
 		C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDBModel.swift; sourceTree = "<group>"; };
@@ -134,6 +134,8 @@
 		FC9DFB022AC186A000824BEA /* Insert_Board_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insert_Board_ViewController.swift; sourceTree = "<group>"; };
 		FCB6EE502AC18BC900A295D4 /* Board_insert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_insert.swift; sourceTree = "<group>"; };
 		FCB6EE522AC18BF800A295D4 /* Firebase_image_upload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_image_upload.swift; sourceTree = "<group>"; };
+		FCB6EE542AC2ADDB00A295D4 /* Board_review_list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_review_list.swift; sourceTree = "<group>"; };
+		FCB6EE562AC2ADFC00A295D4 /* Board_review_list_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_review_list_model.swift; sourceTree = "<group>"; };
 		FCE2384D2ABBEF64005E6ADB /* Board_Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Board_Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 				FC9DFAFE2AC130AC00824BEA /* Board_List.swift */,
 				FCB6EE502AC18BC900A295D4 /* Board_insert.swift */,
 				FCB6EE522AC18BF800A295D4 /* Firebase_image_upload.swift */,
+				FCB6EE542AC2ADDB00A295D4 /* Board_review_list.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				C7F4E2B72ABD33F20053C44F /* UserJSONDBModel.swift */,
 				C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */,
 				FC9DFB002AC1315200824BEA /* Board_List_Model.swift */,
+				FCB6EE562AC2ADFC00A295D4 /* Board_review_list_model.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -272,7 +276,6 @@
 			children = (
 				FC9DFB022AC186A000824BEA /* Insert_Board_ViewController.swift */,
 				C7972E6F2ABD3232006F2EA3 /* NaverMapview.swift */,
-				C7972E6D2ABD3228006F2EA3 /* RegisterViewController.swift */,
 				FC6BC0F32AB972CB00C84D25 /* Home_ViewController.swift */,
 				FC6BC1012AB978E900C84D25 /* Map_ViewController.swift */,
 				FC6BC1132ABA9EA700C84D25 /* PC_ViewController.swift */,
@@ -478,14 +481,15 @@
 				FC9DFB012AC1315200824BEA /* Board_List_Model.swift in Sources */,
 				FC7978862ABD971C007350D0 /* Board_ViewController.swift in Sources */,
 				C7F4E2B32ABD33AC0053C44F /* UserInsertMo.swift in Sources */,
-				C7972E6E2ABD3228006F2EA3 /* RegisterViewController.swift in Sources */,
 				FC9DFAFF2AC130AC00824BEA /* Board_List.swift in Sources */,
 				FC6BC0B82AB9340600C84D25 /* SceneDelegate.swift in Sources */,
 				C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */,
+				FCB6EE572AC2ADFC00A295D4 /* Board_review_list_model.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
 				C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */,
 				FC7978872ABD971C007350D0 /* Cell_Board_CollectionView.swift in Sources */,
 				AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */,
+				FCB6EE552AC2ADDB00A295D4 /* Board_review_list.swift in Sources */,
 				FC7978882ABD971C007350D0 /* Detail_Board_ViewController.swift in Sources */,
 				FC9DFB032AC186A000824BEA /* Insert_Board_ViewController.swift in Sources */,
 				FC6BC1022AB978E900C84D25 /* Map_ViewController.swift in Sources */,

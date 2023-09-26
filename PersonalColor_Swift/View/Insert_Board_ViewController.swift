@@ -44,9 +44,7 @@ class Insert_Board_ViewController: UIViewController {
     
     @IBAction func btn_add(_ sender: UIButton) {
         
-     
-        
-        
+        print("버튼눌려짐")
         guard let imageData = self.img.imageView?.image?.pngData() else {return}
         guard let tfTitle_text = tfTitle.text else {return}
         

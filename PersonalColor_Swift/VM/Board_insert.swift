@@ -12,6 +12,7 @@ import FirebaseFirestore
 
 class Board_insert{
     
+    
     let db = Firestore.firestore()
     
     func insertItems(image:String, title:String, content:String, id:String, time:String){

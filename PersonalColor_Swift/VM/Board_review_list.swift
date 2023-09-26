@@ -1,18 +1,18 @@
 //
-//  Board_List.swift
+//  Board_review_list.swift
 //  PersonalColor_Swift
 //
-//  Created by 이종욱 on 2023/09/25.
+//  Created by 이종욱 on 2023/09/26.
 //
 
 import Foundation
 import Firebase
 
-protocol Board_List_Model_Protocol{
-    func itemDownLoaded(items: [Board_List_Model])
+protocol Boardreview_list_Model_Protocol{
+    func itemDownLoaded(items: [Board_review_list])
 } // protocol LJU_SelectModelProtocol End-
 
-class Board_List{
+class Board_review_list{
     
     var delegate: Board_List_Model_Protocol!
     let db = Firestore.firestore()
