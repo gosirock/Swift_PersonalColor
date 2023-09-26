@@ -21,6 +21,7 @@ class EditIDViewController: UIViewController {
     
     // user info : UserDBModel generic 배열
     var user : [UserDBModel] = []
+    // 이미지를 수정하지 않으면
     
     // 이미지 피커
     // 프로필이미지
@@ -35,6 +36,14 @@ class EditIDViewController: UIViewController {
     var imageName : String = ""
     // 프로필사진을 바꿧는지 상태확인
     var imageInsert : Bool = false
+
+    
+    // firebase에서 가져온 데이터
+    var userinfoList : [Image_DBModel] = []
+    // 이미지를 변경하지 않을시 이전이미지
+    var lastImage : UIImage?
+    // document ID
+    var docID : String = ""
 
     
     
@@ -77,7 +86,7 @@ class EditIDViewController: UIViewController {
     // 페이지 켜질 때 데이터 가져오기
     override func viewWillAppear(_ animated: Bool) {
         selectAction()
-        
+        readValues()
         
         
     }
@@ -112,14 +121,16 @@ class EditIDViewController: UIViewController {
         guard let uid = tfID.text?.trimmingCharacters(in: .whitespaces) else {return}
         guard let upassword = tfPW.text?.trimmingCharacters(in: .whitespaces) else {return}
         guard let uname = tfName.text?.trimmingCharacters(in: .whitespaces) else {return}
-        
         if (passCorrect && uid != "" && upassword != "" && uname != ""){
             if (validpassword(mypassword: upassword)&&validid(myid: uid)) {
                 updateAction()
                 if imageInsert{
-                    
+                    firebase_updateAction(selectedImage!)
+                }else{
+                    firebase_updateAction(lastImage!)
                 }
             }else{
+                print("바로 업데이트 오류")
                 showD()
             }
             
@@ -139,7 +150,7 @@ class EditIDViewController: UIViewController {
     
     func updateAction(){
         let updateModel = UpdateModel()
-        
+        print("sql db update 들어옴")
         //guard let uid = tfID.text?.trimmingCharacters(in: .whitespaces) else {return}
         guard let upassword = tfPW.text?.trimmingCharacters(in: .whitespaces) else {return}
         guard let uname = tfName.text?.trimmingCharacters(in: .whitespaces) else {return}
@@ -221,6 +232,23 @@ class EditIDViewController: UIViewController {
         
     }
     
+    // firebase 업데이트하기
+    func firebase_updateAction(_ image : UIImage){
+        // UpdateModel 연결
+        let upload = User_ImageUpload()
+
+        guard let pw = tfPW.text?.trimmingCharacters(in: .whitespaces) else{return}
+        guard let name = tfName.text?.trimmingCharacters(in: .whitespaces) else{return}
+
+
+        //이미지업로드
+        //UIImage -> Data
+        let imageData: Data = image.pngData()! as Data
+        upload.imageUploadUpdate(DocumentId: docID, image: imageData, upassword: pw, uname: name)
+    }
+    
+    
+    
     // 비밀번호 정규식
     func validpassword(mypassword : String) -> Bool
         {//(?=.*[A-Za-z])(?=.*[0-9])
@@ -231,8 +259,8 @@ class EditIDViewController: UIViewController {
         }
     
     func validid(myid: String) -> Bool {
-        // "@" 기호가 반드시 포함되어야 하고, 총 길이가 5에서 45 사이의 문자열을 체크하는 정규표현식
-        let idreg = "^(?=.*[@])[A-Za-z0-9@#$%^&*!]{5,45}$"
+        // "@, ." 기호가 반드시 포함되어야 하고, 총 길이가 5에서 45 사이의 문자열을 체크하는 정규표현식
+        let idreg = "^(?=.*[@])(?=.*[.])[A-Za-z0-9@#$%^&*!.]{5,45}$"
         let idtesting = NSPredicate(format: "SELF MATCHES %@", idreg)
         return idtesting.evaluate(with: myid)
     }
@@ -317,6 +345,15 @@ class EditIDViewController: UIViewController {
     }
     
     
+    // SelectModel에서 데이터 불러오기
+    func readValues(){
+        let selectModel = User_SelectModel()
+        selectModel.delegate = self
+        selectModel.downloadItems(tableName: "user",id : UserDefaults.standard.string(forKey: "id")!) // todolist Table 불러오기
+        
+    }
+    
+    
 } //EditIDViewController
 
 extension EditIDViewController : QueryModelProtocol{
@@ -349,6 +386,29 @@ extension EditIDViewController: UIImagePickerControllerDelegate,UINavigationCont
         self.selectedImage = selectedImage
         imageInsert = true
         dismiss(animated: true)
+    }
+    
+}
+// selectProtocol
+extension EditIDViewController: User_SelectModelProtocols{
+    func itemDownLoad(items: [Image_DBModel]){
+        self.userinfoList = items
+        self.docID = userinfoList[0].documentID
+        print(userinfoList[0].uid)
+        
+        
+        // 이미지 넣어주기
+        let url = URL(string: userinfoList[0].image)
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url!){
+                DispatchQueue.main.async {
+                    self.lastImage = UIImage(data: data)
+                    self.imgView.image = UIImage(data: data)
+                }
+            }else{
+                    print("이미지불러오기실패")
+                }
+        }
     }
     
 }

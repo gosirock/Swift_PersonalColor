@@ -169,10 +169,10 @@ class LoginCheck{
                 locations.append(query)
                 // 배열에 가져온 값을 넣어주기
             }
-            print(locations)
+            //print(locations)
             
             // 가져온 값 갯수 확인
-            print(users.count)
+            //print(users.count)
             
             
         }catch let error{
@@ -188,7 +188,7 @@ class LoginCheck{
         }
         
     }
-   
+   // 로그인체크 rowCount 1개만 가져오기
 //   func parseJSON(_ data:Data){
 //       // 가져오는지 확인하기
 //       // JSON to String

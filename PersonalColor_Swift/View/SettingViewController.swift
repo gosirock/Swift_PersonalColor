@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingViewController: UIViewController {
-    
+
     @IBOutlet weak var imgView: UIImageView!
     
     // 계정확인 뷰
@@ -22,6 +22,8 @@ class SettingViewController: UIViewController {
     
     // SQLite DB에서 가져온 값 넣어두는 리스트
     //var imageList : [ImageModel] = []
+    
+    var userinfoList : [Image_DBModel] = []
     
     
     var user : [UserDBModel] = []
@@ -74,6 +76,7 @@ class SettingViewController: UIViewController {
     // 페이지 켜질 때 데이터 가져오기
     override func viewWillAppear(_ animated: Bool) {
         selectAction()
+        readValues()
         //selectSQLite()
         
         
@@ -165,9 +168,19 @@ class SettingViewController: UIViewController {
     }
     
     
+    // SelectModel에서 데이터 불러오기
+    func readValues(){
+        let selectModel = User_SelectModel()
+        selectModel.delegate = self
+        selectModel.downloadItems(tableName: "user",id : UserDefaults.standard.string(forKey: "id")!) // todolist Table 불러오기
+        
+    }
     
     
-}
+    
+    
+    
+} //SettingViewController
 
 extension SettingViewController : QueryModelProtocol{
     func itemDownloaded(items : [UserDBModel]) {
@@ -184,3 +197,26 @@ extension SettingViewController : QueryModelProtocol{
 //        imgView.image = UIImage(data: imageList[0].imagefile)
 //    }
 //}
+
+
+// selectProtocol
+extension SettingViewController: User_SelectModelProtocols{
+    func itemDownLoad(items: [Image_DBModel]){
+        self.userinfoList = items
+        
+        // 이미지 넣어주기
+        let url = URL(string: userinfoList[0].image)
+        
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url!){
+                DispatchQueue.main.async {
+                    self.imgView.image = UIImage(data: data)
+                }
+            }else{
+                    print("이미지불러오기실패")
+                }
+        }
+    }
+    
+}
+
