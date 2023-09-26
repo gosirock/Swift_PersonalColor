@@ -60,8 +60,8 @@ class Main_ViewController: UIViewController {
         setKeyBoadEvent()
         
         // SQLite DB  앱 켜질 시 DB생성
-        let database_Handler = DataBase_Handler_Wook()
-        database_Handler.createDB()
+        //let database_Handler = DataBase_Handler_Wook()
+        //database_Handler.createDB()
         
 
     }
