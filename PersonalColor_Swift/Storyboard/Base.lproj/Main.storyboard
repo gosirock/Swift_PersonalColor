@@ -150,10 +150,10 @@
             </objects>
             <point key="canvasLocation" x="773" y="420"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Add User View Controller-->
         <scene sceneID="J1a-aV-i3e">
             <objects>
-                <viewController id="NQs-9i-zZG" customClass="RegisterViewController" customModule="PersonalColor_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NQs-9i-zZG" customClass="AddUserViewController" customModule="PersonalColor_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qek-FW-UD4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
