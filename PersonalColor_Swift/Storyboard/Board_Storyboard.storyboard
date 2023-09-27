@@ -375,8 +375,9 @@
         <scene sceneID="3ez-w6-9W3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="adC-wK-QFB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="IA_ShopTabBar.png" selectedImage="A_ShopTabBar.png" id="d3W-bb-e2K"/>
+                    <tabBarItem key="tabBarItem" title="" image="IA_ShopTabBar.png" selectedImage="Board_tabbar.png" id="Aer-Hg-HQd"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9xw-Rf-wX0">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -392,8 +393,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="A_ShopTabBar.png" width="79" height="66"/>
         <image name="Board_frame.png" width="270" height="375"/>
+        <image name="Board_tabbar.png" width="79" height="66"/>
         <image name="IA_ShopTabBar.png" width="79" height="50"/>
         <image name="UploadPhoto.png" width="203" height="168"/>
         <image name="btn_delete.png" width="80" height="80"/>
