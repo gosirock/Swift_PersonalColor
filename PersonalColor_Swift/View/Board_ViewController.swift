@@ -48,6 +48,7 @@ class Board_ViewController: UIViewController {
             detailView.documentID = collection_data[indexPath!.row].documentID
             detailView.id = collection_data[indexPath!.row].id
             
+            Board_Message.detail_DocumentID = true
             
 
         }

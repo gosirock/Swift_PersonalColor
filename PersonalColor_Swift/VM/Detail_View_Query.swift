@@ -18,6 +18,8 @@ class Detail_View_Query{
     let db = Firestore.firestore()
     
     func downloadItems(documnetID:String){
+ 
+        
         var locations: [Board_List_Model] = []
         
         db.collection("board").document(documnetID)
@@ -27,9 +29,8 @@ class Detail_View_Query{
                 if (err != nil){
                     print("SelectModel Error")
                 }else{
-                    
                         let query = Board_List_Model(
-                            documentID: querySnapshot!.documentID,
+                            documentID: querySnapshot?.documentID ?? "false",
                             image: querySnapshot?.data()?["image"] as! String,
                             title: querySnapshot?.data()?["Title"] as! String,
                             content: querySnapshot?.data()?["Content"] as! String,
@@ -37,13 +38,20 @@ class Detail_View_Query{
                             time: querySnapshot?.data()?["time"] as! String
                         )
                         locations.append(query)
-                        
+                    
+                 
 
                     DispatchQueue.main.async {
                         self.delegate.itemDownLoaded(items: locations)
-                    } // DispatchQueue End-
+                    }
+                        
+                  
+                         
                 } // if, else End-
             })// // FireBase Query getDocuments End-
+       
+        
+    
     }
     
 }

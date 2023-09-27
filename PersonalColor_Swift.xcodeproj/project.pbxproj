@@ -37,6 +37,10 @@
 		C7F4E2CB2ABD8EA80053C44F /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C7F4E2CA2ABD8EA80053C44F /* FirebaseFirestore */; };
 		C7F4E2CD2ABD8EA80053C44F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C7F4E2CC2ABD8EA80053C44F /* FirebaseStorage */; };
 		D82E375D06E1D34D0035BF99 /* Pods_PersonalColor_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DD9586334C126AECA468CD /* Pods_PersonalColor_Swift.framework */; };
+		FC0858F52AC3BF5300B7C507 /* btn_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0858F42AC3BF5300B7C507 /* btn_delete.png */; };
+		FC0858F72AC3BF9D00B7C507 /* btn_update.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0858F62AC3BF9D00B7C507 /* btn_update.png */; };
+		FC0858F92AC3C09200B7C507 /* Board_Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0858F82AC3C09200B7C507 /* Board_Delete.swift */; };
+		FC0858FB2AC3C92600B7C507 /* Board_Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0858FA2AC3C92600B7C507 /* Board_Message.swift */; };
 		FC0DF99B2AC2F88700058F57 /* btn_write.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0DF99A2AC2F88700058F57 /* btn_write.png */; };
 		FC0DF99D2AC2FA8400058F57 /* btn_write2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC0DF99C2AC2FA8400058F57 /* btn_write2.png */; };
 		FC0DF99F2AC30B0400058F57 /* Detail_Board_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0DF99E2AC30B0400058F57 /* Detail_Board_TableViewCell.swift */; };
@@ -125,6 +129,10 @@
 		C7F4E2C12ABD45670053C44F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		C7F4E2C32ABD600E0053C44F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		C7F4E2C52ABD8E6C0053C44F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC0858F42AC3BF5300B7C507 /* btn_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_delete.png; sourceTree = "<group>"; };
+		FC0858F62AC3BF9D00B7C507 /* btn_update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_update.png; sourceTree = "<group>"; };
+		FC0858F82AC3C09200B7C507 /* Board_Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_Delete.swift; sourceTree = "<group>"; };
+		FC0858FA2AC3C92600B7C507 /* Board_Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board_Message.swift; sourceTree = "<group>"; };
 		FC0DF99A2AC2F88700058F57 /* btn_write.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_write.png; sourceTree = "<group>"; };
 		FC0DF99C2AC2FA8400058F57 /* btn_write2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_write2.png; sourceTree = "<group>"; };
 		FC0DF99E2AC30B0400058F57 /* Detail_Board_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail_Board_TableViewCell.swift; sourceTree = "<group>"; };
@@ -236,6 +244,7 @@
 				FC0DF9A62AC31D0400058F57 /* Detail_Review_Delete.swift */,
 				FC0DF9AA2AC32E4100058F57 /* Board_update.swift */,
 				FC0DF9AC2AC3367E00058F57 /* Detail_View_Query.swift */,
+				FC0858F82AC3C09200B7C507 /* Board_Delete.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -248,6 +257,7 @@
 				C7F4E2B52ABD33F00053C44F /* UserDBModel.swift */,
 				FC9DFB002AC1315200824BEA /* Board_List_Model.swift */,
 				FC0DF9A22AC30D8E00058F57 /* Detail_Review_List_Model.swift */,
+				FC0858FA2AC3C92600B7C507 /* Board_Message.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -358,6 +368,8 @@
 			isa = PBXGroup;
 			children = (
 				FC0DF99C2AC2FA8400058F57 /* btn_write2.png */,
+				FC0858F62AC3BF9D00B7C507 /* btn_update.png */,
+				FC0858F42AC3BF5300B7C507 /* btn_delete.png */,
 				FC0DF99A2AC2F88700058F57 /* btn_write.png */,
 				FC6BC0FF2AB9773500C84D25 /* btn_Slelct_Photo.png */,
 				FC6BC1092AB98D0F00C84D25 /* btn_naver.png */,
@@ -465,6 +477,7 @@
 				FC6BC0CB2AB9382400C84D25 /* kakao_login_btn.png in Resources */,
 				FCC5D4832AC2DE6000BD1EC6 /* frame03.png in Resources */,
 				FC6BC0FE2AB976F000C84D25 /* UploadPhoto.png in Resources */,
+				FC0858F52AC3BF5300B7C507 /* btn_delete.png in Resources */,
 				FC53D4432ABBE95300A5AF96 /* Map_Storyboard.storyboard in Resources */,
 				FC6BC0C22AB9340800C84D25 /* LaunchScreen.storyboard in Resources */,
 				FC6BC0DB2AB94FB900C84D25 /* Home_Storyboard.storyboard in Resources */,
@@ -475,6 +488,7 @@
 				FC6BC0F02AB971BB00C84D25 /* IA_ShopTabBar.png in Resources */,
 				FC6BC0EA2AB9603700C84D25 /* IA_MyPageTabBar.png in Resources */,
 				FC6BC10A2AB98D0F00C84D25 /* btn_naver.png in Resources */,
+				FC0858F72AC3BF9D00B7C507 /* btn_update.png in Resources */,
 				AAF3E81D2AC2CA6000971CD6 /* winter.png in Resources */,
 				FC6BC0FA2AB9742000C84D25 /* Shop.png in Resources */,
 				FC6BC0BD2AB9340600C84D25 /* Main.storyboard in Resources */,
@@ -567,6 +581,7 @@
 				C7F4E2B62ABD33F00053C44F /* UserDBModel.swift in Sources */,
 				FC6BC1142ABA9EA700C84D25 /* PC_ViewController.swift in Sources */,
 				C7F4E2BE2ABD37110053C44F /* UserDeleteMo.swift in Sources */,
+				FC0858FB2AC3C92600B7C507 /* Board_Message.swift in Sources */,
 				FC7978872ABD971C007350D0 /* Cell_Board_CollectionView.swift in Sources */,
 				AAAB91552AC115A50088DA51 /* PCT_ViewController.swift in Sources */,
 				FC7978882ABD971C007350D0 /* Detail_Board_ViewController.swift in Sources */,
@@ -580,6 +595,7 @@
 				AAF3E8162AC2B00300971CD6 /* ColorViewController.swift in Sources */,
 				C78B7FAF2AC2AC7E009687C9 /* User_AddUser.swift in Sources */,
 				C78B7FB22AC2AC88009687C9 /* ImageDBModel.swift in Sources */,
+				FC0858F92AC3C09200B7C507 /* Board_Delete.swift in Sources */,
 				C78B7FAE2AC2AC7E009687C9 /* User_Insert.swift in Sources */,
 				FC0DF99F2AC30B0400058F57 /* Detail_Board_TableViewCell.swift in Sources */,
 			);

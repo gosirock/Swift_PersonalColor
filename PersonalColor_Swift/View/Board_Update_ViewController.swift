@@ -53,6 +53,16 @@ class Board_Update_ViewController: UIViewController {
     }
     
     
+    @IBAction func btn_delete(_ sender: UIButton) {
+        
+        callAlert(alert_title: "DeleteCheck", alert_Message: "Are you going to erase it?", tfName: "del")
+        
+    }
+    
+    
+    
+    
+    
     @IBAction func btn_image(_ sender: UIButton) {
         presentPicker()
     }
@@ -103,14 +113,23 @@ class Board_Update_ViewController: UIViewController {
             switch tfName{
             case "image": self.presentPicker()
             case "title": self.tfTitle.becomeFirstResponder()
-            case "update" : self.navigationController?.popViewController(animated: true)
+            case "update" :
+                self.navigationController?.popViewController(animated: true)
+            case "del" :
+                Board_Message.detail_DocumentID = false;
+                let deleteAction = Board_Delete();
+                deleteAction.deleteItems(documentId: self.documentID);
+                self.navigationController?.popViewController(animated: true)
             default: self.tvContent.becomeFirstResponder()
                 
             }
             
             
         } )
-        
+        if tfName == "del"{
+            let no = UIAlertAction(title: "Cancel", style:.cancel)
+            alert.addAction(no)
+        }
         alert.addAction(yes)
         present(alert, animated: true)
     } // func callAlert End-

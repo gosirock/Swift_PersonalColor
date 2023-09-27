@@ -183,7 +183,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj8-uo-B5q">
-                                <rect key="frame" x="29" y="344" width="75" height="21"/>
+                                <rect key="frame" x="29" y="344" width="348" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -248,8 +248,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="댓글" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw6-KV-fpY">
-                                <rect key="frame" x="16" y="514" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw6-KV-fpY">
+                                <rect key="frame" x="16" y="514" width="72" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -293,15 +293,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrl-di-lxb">
-                                <rect key="frame" x="129" y="690" width="137" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="btn_write2.png"/>
-                                <connections>
-                                    <action selector="btn_update:" destination="eaA-8i-iQR" eventType="touchUpInside" id="27m-pS-oDT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRH-Fo-C0P">
                                 <rect key="frame" x="78" y="103" width="237" height="236"/>
                                 <constraints>
@@ -342,6 +333,24 @@
                                 <fontDescription key="fontDescription" name=".SFUI-Semibold" family=".AppleSystemUIFont" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gm9-4w-5lv">
+                                <rect key="frame" x="59" y="664" width="104" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="btn_delete.png"/>
+                                <connections>
+                                    <action selector="btn_delete:" destination="eaA-8i-iQR" eventType="touchUpInside" id="vPG-Ym-c8z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrl-di-lxb">
+                                <rect key="frame" x="198" y="664" width="140" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="btn_update.png"/>
+                                <connections>
+                                    <action selector="btn_update:" destination="eaA-8i-iQR" eventType="touchUpInside" id="27m-pS-oDT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W8a-ga-oVi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -360,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2x1-Wg-a4R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3564" y="360"/>
+            <point key="canvasLocation" x="3562.5954198473282" y="359.85915492957747"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3ez-w6-9W3">
@@ -387,6 +396,8 @@
         <image name="Board_frame.png" width="270" height="375"/>
         <image name="IA_ShopTabBar.png" width="79" height="50"/>
         <image name="UploadPhoto.png" width="203" height="168"/>
+        <image name="btn_delete.png" width="80" height="80"/>
+        <image name="btn_update.png" width="80" height="80"/>
         <image name="btn_write.png" width="80" height="45"/>
         <image name="btn_write2.png" width="112.5" height="33.75"/>
         <image name="eraser.line.dashed" catalog="system" width="128" height="96"/>

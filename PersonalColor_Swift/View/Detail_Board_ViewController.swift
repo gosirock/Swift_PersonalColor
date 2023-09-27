@@ -37,25 +37,30 @@ class Detail_Board_ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         tableView.dataSource = self
         tableView.delegate = self
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
-        
-        if id != UserDefaults.standard.string(forKey: "id")!{
-            btnEdit.isHidden = true
+        var docidCheck = Board_Message.detail_DocumentID
+        if !docidCheck{
+            self.navigationController?.popViewController(animated: true)
+        }else{
+            if id != UserDefaults.standard.string(forKey: "id")!{
+                btnEdit.isHidden = true
+            }
+            readValues()
+            // 키보드위치에 따른 화면이동
+            
+            
+            setKeyboardEvent()
+            
+            //id = UserDefaults.standard.string(forKey: "id")!
+            // 이미지주소 data로 바꾸기
         }
-        readValues()
-        // 키보드위치에 따른 화면이동
         
-        
-        setKeyboardEvent()
-        
-        //id = UserDefaults.standard.string(forKey: "id")!
-        // 이미지주소 data로 바꾸기
         
         
     }
@@ -64,7 +69,7 @@ class Detail_Board_ViewController: UIViewController {
    
         let detailModel = Detail_View_Query()
         detailModel.delegate = self
-        detailModel.downloadItems(documnetID: documentID)
+        var check = detailModel.downloadItems(documnetID: documentID)
         
         
         let selectModel = Detail_Review_List()
