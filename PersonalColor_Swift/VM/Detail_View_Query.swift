@@ -30,7 +30,7 @@ class Detail_View_Query{
                     print("SelectModel Error")
                 }else{
                         let query = Board_List_Model(
-                            documentID: querySnapshot?.documentID ?? "false",
+                            documentID: querySnapshot!.documentID,
                             image: querySnapshot?.data()?["image"] as! String,
                             title: querySnapshot?.data()?["Title"] as! String,
                             content: querySnapshot?.data()?["Content"] as! String,
