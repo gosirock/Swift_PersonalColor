@@ -294,6 +294,13 @@ extension Main_ViewController : LoginModelProtocol{
                 resultAlert.addAction(onAction)
                 
                 present(resultAlert, animated: true)
+            }else{
+                let resultAlert = UIAlertController(title: "로그인실패", message: "정보를 확인해주세요.", preferredStyle: .actionSheet)
+                
+                let onAction = UIAlertAction(title: "OK", style: .cancel)
+                resultAlert.addAction(onAction)
+                
+                present(resultAlert, animated: true)
             }
 
         }
