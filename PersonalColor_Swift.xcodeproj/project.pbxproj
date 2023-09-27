@@ -251,7 +251,7 @@
 			path = VM;
 			sourceTree = "<group>";
 		};
-		C7F4E2B42ABD33D30053C44F /* DTO */ = {
+		C7F4E2B42ABD33D30053C44F /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C78B7FB12AC2AC88009687C9 /* ImageDBModel.swift */,
@@ -261,7 +261,7 @@
 				FC0DF9A22AC30D8E00058F57 /* Detail_Review_List_Model.swift */,
 				FC0858FA2AC3C92600B7C507 /* Board_Message.swift */,
 			);
-			path = DTO;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FC6BC0A92AB9340600C84D25 = {
@@ -286,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				C7F4E2C52ABD8E6C0053C44F /* GoogleService-Info.plist */,
-				C7F4E2B42ABD33D30053C44F /* DTO */,
+				C7F4E2B42ABD33D30053C44F /* Model */,
 				C7F4E2B12ABD33A00053C44F /* VM */,
 				FC6BC0C92AB9381A00C84D25 /* images */,
 				FC6BC0F12AB9726200C84D25 /* View */,
@@ -752,8 +752,10 @@
 				DEVELOPMENT_TEAM = SSW53695BQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor_Swift/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 연결";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치 권한을 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -781,8 +783,10 @@
 				DEVELOPMENT_TEAM = SSW53695BQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor_Swift/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "카메라 연결";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "사용자의 위치 권한을 허용하시겠습니까?";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
